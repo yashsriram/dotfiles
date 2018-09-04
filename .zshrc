@@ -18,7 +18,8 @@ autoload -Uz promptinit
 promptinit
 prompt walters
 
-export PS1="[%c]$ "
+export PS1="[%c] "
 export RPS1="%t"
 
 export EDITOR=/bin/nano
+
