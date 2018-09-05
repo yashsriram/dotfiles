@@ -12,6 +12,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# my config
 bindkey '^R' history-incremental-search-backward
 
 autoload -Uz promptinit
@@ -23,3 +24,5 @@ export RPS1="%t"
 
 export EDITOR=/bin/nano
 
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
