@@ -157,7 +157,7 @@ bindsym $mod+r mode "resize"
 bar {
     status_command i3blocks
     mode hide
-    position top
+    position bottom
         colors {
         background #000000
 
