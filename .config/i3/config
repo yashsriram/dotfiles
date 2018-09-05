@@ -43,10 +43,10 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # you can use the cursor keys:
+bindsym Shift+Right focus right
 bindsym Shift+Left focus left
 bindsym Shift+Down focus down
 bindsym Shift+Up focus up
-bindsym Shift+Right focus right
 
 # you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -76,14 +76,6 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
-
-bindsym Control+k bar mode toggle
-
-bindsym $mod+z gaps outer current plus 5
-bindsym $mod+Shift+z gaps outer current minus 5
-
-bindsym $mod+s gaps inner current plus 5
-bindsym $mod+Shift+s gaps inner current minus 5
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -161,15 +153,9 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#        status_command	i3status
-#	position	top
-#}
-
 bar {
     status_command    i3blocks
     position          top
-    mode              hide
         colors {
         background #000000
         statusline #ffff00
@@ -180,4 +166,14 @@ bar {
         urgent_workspace   #00ff00 #900000
     }
 }
+
+# My config
+bindsym Control+k bar mode toggle
+
+bindsym $mod+z gaps outer current plus 5
+bindsym $mod+Shift+z gaps outer current minus 5
+
+bindsym $mod+s gaps inner current plus 5
+bindsym $mod+Shift+s gaps inner current minus 5
+
 
