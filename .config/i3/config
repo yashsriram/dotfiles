@@ -160,7 +160,6 @@ bar {
     position top
         colors {
         background #000000
-        statusline #ffff00
 
         focused_workspace  #ff0000 #285577
         active_workspace   #0000ff #333333
