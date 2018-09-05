@@ -178,10 +178,15 @@ bindsym $mod+Shift+z gaps outer current minus 5
 bindsym $mod+s gaps inner current plus 5
 bindsym $mod+Shift+s gaps inner current minus 5
 
-# Window and Color
-client.focused               	#121212 #101010 #9e8a8e
-client.focused_inactive 	#101010 #191919 #999999
-client.unfocused           	#101010 #191919 #999999
-client.urgent                 	#cd989a #cd989a #2e3436
+smart_gaps on
 
-client.background		#1d1d1d
+#### COLORS
+# class                 border  backgr. text    indicator child_border
+client.focused          #222222 #222222 #fd81b60 #267fb5   #267fb5
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #333333
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
