@@ -13,16 +13,22 @@ compinit
 # End of lines added by compinstall
 
 # my config
-bindkey '^R' history-incremental-search-backward
 
+# prompt
 autoload -Uz promptinit
 promptinit
 prompt walters
 
+# exports
 export PS1="[%c] "
 export RPS1="%t"
-
 export EDITOR=/bin/nano
 
+# keymaps
+bindkey '^R' history-incremental-search-backward
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+
+# aliases
+alias i3cfg="vim ~/.config/i3/config"
+alias termitecfg="vim ~/.config/termite/config"
