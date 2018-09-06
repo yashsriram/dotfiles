@@ -101,9 +101,9 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=/bin/nano
 
 # aliases
-alias i3cfg="vim ~/.config/i3/config"
-alias i3blockscfg="vim ~/.i3blocks.conf"
-alias termitecfg="vim ~/.config/termite/config"
-alias zshcfg="vim ~/.zshrc"
+alias i3cfg="subl ~/.config/i3/config"
+alias i3blockscfg="subl ~/.i3blocks.conf"
+alias termitecfg="subl ~/.config/termite/config"
+alias zshcfg="subl ~/.zshrc"
 alias pacwc="pacman -Q | wc -l"
 
