@@ -30,7 +30,7 @@ font pango:monospace 16
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym Control+Mod1+T exec termite
 bindsym $mod+c exec chromium
 
 # kill focused window
