@@ -171,6 +171,7 @@ bar {
 # My config
 bindsym $mod+b bar mode toggle
 bindsym Mod1+Tab focus right
+bindsym Mod1+Shift+Tab focus left
 
 bindsym $mod+z gaps outer current plus 5
 bindsym $mod+Shift+z gaps outer current minus 5
