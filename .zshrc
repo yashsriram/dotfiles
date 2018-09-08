@@ -106,4 +106,5 @@ alias i3blockscfg="subl ~/.i3blocks.conf"
 alias termitecfg="subl ~/.config/termite/config"
 alias zshcfg="subl ~/.zshrc"
 alias pacwc="pacman -Q | wc -l"
-
+alias r="ranger"
+alias htop="htop --tree"
