@@ -98,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # exports
-export EDITOR=/bin/nano
+export EDITOR=/bin/subl
 
 # aliases
 alias cfgi3="subl ~/.config/i3/config"
