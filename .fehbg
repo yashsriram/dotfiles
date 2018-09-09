@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --bg-fill '~/.config/wallpaper' 
+feh --bg-fill '/home/pandu/.config/wallpaper' 
