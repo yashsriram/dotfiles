@@ -101,10 +101,10 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=/bin/nano
 
 # aliases
-alias i3cfg="subl ~/.config/i3/config"
-alias i3blockscfg="subl ~/.i3blocks.conf"
-alias termitecfg="subl ~/.config/termite/config"
-alias zshcfg="subl ~/.zshrc"
+alias cfgi3="subl ~/.config/i3/config"
+alias cfgi3b="subl ~/.i3blocks.conf"
+alias cfgt="subl ~/.config/termite/config"
+alias cfgz="subl ~/.zshrc"
 alias pacwc="pacman -Q | wc -l"
 alias r="ranger"
 alias htop="htop --tree"
