@@ -1,0 +1,9 @@
+Dependencies
+  * i3
+  * i3blocks
+  * d_menu
+  * feh
+  * zsh
+  * oh-my-zsh
+  * xorg
+  * pulse audio
