@@ -163,9 +163,9 @@ bar {
         colors {
         background #000000
 
-        focused_workspace  #ff0000 #285577
-        active_workspace   #0000ff #333333
-        inactive_workspace #888888 #222222
+        focused_workspace  #000000 #00bfa5
+        active_workspace   #000000 #00bfa5
+        inactive_workspace #00bfa5 #000000
         urgent_workspace   #00ff00 #900000
     }
 }
@@ -201,4 +201,5 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 # remove borders
-for_window [class="^.*"] border pixel 0
+new_window normal 0
+new_float normal 0
