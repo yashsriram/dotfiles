@@ -108,3 +108,8 @@ alias cfgz="subl ~/.zshrc"
 alias pacwc="pacman -Q | wc -l"
 alias r="ranger"
 alias htop="htop --tree"
+
+
+alias gits="git status"
+alias gita="git add"
+alias gitc="git commit"
