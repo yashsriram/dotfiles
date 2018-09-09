@@ -6,4 +6,5 @@ Dependencies
   * zsh
   * oh-my-zsh
   * xorg
-  * pulse audio
+  * pulseaudio
+  * ranger

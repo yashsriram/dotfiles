@@ -101,9 +101,12 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=/bin/subl
 
 # aliases
-alias pacwc="pacman -Q | wc -l"
 alias r="ranger"
 alias htop="htop --tree"
+
+# pacman aliases
+alias pacwc="pacman -Q | wc -l"
+alias pacclean="sudo pacman -Rns $(pacman -Qtdq)"
 
 # config files
 alias cfgi3="subl ~/.config/i3/config"
