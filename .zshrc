@@ -101,15 +101,18 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=/bin/subl
 
 # aliases
-alias cfgi3="subl ~/.config/i3/config"
-alias cfgi3b="subl ~/.i3blocks.conf"
-alias cfgt="subl ~/.config/termite/config"
-alias cfgz="subl ~/.zshrc"
 alias pacwc="pacman -Q | wc -l"
 alias r="ranger"
 alias htop="htop --tree"
 
+# config files
+alias cfgi3="subl ~/.config/i3/config"
+alias cfgi3b="subl ~/.i3blocks.conf"
+alias cfgt="subl ~/.config/termite/config"
+alias cfgz="subl ~/.zshrc"
 
+# git aliases
 alias gits="git status"
 alias gita="git add"
 alias gitc="git commit"
+alias gitp="git push"
