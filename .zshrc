@@ -110,6 +110,7 @@ alias cfgi3="subl ~/.config/i3/config"
 alias cfgi3b="subl ~/.i3blocks.conf"
 alias cfgt="subl ~/.config/termite/config"
 alias cfgz="subl ~/.zshrc"
+alias cfgr="subl ~/.config/ranger/rc.conf"
 
 # git aliases
 alias gits="git status"
