@@ -8,3 +8,4 @@ Dependencies
   * xorg
   * pulseaudio
   * ranger
+  * htop

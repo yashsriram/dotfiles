@@ -120,3 +120,6 @@ alias gits="git status"
 alias gita="git add"
 alias gitc="git commit"
 alias gitp="git push"
+
+#jetbrains aliases
+alias pycharm="~/pycharm/bin/pycharm.sh &"
