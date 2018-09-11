@@ -109,11 +109,11 @@ alias pacwc="pacman -Q | wc -l"
 alias pacclean="sudo pacman -Rns $(pacman -Qtdq)"
 
 # config files
-alias cfgi3="subl ~/.config/i3/config"
-alias cfgi3b="subl ~/.i3blocks.conf"
-alias cfgt="subl ~/.config/termite/config"
-alias cfgz="subl ~/.zshrc"
-alias cfgr="subl ~/.config/ranger/rc.conf"
+alias cfi3="subl ~/.config/i3/config"
+alias cfi3b="subl ~/.i3blocks.conf"
+alias cft="subl ~/.config/termite/config"
+alias cfz="subl ~/.zshrc"
+alias cfr="subl ~/.config/ranger/rc.conf"
 
 # git aliases
 alias gits="git status"
@@ -122,4 +122,5 @@ alias gitc="git commit"
 alias gitp="git push"
 
 #jetbrains aliases
-alias pycharm="~/pycharm/bin/pycharm.sh &"
+alias pycharm="~/pycharm/bin/pycharm.sh"
+alias clion="~/clion/bin/clion.sh"
