@@ -18,13 +18,12 @@ bindsym $windows_key+Shift+d exec ~/.i3scripts/dmenu_prompt 'Do you really want 
 
 ################ Application Keymaps ################
 bindsym $windows_key+Shift+q kill
-bindsym $windows_key+s exec dmenu_run
-# programs
-bindsym $alt_key+1 exec termite
-bindsym $alt_key+2 exec termite -e ranger
-bindsym $alt_key+3 exec subl
-bindsym $alt_key+4 exec firefox
-bindsym $alt_key+5 exec chromium
+
+bindsym $windows_key+Return exec termite
+bindsym $windows_key+a exec dmenu_run
+bindsym $windows_key+s exec termite -e ranger
+bindsym $windows_key+d exec subl
+bindsym $windows_key+c exec chromium
 
 ################ Volume Control ################
 bindsym XF86AudioRaiseVolume exec pamixer -i 5 && pkill -RTMIN+2 i3blocks
@@ -67,9 +66,9 @@ bindsym $windows_key+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $windows_key+space focus mode_toggle
 # focus the parent container
-bindsym $windows_key+a focus parent
+#bindsym $windows_key+a focus parent
 # focus the child container
-bindsym $windows_key+d focus child
+#bindsym $windows_key+d focus child
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
