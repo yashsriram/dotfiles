@@ -21,8 +21,8 @@ bindsym $windows_key+Shift+q kill
 
 bindsym $windows_key+Return exec termite
 bindsym $windows_key+a exec dmenu_run
-bindsym $windows_key+s exec termite -e ranger
-bindsym $windows_key+d exec subl
+bindsym $windows_key+d exec termite -e ranger
+bindsym $windows_key+s exec subl
 bindsym $windows_key+c exec chromium
 
 ################ Volume Control ################
