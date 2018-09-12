@@ -9,3 +9,4 @@ Dependencies
   * pulseaudio
   * ranger
   * htop
+  * mons
