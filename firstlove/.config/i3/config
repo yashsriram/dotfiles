@@ -163,7 +163,7 @@ bindsym $windows_key+Shift+0 move container to workspace $ws10
 # finds out, if available)
 bar {
     status_command i3blocks
-    position top
+    position bottom
         colors {
         background #000000
 
