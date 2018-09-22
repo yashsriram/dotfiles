@@ -1,0 +1,176 @@
+# Yashasvi Sriram's i3 config
+
+################ Definitions ################
+set $alt_key Mod1
+set $windows_key Mod4
+
+################ High Level Commands ################
+# reload the configuration file
+bindsym $windows_key+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $windows_key+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $windows_key+Shift+e exec ~/.i3scripts/dmenu_prompt 'Do you really want to exit i3?' 'i3-msg exit'
+# shut down
+bindsym $windows_key+Shift+s exec ~/.i3scripts/dmenu_prompt 'Do you really want to shutdown?' 'shutdown now'
+# reboot
+bindsym $windows_key+Shift+d exec ~/.i3scripts/dmenu_prompt 'Do you really want to reboot?' 'reboot'
+
+################ Application Keymaps ################
+bindsym $windows_key+Shift+q kill
+
+bindsym $windows_key+Return exec termite
+bindsym $windows_key+a exec dmenu_run
+bindsym $windows_key+d exec termite -e ranger
+bindsym $windows_key+s exec subl
+bindsym $windows_key+c exec chromium
+
+################ Volume Control ################
+bindsym XF86AudioRaiseVolume exec pamixer -i 5 && pkill -RTMIN+2 i3blocks
+bindsym XF86AudioLowerVolume exec pamixer -d 5 && pkill -RTMIN+2 i3blocks
+bindsym XF86AudioMute exec pamixer -t
+
+################ Brightness Control ################
+bindsym XF86MonBrightnessUp exec ~/.i3scripts/chbrightness 5
+bindsym XF86MonBrightnessDown exec ~/.i3scripts/chbrightness -5
+
+################ Window Switching ################
+bindsym $alt_key+Tab focus right
+bindsym $alt_key+Shift+Tab focus left
+# you can use the cursor keys:
+bindsym $windows_key+Right focus right
+bindsym $windows_key+Left focus left
+bindsym $windows_key+Down focus down
+bindsym $windows_key+Up focus up
+
+################ Window Control ################
+# you can use the cursor keys:
+bindsym $windows_key+Shift+Left move left
+bindsym $windows_key+Shift+Down move down
+bindsym $windows_key+Shift+Up move up
+bindsym $windows_key+Shift+Right move right
+# split in horizontal orientation
+bindsym $windows_key+h split h
+# split in vertical orientation
+bindsym $windows_key+v split v
+# enter fullscreen mode for the focused container
+bindsym $windows_key+f fullscreen toggle
+# change container layout (stacked, tabbed, toggle split)
+# bindsym $windows_key+s layout stacking
+bindsym $windows_key+w layout tabbed
+bindsym $windows_key+e layout toggle split
+# Use Mouse+$windows_key to drag floating windows to their wanted position
+floating_modifier $windows_key
+# toggle tiling / floating
+bindsym $windows_key+Shift+space floating toggle
+# change focus between tiling / floating windows
+bindsym $windows_key+space focus mode_toggle
+# focus the parent container
+#bindsym $windows_key+a focus parent
+# focus the child container
+#bindsym $windows_key+d focus child
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $windows_key+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $windows_key+r mode "default"
+}
+bindsym $windows_key+r mode "resize"
+
+################ Gaps Control ################
+smart_gaps on
+bindsym $windows_key+o gaps outer current plus 5
+bindsym $windows_key+Shift+o gaps outer current minus 5
+bindsym $windows_key+i gaps inner current plus 5
+bindsym $windows_key+Shift+i gaps inner current minus 5
+
+################ Styling ################
+# Font for window titles. Will also be used by the bar unless a different font
+font pango:monospace 12
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #000000 #00bfa5 #000000 #267fb5   #267fb5
+client.focused_inactive #000000 #5f676a #ffffff #484e50   #333333
+client.unfocused        #000000 #000000 #00bfa5 #292d2e   #222222
+client.urgent           #000000 #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
+# remove borders
+new_window normal 0
+new_float normal 0
+
+
+################ Workspaces ################
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $windows_key+1 workspace $ws1
+bindsym $windows_key+2 workspace $ws2
+bindsym $windows_key+3 workspace $ws3
+bindsym $windows_key+4 workspace $ws4
+bindsym $windows_key+5 workspace $ws5
+bindsym $windows_key+6 workspace $ws6
+bindsym $windows_key+7 workspace $ws7
+bindsym $windows_key+8 workspace $ws8
+bindsym $windows_key+9 workspace $ws9
+bindsym $windows_key+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $windows_key+Shift+1 move container to workspace $ws1
+bindsym $windows_key+Shift+2 move container to workspace $ws2
+bindsym $windows_key+Shift+3 move container to workspace $ws3
+bindsym $windows_key+Shift+4 move container to workspace $ws4
+bindsym $windows_key+Shift+5 move container to workspace $ws5
+bindsym $windows_key+Shift+6 move container to workspace $ws6
+bindsym $windows_key+Shift+7 move container to workspace $ws7
+bindsym $windows_key+Shift+8 move container to workspace $ws8
+bindsym $windows_key+Shift+9 move container to workspace $ws9
+bindsym $windows_key+Shift+0 move container to workspace $ws10
+
+################ Status Bar ################
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+    status_command i3blocks
+    position top
+        colors {
+        background #000000
+
+        focused_workspace  #000000 #00bfa5
+        active_workspace   #000000 #00bfa5
+        inactive_workspace #00bfa5 #000000
+        urgent_workspace   #00ff00 #900000
+    }
+}
+bindsym $windows_key+b bar mode toggle

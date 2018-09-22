@@ -1,0 +1,7 @@
+#!/bin/bash
+
+CAPACITY=$(cat /sys/class/power_supply/BAT1/capacity) || exit
+STATUS=$(cat /sys/class/power_supply/BAT1/status)
+
+echo $CAPACITY% $STATUS
+
