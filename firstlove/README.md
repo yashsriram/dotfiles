@@ -1,0 +1,13 @@
+# Tools
+  * i3
+  * i3blocks
+  * d\_menu
+  * feh
+  * zsh
+  * bc
+  * oh-my-zsh
+  * xorg
+  * pamixer
+  * ranger
+  * htop
+  * mons
