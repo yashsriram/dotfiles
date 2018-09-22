@@ -106,7 +106,7 @@ bindsym $windows_key+Shift+i gaps inner current minus 5
 
 ################ Styling ################
 # Font for window titles. Will also be used by the bar unless a different font
-font pango:hack 12
+font pango:fira mono 12
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #000000 #00bfa5 #000000 #267fb5   #267fb5

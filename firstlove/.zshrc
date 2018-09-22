@@ -107,6 +107,7 @@ alias htop="htop --tree"
 # pacman aliases
 alias pacc="pacman -Q | wc -l"
 alias paci="sudo pacman -S"
+alias pacr="sudo pacman -R"
 alias pacclean="sudo pacman -Rns $(pacman -Qtdq)"
 
 # config files
