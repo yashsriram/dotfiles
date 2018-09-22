@@ -28,7 +28,7 @@ bindsym $windows_key+c exec chromium
 ################ Volume Control ################
 bindsym XF86AudioRaiseVolume exec pamixer -i 5 && pkill -RTMIN+2 i3blocks
 bindsym XF86AudioLowerVolume exec pamixer -d 5 && pkill -RTMIN+2 i3blocks
-bindsym XF86AudioMute exec pamixer -t
+bindsym XF86AudioMute exec pamixer -t && pkill -RTMIN+2 i3blocks
 
 ################ Brightness Control ################
 bindsym XF86MonBrightnessUp exec ~/.i3scripts/chbrightness 5
