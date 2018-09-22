@@ -24,6 +24,7 @@ bindsym $windows_key+a exec dmenu_run
 bindsym $windows_key+d exec termite -e ranger
 bindsym $windows_key+s exec subl
 bindsym $windows_key+c exec chromium
+bindsym $windows_key+x exec firefox
 
 ################ Volume Control ################
 bindsym XF86AudioRaiseVolume exec pamixer -i 5 && pkill -RTMIN+2 i3blocks
@@ -97,6 +98,7 @@ bindsym $windows_key+r mode "resize"
 
 ################ Gaps Control ################
 smart_gaps on
+gaps inner 15
 bindsym $windows_key+o gaps outer current plus 5
 bindsym $windows_key+Shift+o gaps outer current minus 5
 bindsym $windows_key+i gaps inner current plus 5
@@ -104,7 +106,7 @@ bindsym $windows_key+Shift+i gaps inner current minus 5
 
 ################ Styling ################
 # Font for window titles. Will also be used by the bar unless a different font
-font pango:monospace 12
+font pango:hack 12
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #000000 #00bfa5 #000000 #267fb5   #267fb5

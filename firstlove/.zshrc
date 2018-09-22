@@ -105,7 +105,8 @@ alias r="ranger"
 alias htop="htop --tree"
 
 # pacman aliases
-alias pacwc="pacman -Q | wc -l"
+alias pacc="pacman -Q | wc -l"
+alias paci="sudo pacman -S"
 alias pacclean="sudo pacman -Rns $(pacman -Qtdq)"
 
 # config files
