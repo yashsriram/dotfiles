@@ -149,16 +149,16 @@ bindsym $windows_key+9 workspace $ws9
 bindsym $windows_key+0 workspace $ws10
 
 # move focused container to workspace
-bindsym $windows_key+Shift+1 move container to workspace $ws1
-bindsym $windows_key+Shift+2 move container to workspace $ws2
-bindsym $windows_key+Shift+3 move container to workspace $ws3
-bindsym $windows_key+Shift+4 move container to workspace $ws4
-bindsym $windows_key+Shift+5 move container to workspace $ws5
-bindsym $windows_key+Shift+6 move container to workspace $ws6
-bindsym $windows_key+Shift+7 move container to workspace $ws7
-bindsym $windows_key+Shift+8 move container to workspace $ws8
-bindsym $windows_key+Shift+9 move container to workspace $ws9
-bindsym $windows_key+Shift+0 move container to workspace $ws10
+bindsym $windows_key+Shift+1 move container to workspace $ws1 ; workspace $ws1
+bindsym $windows_key+Shift+2 move container to workspace $ws2 ; workspace $ws2
+bindsym $windows_key+Shift+3 move container to workspace $ws3 ; workspace $ws3
+bindsym $windows_key+Shift+4 move container to workspace $ws4 ; workspace $ws4
+bindsym $windows_key+Shift+5 move container to workspace $ws5 ; workspace $ws5
+bindsym $windows_key+Shift+6 move container to workspace $ws6 ; workspace $ws6
+bindsym $windows_key+Shift+7 move container to workspace $ws7 ; workspace $ws7
+bindsym $windows_key+Shift+8 move container to workspace $ws8 ; workspace $ws8
+bindsym $windows_key+Shift+9 move container to workspace $ws9 ; workspace $ws9
+bindsym $windows_key+Shift+0 move container to workspace $ws10 ; workspace $ws10
 
 ################ Status Bar ################
 # Start i3bar to display a workspace bar (plus the system information i3status

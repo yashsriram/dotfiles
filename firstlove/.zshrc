@@ -123,13 +123,14 @@ alias gita="git add"
 alias gitc="git commit"
 alias gitp="git push"
 alias gitd="git diff"
+alias gitb="git branch"
 
 # netctl aliases
 alias ns="netctl start"
 
 #jetbrains aliases
-alias pycharm="~/pycharm/bin/pycharm.sh"
-alias clion="~/clion/bin/clion.sh"
+alias pycharm="~/jetbrains/pycharm/bin/pycharm.sh"
+alias clion="~/jetbrains/clion/bin/clion.sh"
 
 # mount aliases
 alias mountwinc="sudo mount /dev/sda4 /home/pandu/mounts/winc"
