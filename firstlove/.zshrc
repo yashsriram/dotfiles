@@ -145,8 +145,8 @@ alias umountubuntu="sudo umount /home/pandu/mounts/ubuntu"
 alias sshkrishna="nohup xterm -e ssh yashasvi@10.129.2.170 > /dev/null &"
 # libvnf
 alias sshran="nohup xterm -e ssh -t ran@10.129.2.113 'cd /home/ran/trishal/mtcp-p/apps/kb-sc-epc/include-epc ; bash -l' > /dev/null &"
-alias sshmme="nohup xterm -e ssh -t sgw@10.129.2.106 'cd /home/sgw/trishal/mtcp-p/apps/ ; bash -l' "
-alias sshhss="nohup xterm -e ssh -t sgw@10.129.2.111 'cd /home/sgw/trishal/hss ; bash -l'"
+alias sshmme="nohup xterm -e ssh -t sgw@10.129.2.106 'cd /home/sgw/trishal/mtcp-p/apps/ ; bash -l' > /dev/null &"
+alias sshhss="nohup xterm -e ssh -t sgw@10.129.2.111 'cd /home/sgw/trishal/hss ; bash -l' > /dev/null &"
 alias sshsgw="nohup xterm -e ssh -t rahul2514888@10.129.2.114 'cd /home/rahul2514888/trishal/mtcp-p/apps/kb-sc-epc ; bash -l' > /dev/null &"
 alias sshpgw="nohup xterm -e ssh -t rahul2514888@10.129.2.112 'cd /home/rahul2514888/trishal/mtcp-p/apps/kb-sc-epc ; bash -l' > /dev/null &"
 
