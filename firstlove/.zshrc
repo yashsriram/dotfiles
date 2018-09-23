@@ -124,6 +124,45 @@ alias gitc="git commit"
 alias gitp="git push"
 alias gitd="git diff"
 
+# netctl aliases
+alias ns="netctl start"
+
 #jetbrains aliases
 alias pycharm="~/pycharm/bin/pycharm.sh"
 alias clion="~/clion/bin/clion.sh"
+
+# mount aliases
+alias mountwinc="sudo mount /dev/sda4 /home/pandu/mounts/winc"
+alias umountwinc="sudo umount /home/pandu/mounts/winc"
+alias mounthyperdrive="sudo mount /dev/sda5 /home/pandu/mounts/hyperdrive"
+alias umounthyperdrive="sudo umount /home/pandu/mounts/hyperdrive"
+alias mountubuntu="sudo mount /dev/sda7 /home/pandu/mounts/ubuntu"
+alias umountubuntu="sudo umount /home/pandu/mounts/ubuntu"
+
+# ssh aliases
+alias sshkrishna="ssh yashasvi@10.129.2.170"
+# libvnf
+alias sshran="ssh -t ran@10.129.2.113 'cd /home/ran/trishal/mtcp-p/apps/kb-sc-epc/include-epc ; bash -l' "
+alias sshmme="ssh -t sgw@10.129.2.106 'cd /home/sgw/trishal/mtcp-p/apps/ ; bash -l' "
+alias sshhss="ssh -t sgw@10.129.2.111 'cd /home/sgw/trishal/hss ; bash -l'"
+alias sshsgw="ssh -t rahul2514888@10.129.2.114 'cd /home/rahul2514888/trishal/mtcp-p/apps/kb-sc-epc ; bash -l' "
+alias sshpgw="ssh -t rahul2514888@10.129.2.112 'cd /home/rahul2514888/trishal/mtcp-p/apps/kb-sc-epc ; bash -l' "
+
+# sshfs aliases
+# rnd
+alias sshfskrishna="sshfs /home/pandu/sshfs/krishna yashasvi@10.129.2.170:"
+# libvnf
+# mount
+alias sshfsran="sshfs /home/pandu/sshfs/libvnf/ran ran@10.129.2.113:"
+alias sshfsmme="sshfs /home/pandu/sshfs/libvnf/mme sgw@10.129.2.106:"
+alias sshfshss="sshfs /home/pandu/sshfs/libvnf/hss sgw@10.129.2.111:"
+alias sshfssgw="sshfs /home/pandu/sshfs/libvnf/sgw rahul2514888@10.129.2.114:"
+alias sshfspgw="sshfs /home/pandu/sshfs/libvnf/pgw rahul2514888@10.129.2.112:"
+alias sshfsepc="sshfsran && sshfsmme && sshfshss && sshfssgw && sshfspgw"
+# umount
+alias umsshfsran="fusermount -u /home/pandu/sshfs/libvnf/ran"
+alias umsshfsmme="fusermount -u /home/pandu/sshfs/libvnf/mme"
+alias umsshfshss="fusermount -u /home/pandu/sshfs/libvnf/hss"
+alias umsshfssgw="fusermount -u /home/pandu/sshfs/libvnf/sgw"
+alias umsshfspgw="fusermount -u /home/pandu/sshfs/libvnf/pgw"
+alias umsshfsepc="umsshfsran ; umsshfsmme ; umsshfshss ; umsshfssgw ; umsshfspgw"
