@@ -131,6 +131,7 @@ alias ns="netctl start"
 #jetbrains aliases
 alias pycharm="~/jetbrains/pycharm/bin/pycharm.sh"
 alias clion="~/jetbrains/clion/bin/clion.sh"
+alias android-studio="~/jetbrains/android-studio/bin/studio.sh"
 
 # mount aliases
 alias mountwinc="sudo mount /dev/sda4 /home/pandu/mounts/winc"
@@ -141,13 +142,13 @@ alias mountubuntu="sudo mount /dev/sda7 /home/pandu/mounts/ubuntu"
 alias umountubuntu="sudo umount /home/pandu/mounts/ubuntu"
 
 # ssh aliases
-alias sshkrishna="ssh yashasvi@10.129.2.170"
+alias sshkrishna="nohup xterm -e ssh yashasvi@10.129.2.170 > /dev/null &"
 # libvnf
-alias sshran="ssh -t ran@10.129.2.113 'cd /home/ran/trishal/mtcp-p/apps/kb-sc-epc/include-epc ; bash -l' "
-alias sshmme="ssh -t sgw@10.129.2.106 'cd /home/sgw/trishal/mtcp-p/apps/ ; bash -l' "
-alias sshhss="ssh -t sgw@10.129.2.111 'cd /home/sgw/trishal/hss ; bash -l'"
-alias sshsgw="ssh -t rahul2514888@10.129.2.114 'cd /home/rahul2514888/trishal/mtcp-p/apps/kb-sc-epc ; bash -l' "
-alias sshpgw="ssh -t rahul2514888@10.129.2.112 'cd /home/rahul2514888/trishal/mtcp-p/apps/kb-sc-epc ; bash -l' "
+alias sshran="nohup xterm -e ssh -t ran@10.129.2.113 'cd /home/ran/trishal/mtcp-p/apps/kb-sc-epc/include-epc ; bash -l' > /dev/null &"
+alias sshmme="nohup xterm -e ssh -t sgw@10.129.2.106 'cd /home/sgw/trishal/mtcp-p/apps/ ; bash -l' "
+alias sshhss="nohup xterm -e ssh -t sgw@10.129.2.111 'cd /home/sgw/trishal/hss ; bash -l'"
+alias sshsgw="nohup xterm -e ssh -t rahul2514888@10.129.2.114 'cd /home/rahul2514888/trishal/mtcp-p/apps/kb-sc-epc ; bash -l' > /dev/null &"
+alias sshpgw="nohup xterm -e ssh -t rahul2514888@10.129.2.112 'cd /home/rahul2514888/trishal/mtcp-p/apps/kb-sc-epc ; bash -l' > /dev/null &"
 
 # sshfs aliases
 # rnd
