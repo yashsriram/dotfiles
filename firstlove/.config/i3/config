@@ -167,7 +167,7 @@ bar {
     status_command i3blocks
     position bottom
         colors {
-        background #000000
+        background #222111
 
         focused_workspace  #000000 #00bfa5
         active_workspace   #000000 #00bfa5
