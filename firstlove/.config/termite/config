@@ -1,5 +1,5 @@
 [options]
-font = Ubuntu Mono 16
+font = Ubuntu Mono 14
 allow_bold = true
 clickable_url = true
 dynamic_title = true

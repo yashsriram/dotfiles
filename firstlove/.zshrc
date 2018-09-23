@@ -126,12 +126,15 @@ alias gitd="git diff"
 alias gitb="git branch"
 
 # netctl aliases
-alias ns="netctl start"
+alias nsr="netctl start"
+alias nso="netctl stop"
+alias nen="netctl stop"
+alias nds="netctl stop"
 
 #jetbrains aliases
-alias pycharm="~/jetbrains/pycharm/bin/pycharm.sh"
-alias clion="~/jetbrains/clion/bin/clion.sh"
-alias android-studio="~/jetbrains/android-studio/bin/studio.sh"
+alias pycharm="nohup ~/jetbrains/pycharm/bin/pycharm.sh > /dev/null &"
+alias clion="nohup ~/jetbrains/clion/bin/clion.sh > /dev/null &"
+alias android-studio="nohup ~/jetbrains/android-studio/bin/studio.sh > /dev/null &"
 
 # mount aliases
 alias mountwinc="sudo mount /dev/sda4 /home/pandu/mounts/winc"
@@ -153,6 +156,7 @@ alias sshpgw="nohup xterm -e ssh -t rahul2514888@10.129.2.112 'cd /home/rahul251
 # sshfs aliases
 # rnd
 alias sshfskrishna="sshfs /home/pandu/sshfs/krishna yashasvi@10.129.2.170:"
+alias umsshfskrishna="fusermount -u /home/pandu/sshfs/krishna"
 # libvnf
 # mount
 alias sshfsran="sshfs /home/pandu/sshfs/libvnf/ran ran@10.129.2.113:"
