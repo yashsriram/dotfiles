@@ -126,8 +126,8 @@ alias gitd="git diff"
 alias gitb="git branch"
 
 # netctl aliases
-alias nsr="netctl start"
-alias nso="netctl stop"
+alias nst="netctl start"
+alias nsp="netctl stop"
 alias nen="netctl stop"
 alias nds="netctl stop"
 
@@ -145,7 +145,7 @@ alias mountubuntu="sudo mount /dev/sda7 /home/pandu/mounts/ubuntu"
 alias umountubuntu="sudo umount /home/pandu/mounts/ubuntu"
 
 # ssh aliases
-alias sshkrishna="nohup xterm -e ssh yashasvi@10.129.2.170 > /dev/null &"
+alias sshkrishna="nohup xterm -e ssh  yashasvi@10.129.2.170 > /dev/null &"
 # libvnf
 alias sshran="nohup xterm -e ssh -t ran@10.129.2.113 'cd /home/ran/trishal/mtcp-p/apps/kb-sc-epc/include-epc ; bash -l' > /dev/null &"
 alias sshmme="nohup xterm -e ssh -t sgw@10.129.2.106 'cd /home/sgw/trishal/mtcp-p/apps/ ; bash -l' > /dev/null &"

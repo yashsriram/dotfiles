@@ -15,6 +15,8 @@ bindsym $windows_key+Shift+e exec ~/.i3scripts/dmenu_prompt 'Do you really want 
 bindsym $windows_key+Shift+s exec ~/.i3scripts/dmenu_prompt 'Do you really want to shutdown?' 'shutdown now'
 # reboot
 bindsym $windows_key+Shift+d exec ~/.i3scripts/dmenu_prompt 'Do you really want to reboot?' 'reboot'
+# lock
+bindsym Control+$alt_key+l exec i3lock --fuzzy -l
 
 ################ Application Keymaps ################
 bindsym $windows_key+Shift+q kill

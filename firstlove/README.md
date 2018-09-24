@@ -1,13 +1,15 @@
 # Tools
-  * i3
-  * i3blocks
-  * d\_menu
-  * feh
   * zsh
-  * bc
   * oh-my-zsh
   * xorg
-  * pamixer
+  * i3
+  * i3blocks
+  * i3lock-blur
   * ranger
   * htop
   * mons
+  * d\_menu
+  * feh
+  * zathura
+  * pamixer
+  * bc
