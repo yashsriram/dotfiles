@@ -13,3 +13,5 @@
   * zathura
   * pamixer
   * bc
+  * xterm [for remote logins]
+  * gitahead [git gui client]

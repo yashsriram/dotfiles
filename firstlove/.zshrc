@@ -103,6 +103,7 @@ export EDITOR=/bin/subl
 # aliases
 alias r="ranger"
 alias htop="htop --tree"
+alias ahead="nohup gitahead > /dev/null &"
 
 # pacman aliases
 alias pacc="pacman -Q | wc -l"
