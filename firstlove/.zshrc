@@ -103,12 +103,14 @@ export EDITOR=/bin/subl
 # aliases
 alias r="ranger"
 alias htop="htop --tree"
+alias mounts="mount | grep /dev/sd"
 alias ahead="nohup gitahead > /dev/null &"
 
 # pacman aliases
 alias pacc="pacman -Q | wc -l"
 alias paci="sudo pacman -S"
 alias pacr="sudo pacman -R"
+alias pacac="cat /var/log/pacman.log | grep -i installed | sort -r | less"
 alias pacclean="sudo pacman -Rns $(pacman -Qtdq)"
 
 # config files
