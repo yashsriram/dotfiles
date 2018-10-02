@@ -108,6 +108,7 @@ alias ahead="nohup gitahead > /dev/null &"
 
 # pacman aliases
 alias pacc="pacman -Q | wc -l"
+alias pacl="pacman -Q | less"
 alias paci="sudo pacman -S"
 alias pacr="sudo pacman -R"
 alias pacac="cat /var/log/pacman.log | grep -i installed | sort -r | less"

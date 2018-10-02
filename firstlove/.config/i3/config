@@ -28,7 +28,7 @@ bindsym $windows_key+Return exec termite
 bindsym $windows_key+a exec dmenu_run
 bindsym $windows_key+d exec termite -e ranger
 bindsym $windows_key+s exec subl
-bindsym $windows_key+c exec chromium
+bindsym $windows_key+c exec google-chrome-stable
 bindsym $windows_key+x exec firefox
 
 ################ Volume Control ################
@@ -111,13 +111,13 @@ bindsym $windows_key+Shift+i gaps inner current minus 5
 
 ################ Styling ################
 # Font for window titles. Will also be used by the bar unless a different font
-font pango:fira mono 12
+font pango:fira mono 14
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #000000 #00bfa5 #000000 #267fb5   #267fb5
+client.focused          #000000 #ffeb3b #000000 #267fb5   #267fb5
 client.focused_inactive #000000 #5f676a #ffffff #484e50   #333333
-client.unfocused        #000000 #000000 #00bfa5 #292d2e   #222222
-client.urgent           #000000 #900000 #ffffff #900000   #900000
+client.unfocused        #000000 #000000 #ffffff #292d2e   #222222
+client.urgent           #000000 #d81b60 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
