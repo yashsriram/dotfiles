@@ -129,12 +129,6 @@ alias gitp="git push"
 alias gitd="git diff"
 alias gitb="git branch"
 
-# netctl aliases
-alias nst="netctl start"
-alias nsp="netctl stop"
-alias nen="netctl stop"
-alias nds="netctl stop"
-
 #jetbrains aliases
 alias pycharm="nohup ~/jetbrains/pycharm/bin/pycharm.sh > /dev/null &"
 alias clion="nohup ~/jetbrains/clion/bin/clion.sh > /dev/null &"

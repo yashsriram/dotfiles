@@ -114,7 +114,7 @@ bindsym $windows_key+Shift+i gaps inner current minus 5
 font pango:fira mono 14
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #000000 #ffeb3b #000000 #267fb5   #267fb5
+client.focused          #000000 #ffab00 #000000 #267fb5   #267fb5
 client.focused_inactive #000000 #5f676a #ffffff #484e50   #333333
 client.unfocused        #000000 #000000 #ffffff #292d2e   #222222
 client.urgent           #000000 #d81b60 #ffffff #900000   #900000
