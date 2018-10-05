@@ -1,3 +1,3 @@
 xrdb /home/pandu/.Xresources
-./.fehbg
+~/.fehbg
 exec i3

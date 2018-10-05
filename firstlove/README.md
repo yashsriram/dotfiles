@@ -17,4 +17,4 @@
   * bc
   * xterm [for remote logins]
   * gitahead [git gui client]
-  * connman [instead of netctl and cmst]
+  * networkmanager [instead of netctl]
