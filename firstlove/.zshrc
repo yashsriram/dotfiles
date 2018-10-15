@@ -103,7 +103,7 @@ export EDITOR=/bin/subl
 # aliases
 alias r="ranger"
 alias htop="htop --tree"
-alias mounts="mount | grep /dev/sd"
+alias mounts="mount | grep -E '(/dev/sd|@)'"
 alias ahead="nohup gitahead > /dev/null &"
 
 # pacman aliases
@@ -111,6 +111,7 @@ alias pacc="pacman -Q | wc -l"
 alias pacl="pacman -Q | less"
 alias paci="sudo pacman -S"
 alias pacr="sudo pacman -R"
+alias pacu="sudo pacman -Syu"
 alias pacac="cat /var/log/pacman.log | grep -i installed | sort -r | less"
 alias pacclean="sudo pacman -Rns $(pacman -Qtdq)"
 
@@ -143,7 +144,9 @@ alias mountubuntu="sudo mount /dev/sda7 /home/pandu/mounts/ubuntu"
 alias umountubuntu="sudo umount /home/pandu/mounts/ubuntu"
 
 # ssh aliases
-alias sshkrishna="nohup xterm -e ssh  yashasvi@10.129.2.170 > /dev/null &"
+alias sshmars="nohup xterm -e ssh yashsriram@mars.cse.iitb.ac.in > /dev/null &"
+alias sshkrishna="nohup xterm -e ssh yashasvi@10.129.2.170 > /dev/null &"
+alias sshpascal="ssh yashsriram@10.129.131.209"
 # libvnf
 alias sshran="nohup xterm -e ssh -t ran@10.129.2.113 'cd /home/ran/trishal/mtcp-p/apps/kb-sc-epc/include-epc ; bash -l' > /dev/null &"
 alias sshmme="nohup xterm -e ssh -t sgw@10.129.2.106 'cd /home/sgw/trishal/mtcp-p/apps/ ; bash -l' > /dev/null &"
@@ -152,9 +155,19 @@ alias sshsgw="nohup xterm -e ssh -t rahul2514888@10.129.2.114 'cd /home/rahul251
 alias sshpgw="nohup xterm -e ssh -t rahul2514888@10.129.2.112 'cd /home/rahul2514888/trishal/mtcp-p/apps/kb-sc-epc ; bash -l' > /dev/null &"
 
 # sshfs aliases
-# rnd
-alias sshfskrishna="sshfs /home/pandu/sshfs/krishna yashasvi@10.129.2.170:"
-alias umsshfskrishna="fusermount -u /home/pandu/sshfs/krishna"
+unmount_all_ssh_filesystems () {
+  mount | grep @ | awk '{print $3}' | for i in $(cat); do fusermount -u $i; done
+}
+alias usshfsall="unmount_all_ssh_filesystems"
+# pascal
+alias sshfsmars="sshfs /home/pandu/sshfs/mars yashsriram@mars.cse.iitb.ac.in: && ranger /home/pandu/sshfs/mars"
+alias usshfsmars="fusermount -u /home/pandu/sshfs/mars"
+# pascal
+alias sshfspascal="sshfs /home/pandu/sshfs/pascal yashsriram@10.129.131.209: && ranger /home/pandu/sshfs/pascal"
+alias usshfspascal="fusermount -u /home/pandu/sshfs/pascal"
+# krishna
+alias sshfskrishna="sshfs /home/pandu/sshfs/krishna yashasvi@10.129.2.170: && ranger /home/pandu/sshfs/krishna"
+alias usshfskrishna="fusermount -u /home/pandu/sshfs/krishna"
 # libvnf
 # mount
 alias sshfsran="sshfs /home/pandu/sshfs/libvnf/ran ran@10.129.2.113:"
@@ -164,9 +177,9 @@ alias sshfssgw="sshfs /home/pandu/sshfs/libvnf/sgw rahul2514888@10.129.2.114:"
 alias sshfspgw="sshfs /home/pandu/sshfs/libvnf/pgw rahul2514888@10.129.2.112:"
 alias sshfsepc="sshfsran && sshfsmme && sshfshss && sshfssgw && sshfspgw"
 # umount
-alias umsshfsran="fusermount -u /home/pandu/sshfs/libvnf/ran"
-alias umsshfsmme="fusermount -u /home/pandu/sshfs/libvnf/mme"
-alias umsshfshss="fusermount -u /home/pandu/sshfs/libvnf/hss"
-alias umsshfssgw="fusermount -u /home/pandu/sshfs/libvnf/sgw"
-alias umsshfspgw="fusermount -u /home/pandu/sshfs/libvnf/pgw"
-alias umsshfsepc="umsshfsran ; umsshfsmme ; umsshfshss ; umsshfssgw ; umsshfspgw"
+alias usshfsran="fusermount -u /home/pandu/sshfs/libvnf/ran"
+alias usshfsmme="fusermount -u /home/pandu/sshfs/libvnf/mme"
+alias usshfshss="fusermount -u /home/pandu/sshfs/libvnf/hss"
+alias usshfssgw="fusermount -u /home/pandu/sshfs/libvnf/sgw"
+alias usshfspgw="fusermount -u /home/pandu/sshfs/libvnf/pgw"
+alias usshfsepc="usshfsran ; usshfsmme ; usshfshss ; usshfssgw ; usshfspgw"

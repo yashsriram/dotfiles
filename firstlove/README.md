@@ -18,3 +18,4 @@
   * xterm [for remote logins]
   * gitahead [git gui client]
   * networkmanager [instead of netctl]
+  * ranger_devicons [icons for ranger, depends on nerd-font]
