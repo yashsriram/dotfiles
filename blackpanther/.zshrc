@@ -103,9 +103,15 @@ export EDITOR=/bin/subl
 # aliases
 alias r="ranger"
 alias htop="htop --tree"
+alias mounts="mount | grep /dev/nvme"
+alias ahead="nohup gitahead > /dev/null &"
 
 # pacman aliases
-alias pacwc="pacman -Q | wc -l"
+alias pacc="pacman -Q | wc -l"
+alias pacl="pacman -Q | less"
+alias paci="sudo pacman -S"
+alias pacr="sudo pacman -R"
+alias pacac="cat /var/log/pacman.log | grep -i installed | sort -r | less"
 alias pacclean="sudo pacman -Rns $(pacman -Qtdq)"
 
 # config files
@@ -121,7 +127,22 @@ alias gita="git add"
 alias gitc="git commit"
 alias gitp="git push"
 alias gitd="git diff"
+alias gitb="git branch"
 
 #jetbrains aliases
-alias pycharm="~/pycharm/bin/pycharm.sh"
-alias clion="~/clion/bin/clion.sh"
+alias pycharm="nohup ~/jetbrains/pycharm/bin/pycharm.sh > /dev/null &"
+alias clion="nohup ~/jetbrains/clion/bin/clion.sh > /dev/null &"
+alias android-studio="nohup ~/jetbrains/android-studio/bin/studio.sh > /dev/null &"
+
+# mount aliases
+alias mountwinc="sudo mount /dev/nvme0n1p3 /home/pandu/mounts/winc"
+alias umountwinc="sudo umount /home/pandu/mounts/winc"
+alias mountwind="sudo mount /dev/nvme0n1p4 /home/pandu/mounts/wind"
+alias umountwind="sudo umount /home/pandu/mounts/wind"
+
+# ssh aliases
+alias sshkrishna="nohup xterm -e ssh  yashasvi@10.129.2.170 > /dev/null &"
+
+# sshfs aliases
+alias sshfskrishna="sshfs /home/pandu/sshfs/krishna yashasvi@10.129.2.170:"
+alias umsshfskrishna="fusermount -u /home/pandu/sshfs/krishna"
