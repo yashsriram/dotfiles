@@ -6,6 +6,7 @@ set $windows_key Mod4
 
 ################ Daemons ################ 
 exec --no-startup-id i3-battery-popup -n -m "Battery low!"
+exec --no-startup-id dunst
 
 ################ High Level Commands ################
 # reload the configuration file

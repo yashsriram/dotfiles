@@ -19,3 +19,4 @@
   * gitahead [git gui client]
   * networkmanager [instead of netctl]
   * ranger_devicons [icons for ranger, depends on nerd-font]
+  * dunst [for notifications]

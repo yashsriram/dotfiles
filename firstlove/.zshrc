@@ -121,6 +121,7 @@ alias cfi3b="subl ~/.i3blocks.conf"
 alias cft="subl ~/.config/termite/config"
 alias cfz="subl ~/.zshrc"
 alias cfr="subl ~/.config/ranger/rc.conf"
+alias cfd="subl ~/.config/dunst/dunstrc"
 
 # git aliases
 alias gits="git status"
@@ -140,7 +141,7 @@ alias mountwinc="sudo mount /dev/sda4 /home/pandu/mounts/winc"
 alias umountwinc="sudo umount /home/pandu/mounts/winc"
 alias mounthyperdrive="sudo mount /dev/sda5 /home/pandu/mounts/hyperdrive"
 alias umounthyperdrive="sudo umount /home/pandu/mounts/hyperdrive"
-alias mountubuntu="sudo mount /dev/sda7 /home/pandu/mounts/ubuntu"
+alias mountubuntu="sudo mount /dev/sda7 /home/pandu/mounts/ubuntu && ranger /home/pandu/mounts/ubuntu/home/pandu/"
 alias umountubuntu="sudo umount /home/pandu/mounts/ubuntu"
 
 # ssh aliases
