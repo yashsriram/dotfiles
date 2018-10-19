@@ -1,25 +1,25 @@
 # Tools
-* zsh
-* oh-my-zsh
-* xorg
-* window manager
+* zsh & oh-my-zsh [default shell]
+* xorg [display server]
+* i3 [window manager]
   * i3
   * i3blocks
   * i3lock-blur
   * i3-battery-popup
-* ranger
+* ranger [file manager]
 * htop
-* mons
-* d\_menu
-* feh
-* zathura
-* pamixer
-* bc
+* mons [for multi monitor display control]
+* d\_menu [general selection from menu]
+* feh [for images]
+* zathura [for pdfs]
+* pamixer [for volume control]
+* bc [for i3scripts]
 * xterm [for remote logins]
 * gitahead [git gui client]
 * networkmanager [instead of netctl]
 * ranger_devicons [icons for ranger, depends on nerd-font]
 * dunst [for notifications]
+* scrot [for screenshots]
 
-# Additional Config
-* in `/etc/systemd/logind.conf` HandlePowerKey=ignore
+# Config
+* In file `/etc/systemd/logind.conf` set HandlePowerKey=ignore [for disabling immediate shutdown on power button press]
