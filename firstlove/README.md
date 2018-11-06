@@ -15,7 +15,7 @@
 * pamixer [for volume control]
 * bc [for i3scripts]
 * xterm [for remote logins]
-* gitahead [git gui client]
+* tig [git tui client]
 * networkmanager [instead of netctl]
 * ranger_devicons [icons for ranger, depends on nerd-font]
 * dunst [for notifications]

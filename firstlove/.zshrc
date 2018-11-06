@@ -103,8 +103,8 @@ export EDITOR=/bin/subl
 # aliases
 alias r="ranger"
 alias htop="htop --tree"
-alias mounts="mount | grep -E '(/dev/sd|@)'"
-alias ahead="nohup gitahead > /dev/null &"
+alias mounts="mount | grep -E '(/dev/sd|@|ifuse)'"
+alias tig="tig --all"
 
 # pacman aliases
 alias pacc="pacman -Q | wc -l"
@@ -147,7 +147,7 @@ alias umountubuntu="sudo umount /home/pandu/mounts/ubuntu"
 # ssh aliases
 alias sshmars="nohup xterm -e ssh yashsriram@mars.cse.iitb.ac.in > /dev/null &"
 alias sshkrishna="nohup xterm -e ssh yashasvi@10.129.2.170 > /dev/null &"
-alias sshpascal="ssh yashsriram@10.129.131.209"
+alias sshpascal="ssh yashsriram@10.129.131.78"
 # libvnf
 alias sshran="nohup xterm -e ssh -t ran@10.129.2.113 'cd /home/ran/trishal/mtcp-p/apps/kb-sc-epc/include-epc ; bash -l' > /dev/null &"
 alias sshmme="nohup xterm -e ssh -t sgw@10.129.2.106 'cd /home/sgw/trishal/mtcp-p/apps/ ; bash -l' > /dev/null &"
@@ -164,7 +164,7 @@ alias usshfsall="unmount_all_ssh_filesystems"
 alias sshfsmars="sshfs /home/pandu/sshfs/mars yashsriram@mars.cse.iitb.ac.in: && ranger /home/pandu/sshfs/mars"
 alias usshfsmars="fusermount -u /home/pandu/sshfs/mars"
 # pascal
-alias sshfspascal="sshfs /home/pandu/sshfs/pascal yashsriram@10.129.131.209: && ranger /home/pandu/sshfs/pascal"
+alias sshfspascal="sshfs /home/pandu/sshfs/pascal yashsriram@10.129.131.78: && ranger /home/pandu/sshfs/pascal"
 alias usshfspascal="fusermount -u /home/pandu/sshfs/pascal"
 # krishna
 alias sshfskrishna="sshfs /home/pandu/sshfs/krishna yashasvi@10.129.2.170: && ranger /home/pandu/sshfs/krishna"
@@ -184,3 +184,7 @@ alias usshfshss="fusermount -u /home/pandu/sshfs/libvnf/hss"
 alias usshfssgw="fusermount -u /home/pandu/sshfs/libvnf/sgw"
 alias usshfspgw="fusermount -u /home/pandu/sshfs/libvnf/pgw"
 alias usshfsepc="usshfsran ; usshfsmme ; usshfshss ; usshfssgw ; usshfspgw"
+
+# libvnf
+alias abclocal="cd /home/pandu/libvnf/examples/abc/local/"
+alias abcm2m="cd /home/pandu/libvnf/examples/abc/local-m2m/"
