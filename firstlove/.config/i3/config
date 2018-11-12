@@ -70,6 +70,7 @@ bindsym $windows_key+v split v
 bindsym $windows_key+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $windows_key+s layout stacking
+workspace_layout tabbed
 bindsym $windows_key+w layout tabbed
 bindsym $windows_key+e layout toggle split
 # Use Mouse+$windows_key to drag floating windows to their wanted position
