@@ -26,6 +26,7 @@ bindsym Control+$alt_key+l exec i3lock --fuzzy -l
 bindsym $windows_key+Shift+q kill
 
 bindsym $windows_key+Return exec termite
+bindsym $windows_key+g exec dmenu_run
 bindsym $windows_key+a exec speedcrunch
 bindsym $windows_key+d exec termite -e ranger
 bindsym $windows_key+s exec subl

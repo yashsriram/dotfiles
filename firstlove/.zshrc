@@ -160,30 +160,15 @@ unmount_all_ssh_filesystems () {
   mount | grep @ | awk '{print $3}' | for i in $(cat); do fusermount -u $i; done
 }
 alias usshfsall="unmount_all_ssh_filesystems"
-# pascal
-alias sshfsmars="sshfs /home/pandu/sshfs/mars yashsriram@mars.cse.iitb.ac.in: && ranger /home/pandu/sshfs/mars"
+# mars
+alias sshfsmars="sshfs /home/pandu/sshfs/mars yashsriram@mars.cse.iitb.ac.in: ; ranger /home/pandu/sshfs/mars"
 alias usshfsmars="fusermount -u /home/pandu/sshfs/mars"
 # pascal
-alias sshfspascal="sshfs /home/pandu/sshfs/pascal yashsriram@10.129.131.78: && ranger /home/pandu/sshfs/pascal"
+alias sshfspascal="sshfs /home/pandu/sshfs/pascal yashsriram@10.129.131.78: ; ranger /home/pandu/sshfs/pascal"
 alias usshfspascal="fusermount -u /home/pandu/sshfs/pascal"
 # krishna
-alias sshfskrishna="sshfs /home/pandu/sshfs/krishna yashasvi@10.129.2.170: && ranger /home/pandu/sshfs/krishna"
+alias sshfskrishna="sshfs /home/pandu/sshfs/krishna yashasvi@10.129.2.170: ; ranger /home/pandu/sshfs/krishna"
 alias usshfskrishna="fusermount -u /home/pandu/sshfs/krishna"
-# libvnf
-# mount
-alias sshfsran="sshfs /home/pandu/sshfs/libvnf/ran ran@10.129.2.113:"
-alias sshfsmme="sshfs /home/pandu/sshfs/libvnf/mme sgw@10.129.2.106:"
-alias sshfshss="sshfs /home/pandu/sshfs/libvnf/hss sgw@10.129.2.111:"
-alias sshfssgw="sshfs /home/pandu/sshfs/libvnf/sgw rahul2514888@10.129.2.114:"
-alias sshfspgw="sshfs /home/pandu/sshfs/libvnf/pgw rahul2514888@10.129.2.112:"
-alias sshfsepc="sshfsran && sshfsmme && sshfshss && sshfssgw && sshfspgw"
-# umount
-alias usshfsran="fusermount -u /home/pandu/sshfs/libvnf/ran"
-alias usshfsmme="fusermount -u /home/pandu/sshfs/libvnf/mme"
-alias usshfshss="fusermount -u /home/pandu/sshfs/libvnf/hss"
-alias usshfssgw="fusermount -u /home/pandu/sshfs/libvnf/sgw"
-alias usshfspgw="fusermount -u /home/pandu/sshfs/libvnf/pgw"
-alias usshfsepc="usshfsran ; usshfsmme ; usshfshss ; usshfssgw ; usshfspgw"
 
 # libvnf
 alias abclocal="cd /home/pandu/libvnf/examples/abc/local/"
