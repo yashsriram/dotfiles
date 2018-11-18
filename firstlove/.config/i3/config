@@ -34,9 +34,9 @@ bindsym $windows_key+c exec google-chrome-stable
 bindsym $windows_key+x exec firefox
 
 ################ Screenshot Keymaps ################
-bindsym --release Print exec scrot /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png
-bindsym --release $windows_key+Print exec scrot -s /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png
-bindsym --release $windows_key+Shift+Print exec scrot -u /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png
+bindsym --release Print exec scrot /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot Captured"
+bindsym --release $windows_key+Print exec scrot -s /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot of area Captured"
+bindsym --release $windows_key+Shift+Print exec scrot -u /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot of app Captured"
 
 ################ Volume Control ################
 bindsym XF86AudioRaiseVolume exec pamixer -i 5 && pkill -RTMIN+2 i3blocks

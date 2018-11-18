@@ -165,5 +165,6 @@ alias sshfskrishna="sshfs /home/pandu/sshfs/krishna yashasvi@10.129.2.170: ; ran
 alias usshfskrishna="fusermount -u /home/pandu/sshfs/krishna"
 
 # libvnf
-alias abclocal="cd /home/pandu/libvnf/examples/abc/local/"
-alias abcm2m="cd /home/pandu/libvnf/examples/abc/local-m2m/"
+alias abclocal="cd /home/pandu/libvnf/examples/abc/local-legacy/"
+alias abcm2ms="cd /home/pandu/libvnf/examples/abc/local-m2m-single-outstanding/"
+alias abcm2mm="cd /home/pandu/libvnf/examples/abc/local-m2m-multiple-outstanding/"
