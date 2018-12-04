@@ -1,7 +1,7 @@
 # Tools
 * zsh & oh-my-zsh [default shell]
 * xorg [display server]
-* i3 [window manager]
+* i3-gaps [window manager]
   * i3
   * i3blocks
   * i3lock-blur

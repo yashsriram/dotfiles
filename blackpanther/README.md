@@ -1,5 +1,5 @@
 # Tools
-  * i3
+  * i3-gaps
   * i3blocks
   * d\_menu
   * feh
