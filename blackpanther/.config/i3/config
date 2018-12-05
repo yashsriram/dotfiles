@@ -20,7 +20,7 @@ bindsym $windows_key+Shift+d exec ~/.i3scripts/dmenu_prompt 'Do you really want 
 bindsym $windows_key+Shift+q kill
 
 bindsym $windows_key+Return exec termite
-bindsym $windows_key+a exec dmenu_run
+bindsym $windows_key+g exec dmenu_run
 bindsym $windows_key+d exec termite -e ranger
 bindsym $windows_key+s exec subl
 bindsym $windows_key+c exec google-chrome-stable
@@ -28,7 +28,7 @@ bindsym $windows_key+c exec google-chrome-stable
 ################ Volume Control ################
 bindsym XF86AudioRaiseVolume exec pamixer -i 5 && pkill -RTMIN+2 i3blocks
 bindsym XF86AudioLowerVolume exec pamixer -d 5 && pkill -RTMIN+2 i3blocks
-bindsym XF86AudioMute exec pamixer -t
+bindsym XF86AudioMute exec pamixer -t && pkill -RTMIN+2 i3blocks
 
 ################ Brightness Control ################
 bindsym XF86MonBrightnessUp exec ~/.i3scripts/ch_oled_brightness 5
@@ -108,7 +108,7 @@ bindsym $windows_key+Shift+i gaps inner current minus 5
 font pango:monospace 18
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #000000 #ffd600 #000000 #267fb5   #267fb5
+client.focused          #000000 #ffe57f #000000 #267fb5   #267fb5
 client.unfocused        #000000 #000000 #ffd600 #292d2e   #222222
 client.focused_inactive #000000 #5f676a #ffffff #484e50   #333333
 client.urgent           #000000 #900000 #ffffff #900000   #900000

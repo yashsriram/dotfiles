@@ -27,16 +27,16 @@ color1  = #ff5555
 color9  = #ff6e67
 
 # green
-color2  = #50fa7b
-color10 = #5af78e
+color2  = #43a047
+color10 = #00e676
 
 # yellow
 color3  = #f1fa8c
 color11 = #f4f99d
 
 # blue
-color4  = #bd93f9
-color12 = #caa9fa
+color4  = #0d47a1
+color12 = #82b1ff
 
 # magenta
 color5  = #ff79c6
