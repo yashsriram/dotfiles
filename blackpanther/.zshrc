@@ -97,6 +97,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# sources
+source /etc/profile.d/vte.sh
+
 # exports
 export EDITOR=/bin/subl
 
@@ -104,13 +107,13 @@ export EDITOR=/bin/subl
 alias r="ranger"
 alias htop="htop --tree"
 alias mounts="mount | grep /dev/nvme"
-alias ahead="nohup gitahead > /dev/null &"
 
 # pacman aliases
 alias pacc="pacman -Q | wc -l"
 alias pacl="pacman -Q | less"
 alias paci="sudo pacman -S"
 alias pacr="sudo pacman -R"
+alias pacu="sudo pacman -Sy"
 alias pacac="cat /var/log/pacman.log | grep -i installed | sort -r | less"
 alias pacclean="sudo pacman -Rns $(pacman -Qtdq)"
 
