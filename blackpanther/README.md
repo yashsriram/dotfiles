@@ -12,6 +12,13 @@
   * htop
   * mons
 
+# TRIM for SSD
+* To use TRIM (which is supported by linux out of the box) run
+  * `sudo systemctl start fstrim.timer`
+  * `sudo systemctl enable fstrim.timer`
+* Why do trim? Read [this](https://blog.backslasher.net/linux-and-ssds-should-you-trim.html)
+  * TL;DR because it improves life span
+
 # intel powersaving
 * add kernel parameters `enable_rc6=1 enable_fbc=1 enable_guc_loading=1 enable_guc_submission=1 enable_psr=1` in `/etc/modprobe.d/i915.conf`
   * add line `options i915 enable_rc6=1 enable_fbc=1 enable_guc_loading=1 enable_guc_submission=1 enable_psr=1` in `/etc/modprobe.d/i915.conf`
