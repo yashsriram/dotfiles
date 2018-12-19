@@ -12,6 +12,10 @@
   * htop
   * mons
 
+# intel powersaving
+* add kernel parameters `enable_rc6=1 enable_fbc=1 enable_guc_loading=1 enable_guc_submission=1 enable_psr=1` in `/etc/modprobe.d/i915.conf`
+  * add line `options i915 enable_rc6=1 enable_fbc=1 enable_guc_loading=1 enable_guc_submission=1 enable_psr=1` in `/etc/modprobe.d/i915.conf`
+
 # X lockup
 * add `acpi_osi=! acpi_osi=\"Windows 2009\"` to kernel parameters
   * i.e. in `/etc/default/grub` append to existing parameters `GRUB_CMDLINE_LINUX_DEFAULT="foo bar acpi_osi=! acpi_osi=\"Windows 2009\""`
@@ -24,10 +28,10 @@
   * `sudo pacman -S nvidia nvidia-utils`
 * prepend `xrandr --auto` to your xinitrc
   * after installing nvidia the output name of your inbuilt monitor according to xrandr may change
-* add `rcutree.rcu_idle_gp_delay=1` as kernel parameter
-  * in `/etc/default/grub` append to existing parameters `GRUB_CMDLINE_LINUX_DEFAULT="foo bar rcutree.rcu_idle_gp_delay=1"`
-* add `nvidia` module in mkinitcpio config file
-  * in `/etc/mkinitcpio.conf` append to existing modules `MODULES=(foo bar nvidia)`
+* add `nvidia-drm.modeset=1 rcutree.rcu_idle_gp_delay=1` as kernel parameters
+  * in `/etc/default/grub` append to existing parameters `GRUB_CMDLINE_LINUX_DEFAULT="foo bar nvidia-drm.modeset=1 rcutree.rcu_idle_gp_delay=1"`
+* add `nvidia, nvidia_modeset, nvidia_uvm and nvidia_drm` modules in mkinitcpio config file
+  * in `/etc/mkinitcpio.conf` append to existing modules `MODULES=(foo bar nvidia nvidia_modeset nvidia_uvm nvidia_drm)`
 * `sudo mkinitcpio -p linux`
 * `sudo grub-mkconfig -o /boot/grub/grub.cfg`
 * create a pacman hook `/etc/pacman.d/hooks/nvidia.hook` so that nvidia driver gets updated with linux kernel always
