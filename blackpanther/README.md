@@ -42,3 +42,13 @@
     Depends=mkinitcpio
     When=PostTransaction
     Exec=/usr/bin/mkinitcpio -P
+
+# run selected programs only on nvidia GPU (switching)
+* follow instructions of above sections
+* install `bumblebee` as described in the arch wiki page
+  * install `bumblebee` `mesa` `xf86-video-intel`
+  * add the user to group bumblebee `sudo gpasswd -a user bumblebee`
+  * enable bumblebee service `sudo systemctl enable bumblebeed.service`
+  * reboot
+* by default everything is run using integrated GPU, to specify an application to run on nvidia GPU use
+  * `optirun <program-name>`
