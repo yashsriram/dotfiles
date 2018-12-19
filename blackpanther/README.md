@@ -31,7 +31,7 @@
 * `sudo mkinitcpio -p linux`
 * `sudo grub-mkconfig -o /boot/grub/grub.cfg`
 * create a pacman hook `/etc/pacman.d/hooks/nvidia.hook` so that nvidia driver gets updated with linux kernel always
-
+```
     [Trigger]
     Operation=Install
     Operation=Upgrade
@@ -43,7 +43,7 @@
     Depends=mkinitcpio
     When=PostTransaction
     Exec=/usr/bin/mkinitcpio -P
-
+```
 # run selected programs only on nvidia GPU (switching)
 * follow instructions of above sections
 * install `bumblebee` as described in the arch wiki page
