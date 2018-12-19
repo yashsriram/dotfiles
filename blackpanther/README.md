@@ -34,7 +34,7 @@
   * in `/etc/mkinitcpio.conf` append to existing modules `MODULES=(foo bar nvidia nvidia_modeset nvidia_uvm nvidia_drm)`
 * `sudo mkinitcpio -p linux`
 * `sudo grub-mkconfig -o /boot/grub/grub.cfg`
-* create a pacman hook `/etc/pacman.d/hooks/nvidia.hook` so that nvidia driver gets updated with linux kernel always
+* create a pacman hook `/etc/pacman.d/hooks/nvidia.hook` so that whenever nvidia driver gets updated mkinitcpio is executed
 ```
     [Trigger]
     Operation=Install
