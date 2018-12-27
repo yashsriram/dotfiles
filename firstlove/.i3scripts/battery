@@ -2,6 +2,11 @@
 
 CAPACITY=$(cat /sys/class/power_supply/BAT1/capacity) || exit
 STATUS=$(cat /sys/class/power_supply/BAT1/status)
+ICON=
+if [ "$STATUS" = "Charging" ]; 
+then
+	ICON=
+fi
 
-echo $CAPACITY% $STATUS
+echo "$ICON $CAPACITY% $STATUS"
 

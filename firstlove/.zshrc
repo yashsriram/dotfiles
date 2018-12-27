@@ -97,6 +97,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# sources
+source /etc/profile.d/vte.sh
+
 # exports
 export EDITOR=/bin/subl
 
@@ -120,6 +123,7 @@ alias cfi3="subl ~/.config/i3/config"
 alias cfi3b="subl ~/.i3blocks.conf"
 alias cft="subl ~/.config/termite/config"
 alias cfz="subl ~/.zshrc"
+alias cfza="subl ~/.config/zathura/zathurarc"
 alias cfr="subl ~/.config/ranger/rc.conf"
 alias cfd="subl ~/.config/dunst/dunstrc"
 
@@ -163,8 +167,3 @@ alias usshfspascal="fusermount -u /home/pandu/sshfs/pascal"
 # krishna
 alias sshfskrishna="sshfs /home/pandu/sshfs/krishna yashasvi@10.129.2.170: ; ranger /home/pandu/sshfs/krishna"
 alias usshfskrishna="fusermount -u /home/pandu/sshfs/krishna"
-
-# libvnf
-alias abclocal="cd /home/pandu/libvnf/examples/abc/local-legacy/"
-alias abcm2ms="cd /home/pandu/libvnf/examples/abc/local-m2m-single-outstanding/"
-alias abcm2mm="cd /home/pandu/libvnf/examples/abc/local-m2m-multiple-outstanding/"

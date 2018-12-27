@@ -34,9 +34,9 @@ bindsym $windows_key+c exec google-chrome-stable
 bindsym $windows_key+x exec firefox
 
 ################ Screenshot Keymaps ################
-bindsym --release Print exec scrot /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot Captured"
-bindsym --release $windows_key+Print exec scrot -s /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot of area Captured"
-bindsym --release $windows_key+Shift+Print exec scrot -u /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot of app Captured"
+bindsym --release Print exec --no-startup-id scrot /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot Captured"
+bindsym --release $windows_key+Print exec --no-startup-id scrot -s /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot of area Captured"
+bindsym --release $windows_key+Shift+Print exec --no-startup-id scrot -u /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot of app Captured"
 
 ################ Volume Control ################
 bindsym XF86AudioRaiseVolume exec pamixer -i 5 && pkill -RTMIN+2 i3blocks
@@ -44,8 +44,8 @@ bindsym XF86AudioLowerVolume exec pamixer -d 5 && pkill -RTMIN+2 i3blocks
 bindsym XF86AudioMute exec pamixer -t && pkill -RTMIN+2 i3blocks
 
 ################ Brightness Control ################
-bindsym XF86MonBrightnessUp exec ~/.i3scripts/chbrightness 5
-bindsym XF86MonBrightnessDown exec ~/.i3scripts/chbrightness -5
+bindsym XF86MonBrightnessUp exec lux -a 5% && pkill -RTMIN+1 i3blocks
+bindsym XF86MonBrightnessDown exec lux -s 5% && pkill -RTMIN+1 i3blocks
 
 ################ Window Switching ################
 bindsym $alt_key+Tab focus right
