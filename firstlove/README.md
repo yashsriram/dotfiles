@@ -21,7 +21,7 @@
 * dunst [for notifications]
 * scrot [for screenshots]
 * speedcrunch [calculator]
-* gummi [latex editor]
+* lux [brightness controller]
 
 # Config
 * In file `/etc/systemd/logind.conf` set HandlePowerKey=ignore [for disabling immediate shutdown on power button press]
