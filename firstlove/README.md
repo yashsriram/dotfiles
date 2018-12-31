@@ -22,6 +22,7 @@
 * scrot [for screenshots]
 * speedcrunch [calculator]
 * lux [brightness controller]
+* xcompmgr [composition manager - mostly used to remove black regions above titlebars]
 
 # Config
 * In file `/etc/systemd/logind.conf` set HandlePowerKey=ignore [for disabling immediate shutdown on power button press]
