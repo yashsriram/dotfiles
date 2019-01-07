@@ -115,7 +115,7 @@ alias pacl="pacman -Q | less"
 alias paci="sudo pacman -S"
 alias pacr="sudo pacman -R"
 alias pacu="sudo pacman -Syu"
-alias pacac="cat /var/log/pacman.log | grep -i installed | sort -r | less"
+alias pacac="cat /var/log/pacman.log | grep -aE '(installed|removed)' | sort -r | less"
 alias pacclean="sudo pacman -Rns $(pacman -Qtdq)"
 
 # config files

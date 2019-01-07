@@ -23,6 +23,7 @@
 * speedcrunch [calculator]
 * lux [brightness controller]
 * xcompmgr [composition manager - mostly used to remove black regions above titlebars]
+* nerd-fonts-source-code-pro, otf-font-awesome, noto-fonts-emoji [for unicode emojis]
 
 # Config
 * In file `/etc/systemd/logind.conf` set HandlePowerKey=ignore [for disabling immediate shutdown on power button press]
