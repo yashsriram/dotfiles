@@ -28,6 +28,9 @@ bindsym $windows_key+Shift+q kill
 bindsym $windows_key+Return exec termite
 bindsym $windows_key+g exec dmenu_run
 bindsym $windows_key+a exec speedcrunch
+for_window [class="SpeedCrunch"] floating enable resize set 840 500
+for_window [class="SpeedCrunch"] border pixel 2
+for_window [class="SpeedCrunch"] move position center
 bindsym $windows_key+d exec termite -e ranger
 bindsym $windows_key+s exec subl
 bindsym $windows_key+c exec google-chrome-stable
@@ -47,6 +50,18 @@ bindsym XF86AudioMute exec pamixer -t && pkill -RTMIN+2 i3blocks
 bindsym XF86MonBrightnessUp exec lux -a 5% && pkill -RTMIN+1 i3blocks
 bindsym XF86MonBrightnessDown exec lux -s 5% && pkill -RTMIN+1 i3blocks
 
+################ Window Layout ################
+# change container layout (stacked, tabbed, toggle split)
+workspace_layout tabbed
+bindsym $windows_key+w layout tabbed
+bindsym $windows_key+e layout toggle split
+# bindsym $windows_key+s layout stacking
+bindsym $windows_key+space fullscreen toggle
+# split in horizontal orientation
+bindsym $windows_key+h split h
+# split in vertical orientation
+bindsym $windows_key+v split v
+
 ################ Window Switching ################
 bindsym $alt_key+Tab focus right
 bindsym $alt_key+Shift+Tab focus left
@@ -56,47 +71,31 @@ bindsym $windows_key+Left focus left
 bindsym $windows_key+Down focus down
 bindsym $windows_key+Up focus up
 
-################ Window Control ################
-# you can use the cursor keys:
-bindsym $windows_key+Shift+Left move left
-bindsym $windows_key+Shift+Down move down
-bindsym $windows_key+Shift+Up move up
-bindsym $windows_key+Shift+Right move right
-# split in horizontal orientation
-bindsym $windows_key+h split h
-# split in vertical orientation
-bindsym $windows_key+v split v
-# enter fullscreen mode for the focused container
-bindsym $windows_key+f fullscreen toggle
-# change container layout (stacked, tabbed, toggle split)
-# bindsym $windows_key+s layout stacking
-workspace_layout tabbed
-bindsym $windows_key+w layout tabbed
-bindsym $windows_key+e layout toggle split
-# Use Mouse+$windows_key to drag floating windows to their wanted position
-floating_modifier $windows_key
-# toggle tiling / floating
-bindsym $windows_key+Shift+space floating toggle
-# change focus between tiling / floating windows
-bindsym $windows_key+space focus mode_toggle
-# focus the parent container
-#bindsym $windows_key+a focus parent
-# focus the child container
-#bindsym $windows_key+d focus child
-
-################ Gaps Control ################
-bindsym $windows_key+k resize grow width 5 px or 5 ppt
-bindsym $windows_key+Shift+k resize shrink width 5 px or 5 ppt
-bindsym $windows_key+l resize grow height 5 px or 5 ppt
-bindsym $windows_key+Shift+l resize shrink height 5 px or 5 ppt
-
 ################ Gaps Control ################
 smart_gaps on
-gaps inner 15
+gaps inner 10
 bindsym $windows_key+o gaps outer current plus 5
 bindsym $windows_key+Shift+o gaps outer current minus 5
 bindsym $windows_key+i gaps inner current plus 5
 bindsym $windows_key+Shift+i gaps inner current minus 5
+
+################ Floating Control ################
+# toggle tiling / floating
+bindsym $alt_key+w floating toggle
+# change focus between tiling / floating windows
+bindsym $alt_key+q focus mode_toggle
+
+################ Window Size Control ################
+bindsym $windows_key+k resize shrink width 30 px or 30 ppt
+bindsym $windows_key+Shift+k resize grow width 30 px or 30 ppt
+bindsym $windows_key+l resize shrink height 30 px or 30 ppt
+bindsym $windows_key+Shift+l resize grow height 30 px or 30 ppt
+
+################ Window Postion Control ################
+bindsym $windows_key+Shift+Left move left 30 px
+bindsym $windows_key+Shift+Down move down 30 px
+bindsym $windows_key+Shift+Up move up 30 px
+bindsym $windows_key+Shift+Right move right 30 px
 
 ################ Styling ################
 # Font for window titles. Will also be used by the bar unless a different font
@@ -108,13 +107,10 @@ client.focused_inactive #000000 #5f676a #ffffff #484e50   #333333
 client.unfocused        #000000 #000000 #ffffff #292d2e   #222222
 client.urgent           #000000 #d81b60 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-
 client.background       #ffffff
 
 # remove borders
-new_window normal 0
-new_float normal 0
-
+default_border normal 0
 
 ################ Workspaces ################
 # Define names for default workspaces for which we configure key bindings later on.
