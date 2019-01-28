@@ -7,6 +7,8 @@
   * i3lock-blur
   * i3-battery-popup
 * ranger [file manager]
+* ranger_devicons [icons for ranger, depends on nerd-fonts]
+* nerd-fonts-source-code-pro, ttf-emojione-color [for unicode emojis]
 * htop
 * mons [for multi monitor display control]
 * d\_menu [general selection from menu]
@@ -17,13 +19,11 @@
 * xterm [for remote logins]
 * tig [git tui client]
 * networkmanager [instead of netctl]
-* ranger_devicons [icons for ranger, depends on nerd-font]
 * dunst [for notifications]
 * scrot [for screenshots]
 * speedcrunch [calculator]
 * lux [brightness controller]
 * xcompmgr [composition manager - mostly used to remove black regions above titlebars]
-* nerd-fonts-source-code-pro, otf-font-awesome, noto-fonts-emoji [for unicode emojis]
 
 # Config
 * In file `/etc/systemd/logind.conf` set HandlePowerKey=ignore [for disabling immediate shutdown on power button press]

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cat ~/.i3scripts/emojis.csv | dmenu -i -l 20 -fn FiraMono-12 | awk -F "," '{print $1}' | tr -d '\n' | xclip -selection clipboard \
+  && pgrep dunst > /dev/null && notify-send "\"$(xclip -o -selection clipboard)\" is copied into clipboard"

@@ -150,7 +150,7 @@ alias umountubuntu="sudo umount /home/pandu/mounts/ubuntu"
 
 # ssh aliases
 alias sshmars="nohup xterm -e ssh yashsriram@mars.cse.iitb.ac.in > /dev/null &"
-alias sshkrishna="nohup xterm -e ssh yashasvi@10.129.2.170 > /dev/null &"
+alias sshkrishna="ssh yashasvi@10.129.2.170"
 alias sshpascal="ssh yashsriram@10.129.131.78"
 
 # sshfs aliases
@@ -167,3 +167,6 @@ alias usshfspascal="fusermount -u /home/pandu/sshfs/pascal"
 # krishna
 alias sshfskrishna="sshfs /home/pandu/sshfs/krishna yashasvi@10.129.2.170: ; ranger /home/pandu/sshfs/krishna"
 alias usshfskrishna="fusermount -u /home/pandu/sshfs/krishna"
+
+# 8th semester aliases
+alias sms="source /usr/local/anaconda/etc/profile.d/conda.sh && conda activate ztdl"
