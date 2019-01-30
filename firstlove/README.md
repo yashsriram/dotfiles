@@ -25,6 +25,9 @@
 * speedcrunch [calculator]
 * lux [brightness controller]
 * xcompmgr [composition manager - mostly used to remove black regions above titlebars]
+* cronie [for cron tabs]
 
 # Config
 * In file `/etc/systemd/logind.conf` set HandlePowerKey=ignore [for disabling immediate shutdown on power button press]
+* enable `NetworkManager.service`
+* use `.config/cronscripts/crontab` as crontab file and enable `cronie.service`

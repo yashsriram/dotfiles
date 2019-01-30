@@ -126,6 +126,7 @@ alias cfz="subl ~/.zshrc"
 alias cfza="subl ~/.config/zathura/zathurarc"
 alias cfr="subl ~/.config/ranger/rc.conf"
 alias cfd="subl ~/.config/dunst/dunstrc"
+alias cfv="subl ~/.config/nvim/init.vim"
 
 # git aliases
 alias gits="git status"
