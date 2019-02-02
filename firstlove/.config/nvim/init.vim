@@ -1,21 +1,33 @@
 set nocompatible
 
 syntax on
-colorscheme dracula
+
 set number relativenumber
 set encoding=utf-8
 
+" Appearance
+  colorscheme dracula
+  set cursorline
+  hi CursorLine   cterm=NONE ctermbg=234 ctermfg=NONE
+
 " Basic keybindings
+  
+  " Remap escape
+  nnoremap <C-d> <Esc>
+  inoremap <C-d> <Esc>
+  vnoremap <C-d> <Esc>
+
   " Save: N, I modes
   nnoremap <C-s> :w<Enter>
   inoremap <C-s> <Esc>:w<Enter>i
+  vnoremap <C-s> <Esc>:w<Enter>v
 
-  " Quit gracefully: N, I modes
+  " Quit gracefully
   nnoremap <C-w> :q<Enter>
   inoremap <C-w> <Esc>:q<Enter>
   vnoremap <C-w> <Esc>:q<Enter>
 
-  " Quit forcefully: N, I modes
+  inoremap <BS> lol
 
 set wildmode=longest,list,full
 filetype plugin on

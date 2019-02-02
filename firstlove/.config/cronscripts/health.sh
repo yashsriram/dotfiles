@@ -10,4 +10,4 @@ messages=(
 
 message=${messages[$RANDOM % ${#messages[@]} ]}
 
-notify-send -a "Your consciences says:" "${message}"
+notify-send -a "Your consciences says:" "${message}" -t 60000
