@@ -1,43 +1,60 @@
 set nocompatible
 
-syntax on
+call plug#begin()
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'flazz/vim-colorschemes'
+Plug 'mboughaba/i3config.vim'
+call plug#end() 
 
+syntax on
 set number relativenumber
 set encoding=utf-8
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
-" Appearance
-  colorscheme dracula
-  set cursorline
-  hi CursorLine   cterm=NONE ctermbg=234 ctermfg=NONE
+" appearance
+colorscheme monokai
+highlight Cursor guifg=black guibg=green
+set cursorline
 
-" Basic keybindings
-  
-  " Remap escape
-  nnoremap <C-d> <Esc>
-  inoremap <C-d> <Esc>
-  vnoremap <C-d> <Esc>
+inoremap <C-.> <Esc>
 
-  " Save: N, I modes
-  nnoremap <C-s> :w<Enter>
-  inoremap <C-s> <Esc>:w<Enter>i
-  vnoremap <C-s> <Esc>:w<Enter>v
+" navigation
+nnoremap <Up> g<Up>
+nnoremap <Down> g<Down>
 
-  " Quit gracefully
-  nnoremap <C-w> :q<Enter>
-  inoremap <C-w> <Esc>:q<Enter>
-  vnoremap <C-w> <Esc>:q<Enter>
+" save
+nnoremap <C-s> :w<Enter>
+inoremap <C-s> <Esc>:w<Enter>l
+vnoremap <C-s> <Esc>:w<Enter>
 
-  inoremap <BS> lol
+" quit gracefully
+nnoremap <C-w> :q<Enter>
+inoremap <C-w> <Esc>:q<Enter>i
+vnoremap <C-w> <Esc>:q<Enter>
 
-set wildmode=longest,list,full
-filetype plugin on
+" copy-paste system clipboard
+vnoremap <C-y> "+y
+nnoremap <C-p> "+Pl
+inoremap <C-p> <Esc>"+Pl
 
-" Shortcutting split navigation, saving a keypress:
-  map <C-h> <C-w>h
-  map <C-j> <C-w>j
-  map <C-k> <C-w>k
-  map <C-l> <C-w>l
+" undo-redo
+nnoremap U <C-r>
 
-" Copy selected text to system clipboard (requires gvim/nvim/vim-x11 installed):
-  vnoremap <C-c> "+y
-  map <C-p> "+P
+" find
+set nowrapscan
+nnoremap <C-f> /
+inoremap <C-f> <Esc>/
+nnoremap <A-f> :set hlsearch!<Enter>
+inoremap <A-f> <Esc>:set hlsearch!<Enter>i
+nnoremap <A-c> :set ignorecase!<Enter>
+inoremap <A-c> <Esc>:set ignorecase!<Enter>
+nnoremap <C-A-f> *
+inoremap <C-A-f> <Esc>*
+
+" replace
+nnoremap <C-r> ireplace
+
+" nerd tree
+nnoremap <A-1> :NERDTree<Enter>

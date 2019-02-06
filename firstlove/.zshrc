@@ -101,10 +101,11 @@ source $ZSH/oh-my-zsh.sh
 source /etc/profile.d/vte.sh
 
 # exports
-export EDITOR=/bin/subl
+export EDITOR=/bin/nvim
 
 # aliases
 alias r="ranger"
+alias v="nvim"
 alias htop="htop --tree"
 alias mounts="mount | grep -E '(/dev/sd|@|ifuse)'"
 alias tig="tig --all"
@@ -119,14 +120,14 @@ alias pacac="cat /var/log/pacman.log | grep -aE '(installed|removed)' | sort -r 
 alias pacclean="sudo pacman -Rns $(pacman -Qtdq)"
 
 # config files
-alias cfi3="subl ~/.config/i3/config"
-alias cfi3b="subl ~/.i3blocks.conf"
-alias cft="subl ~/.config/termite/config"
-alias cfz="subl ~/.zshrc"
-alias cfza="subl ~/.config/zathura/zathurarc"
-alias cfr="subl ~/.config/ranger/rc.conf"
-alias cfd="subl ~/.config/dunst/dunstrc"
-alias cfv="subl ~/.config/nvim/init.vim"
+alias cfi3="${EDITOR} ~/.config/i3/config"
+alias cfi3b="${EDITOR} ~/.i3blocks.conf"
+alias cft="${EDITOR} ~/.config/termite/config"
+alias cfz="${EDITOR} ~/.zshrc"
+alias cfza="${EDITOR} ~/.config/zathura/zathurarc"
+alias cfr="${EDITOR} ~/.config/ranger/rc.conf"
+alias cfd="${EDITOR} ~/.config/dunst/dunstrc"
+alias cfv="${EDITOR} ~/.config/nvim/init.vim"
 
 # git aliases
 alias gits="git status"

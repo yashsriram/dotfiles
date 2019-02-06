@@ -27,6 +27,7 @@ bindsym $windows_key+Shift+q kill
 
 bindsym $windows_key+Return exec termite
 bindsym $windows_key+j exec ~/.i3scripts/emojis_select
+bindsym $windows_key+t exec ~/.i3scripts/talk_to_me
 bindsym $windows_key+a exec speedcrunch
 for_window [class="SpeedCrunch"] floating enable resize set 840 500
 for_window [class="SpeedCrunch"] border pixel 2
