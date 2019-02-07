@@ -228,19 +228,19 @@
     # Xev might be helpful to find names for keys.
 
     # Close notification.
-    close = mod4+n
+    close = mod4+comma
 
     # Close all notifications.
-    close_all = mod4+m
+    # close_all = mod4+shift+less
 
     # Redisplay last message(s).
     # On the US keyboard layout "grave" is normally above TAB and left
     # of "1". Make sure this key actually exists on your keyboard layout,
     # e.g. check output of 'xmodmap -pke'
-    history = mod4+shift+n
+    history = mod4+period
 
     # Context menu.
-    context = mod4+shift+m
+    # context = mod4+shift+greater
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
@@ -254,7 +254,7 @@
 [urgency_normal]
     background = "#285577"
     foreground = "#ffffff"
-    timeout = 10
+    timeout = 30
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 
