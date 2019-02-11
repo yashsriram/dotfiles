@@ -14,7 +14,7 @@ let g:colors_name = "monokai"
 highlight Cursor ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 highlight Visual ctermfg=NONE ctermbg=8 cterm=NONE guifg=NONE guibg=#49483e gui=NONE
 
-highlight CursorLine ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
+highlight CursorLine ctermfg=NONE ctermbg=17 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
 highlight CursorColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
 highlight ColorColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
 
@@ -36,7 +36,7 @@ highlight Directory ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE
 highlight Folded ctermfg=242 ctermbg=235 cterm=NONE guifg=#75715e guibg=#272822 gui=NONE
 highlight SignColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
 
-highlight Normal ctermfg=136 ctermbg=0 cterm=NONE guifg=#f8f8f2 guibg=#272822 gui=NONE
+highlight Normal ctermfg=255 ctermbg=0 cterm=NONE guifg=#f8f8f2 guibg=#272822 gui=NONE
 highlight Boolean ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 highlight Character ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 highlight Comment ctermfg=46 ctermbg=NONE cterm=NONE guifg=#75715e guibg=NONE gui=NONE
@@ -44,8 +44,8 @@ highlight Conditional ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NO
 highlight Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 highlight Define ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 highlight Float ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-highlight Function ctermfg=148 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui=NONE
-highlight Identifier ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
+highlight Function ctermfg=81 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui=NONE
+highlight Identifier ctermfg=226 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
 highlight Keyword ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 highlight Label ctermfg=186 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
 highlight NonText ctermfg=59 ctermbg=236 cterm=NONE guifg=#49483e guibg=#31322c gui=NONE
