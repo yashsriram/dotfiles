@@ -33,7 +33,7 @@ for_window [class="SpeedCrunch"] floating enable resize set 840 500
 for_window [class="SpeedCrunch"] border pixel 2
 for_window [class="SpeedCrunch"] move position center
 bindsym $windows_key+s exec subl
-bindsym $windows_key+v exec termite -e "nvim /home/pandu"
+bindsym $windows_key+v exec termite -e nvim
 bindsym $windows_key+c exec google-chrome-stable
 bindsym $windows_key+x exec firefox
 
