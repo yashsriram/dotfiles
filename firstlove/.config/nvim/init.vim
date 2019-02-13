@@ -15,6 +15,7 @@ Plug 'tpope/vim-surround' " surround text with anything
 Plug 'tpope/vim-commentary' " comment and uncomment quickly
 Plug 'tpope/vim-abolish' " supercharged substitution, case changing and abbreviations(auto-corrections)
 Plug 'vim-airline/vim-airline' " status line plugin
+Plug 'tpope/vim-fugitive' " status line plugin
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " sublime like autocomplete
 Plug 'junegunn/goyo.vim' " distraction free writing
 call plug#end()
@@ -42,6 +43,8 @@ call plug#end()
   nnoremap <C-Left> b
   nnoremap <c-a-right> g_
   nnoremap <c-a-left> g0
+  inoremap <c-a-right> <Esc>g_i
+  inoremap <c-a-left> <Esc>g0i
   nnoremap w b
 
 " navigating windows
@@ -153,3 +156,4 @@ call plug#end()
   let g:airline_symbols.branch = ''
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
+
