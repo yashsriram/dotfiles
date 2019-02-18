@@ -3,21 +3,21 @@ set nocompatible
 let mapleader=" "
 
 call plug#begin()
-Plug 'mboughaba/i3config.vim' " i3 highlights
-Plug 'rbgrouleff/bclose.vim' " required for ranger plugin
-Plug 'francoiscabrol/ranger.vim' " ranger integration to open files
-Plug 'Yggdroot/indentLine' " indent guide
-Plug 'ntpeters/vim-better-whitespace' " highlights unwanted whitespaces
-Plug 'itchyny/vim-cursorword' ", { 'on': 'CursorWord' } underlines all instances of current word
-Plug 'jiangmiao/auto-pairs' " inserts matching pair for {[(\"'
-Plug 'tpope/vim-repeat' " makes surround and commentary plugins repeatable
-Plug 'tpope/vim-surround' " surround text with anything
-Plug 'tpope/vim-commentary' " comment and uncomment quickly
-Plug 'tpope/vim-abolish' " supercharged substitution, case changing and abbreviations(auto-corrections)
-Plug 'vim-airline/vim-airline' " status line plugin
-Plug 'tpope/vim-fugitive' " status line plugin
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " sublime like autocomplete
-Plug 'junegunn/goyo.vim' " distraction free writing
+  Plug 'mboughaba/i3config.vim' " i3 highlights
+  Plug 'rbgrouleff/bclose.vim' " required for ranger plugin
+  Plug 'francoiscabrol/ranger.vim' " ranger integration to open files
+  Plug 'Yggdroot/indentLine' " indent guide
+  Plug 'ntpeters/vim-better-whitespace' " highlights unwanted whitespaces
+  Plug 'itchyny/vim-cursorword' ", { 'on': 'CursorWord' } underlines all instances of current word
+  Plug 'jiangmiao/auto-pairs' " inserts matching pair for {[(\"'
+  Plug 'tpope/vim-repeat' " makes surround and commentary plugins repeatable
+  Plug 'tpope/vim-surround' " surround text with anything
+  Plug 'tpope/vim-commentary' " comment and uncomment quickly
+  Plug 'tpope/vim-abolish' " supercharged substitution, case changing and abbreviations(auto-corrections)
+  Plug 'vim-airline/vim-airline' " status line plugin
+  Plug 'tpope/vim-fugitive' " git plugin
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " sublime like autocomplete
+  Plug 'junegunn/goyo.vim' " distraction free writing
 call plug#end()
 
 " basic options
@@ -45,7 +45,13 @@ call plug#end()
   nnoremap <c-a-left> g0
   inoremap <c-a-right> <Esc>g_i
   inoremap <c-a-left> <Esc>g0i
+  vnoremap <c-a-right> g_i
+  vnoremap <c-a-left> g0i
   nnoremap w b
+
+" indent selection
+  vnoremap > >gv
+  vnoremap < <gv
 
 " navigating windows
   nnoremap <A-S-Left> <C-w>h
@@ -82,20 +88,20 @@ call plug#end()
 
 " find
   set nowrapscan
-  nnoremap <C-f> /
-  inoremap <C-f> <Esc>/
+  nnoremap <C-f> :%s///gn<Left><Left><Left><Left>
+  inoremap <C-f> <Esc>:%s///gn<Left><Left><Left><Left>
   nnoremap <A-f> :set hlsearch!<Enter>
   inoremap <A-f> <Esc>:set hlsearch!<Enter>i
   nnoremap <A-c> :set ignorecase!<Enter>
   inoremap <A-c> <Esc>:set ignorecase!<Enter>
-  nnoremap <C-A-f> *
-  inoremap <C-A-f> <Esc>*
+  nnoremap <C-A-f> viw"ry:%s/<C-r>r//gn<Left><Left><Left><Enter>
+  inoremap <C-A-f> <Esc>viw"ry:%s/<C-r>r//gn<Left><Left><Left><Enter>
 
 " replace
-  nnoremap <C-r> :%S///gc<Left><Left><Left><Left>
-  inoremap <C-r> <Esc>:%S///gc<Left><Left><Left><Left>
-  nnoremap <C-A-r> viw"ry:%S/<C-r>r//gc<Left><Left><Left>
-  inoremap <C-A-r> <Esc>viw"ry:%S/<C-r>r//gc<Left><Left><Left>
+  nnoremap <C-r> :%s///gc<Left><Left><Left><Left>
+  inoremap <C-r> <Esc>:%s///gc<Left><Left><Left><Left>
+  nnoremap <C-A-r> viw"ry:%s/<C-r>r//gc<Left><Left><Left>
+  inoremap <C-A-r> <Esc>viw"ry:%s/<C-r>r//gc<Left><Left><Left>
 
 " buffers
   nnoremap <A-]> :bn<Enter>

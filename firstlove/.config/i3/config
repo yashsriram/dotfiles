@@ -4,7 +4,7 @@
 set $alt_key Mod1
 set $windows_key Mod4
 
-################ Daemons ################ 
+################ Daemons ################
 exec --no-startup-id i3-battery-popup -n -m "Battery low!"
 exec --no-startup-id dunst
 

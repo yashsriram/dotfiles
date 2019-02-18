@@ -171,4 +171,29 @@ alias sshfskrishna="sshfs /home/pandu/sshfs/krishna yashasvi@10.129.2.170: ; ran
 alias usshfskrishna="fusermount -u /home/pandu/sshfs/krishna"
 
 # 8th semester aliases
-alias sms="source /usr/local/anaconda/etc/profile.d/conda.sh && conda activate ztdl"
+open_5g_original_workspace () {
+  local LIBVNF_PATH="/home/pandu/school/8/BTP/libvnf/"
+  local FIVEG_REL_PATH="examples/5G_original/"
+
+  local AMF_PATH="${LIBVNF_PATH}/${FIVEG_REL_PATH}/AMF_and_RAN/AMF/build"
+  mkdir -p ${AMF_PATH}
+  nohup termite -d "${AMF_PATH}" > /dev/null &
+
+  local RAN_PATH="${LIBVNF_PATH}/${FIVEG_REL_PATH}/AMF_and_RAN/AMF/build"
+  mkdir -p ${RAN_PATH}
+  nohup termite -d "${RAN_PATH}" > /dev/null &
+
+  local AUSF_PATH="${LIBVNF_PATH}/${FIVEG_REL_PATH}/NRF_AUSF_UDM/AUSF/build"
+  mkdir -p ${AUSF_PATH}
+  nohup termite -d ${AUSF_PATH}"" > /dev/null &
+
+  local NRF_PATH="${LIBVNF_PATH}/${FIVEG_REL_PATH}/NRF_AUSF_UDM/NRF/build"
+  mkdir -p ${NRF_PATH}
+  nohup termite -d ${NRF_PATH}"" > /dev/null &
+
+  local UDM_PATH="${LIBVNF_PATH}/${FIVEG_REL_PATH}/NRF_AUSF_UDM/UDM/build"
+  mkdir -p ${UDM_PATH}
+  nohup termite -d ${UDM_PATH}"" > /dev/null &
+}
+
+alias open_5g_original_workspace="open_5g_original_workspace"
