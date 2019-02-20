@@ -9,11 +9,11 @@ call plug#begin()
   Plug 'Yggdroot/indentLine' " indent guide
   Plug 'ntpeters/vim-better-whitespace' " highlights unwanted whitespaces
   Plug 'itchyny/vim-cursorword' ", { 'on': 'CursorWord' } underlines all instances of current word
-  Plug 'jiangmiao/auto-pairs' " inserts matching pair for {[(\"'
   Plug 'tpope/vim-repeat' " makes surround and commentary plugins repeatable
   Plug 'tpope/vim-surround' " surround text with anything
   Plug 'tpope/vim-commentary' " comment and uncomment quickly
   Plug 'tpope/vim-abolish' " supercharged substitution, case changing and abbreviations(auto-corrections)
+  Plug 'Yashasvi-Sriram/vim-searchindex' " gives number and count of matches
   Plug 'vim-airline/vim-airline' " status line plugin
   Plug 'tpope/vim-fugitive' " git plugin
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " sublime like autocomplete
@@ -30,11 +30,18 @@ call plug#end()
   set shiftwidth=2
   set expandtab
   set foldmethod=indent
+  set listchars=tab:→\ ,trail:•,nbsp:‡,extends:⟩,precedes:⟨
+  set list
 
 " appearance
   colorscheme monokai
   let g:airline_theme='dark'
   set cursorline
+
+" highlevel
+  nnoremap ; :
+  nnoremap <C-h> :vertical help<Space>
+  nnoremap <C-A-h> "hyiw:vertical help <C-r>h<Enter>
 
 " basic navigation
   nnoremap <Up> g<Up>
@@ -79,6 +86,15 @@ call plug#end()
   inoremap <C-w> <Esc>:quit<Enter>
   vnoremap <C-w> <Esc>:quit<Enter>
 
+" Make sure Vim returns to the same line when you reopen a file.
+augroup line_return
+  au!
+  au BufReadPost *
+      \ if line("'\"") > 0 && line("'\"") <= line("$") |
+      \     execute 'normal! g`"zvzz' |
+      \ endif
+augroup END
+
 " copy-paste system clipboard
 " paste with C-S-v in insert mode
   vnoremap <C-y> "+y
@@ -86,22 +102,21 @@ call plug#end()
 " undo-redo
   nnoremap U <C-r>
 
+" next and previous
+" nnoremap n nzzzv
+" nnoremap N Nzzzv
+
 " find
   set nowrapscan
-  nnoremap <C-f> :%s///gn<Left><Left><Left><Left>
-  inoremap <C-f> <Esc>:%s///gn<Left><Left><Left><Left>
+  nnoremap <leader>/ :execute 'vimgrep /'.@/.'/g %'<Enter>:copen<Enter>
+  nnoremap <C-f> /
   nnoremap <A-f> :set hlsearch!<Enter>
-  inoremap <A-f> <Esc>:set hlsearch!<Enter>i
   nnoremap <A-c> :set ignorecase!<Enter>
-  inoremap <A-c> <Esc>:set ignorecase!<Enter>
-  nnoremap <C-A-f> viw"ry:%s/<C-r>r//gn<Left><Left><Left><Enter>
-  inoremap <C-A-f> <Esc>viw"ry:%s/<C-r>r//gn<Left><Left><Left><Enter>
+  nnoremap <C-A-f> *
 
 " replace
   nnoremap <C-r> :%s///gc<Left><Left><Left><Left>
-  inoremap <C-r> <Esc>:%s///gc<Left><Left><Left><Left>
   nnoremap <C-A-r> viw"ry:%s/<C-r>r//gc<Left><Left><Left>
-  inoremap <C-A-r> <Esc>viw"ry:%s/<C-r>r//gc<Left><Left><Left>
 
 " buffers
   nnoremap <A-]> :bn<Enter>
@@ -113,7 +128,6 @@ call plug#end()
   nnoremap <C-n> :tabnew<Enter>
   nnoremap <A-Right> :tabn<Enter>
   nnoremap <A-Left> :tabp<Enter>
-  inoremap <C-n> <Esc>:tabnew<Enter>
   inoremap <A-Right> <Esc>:tabn<Enter>
   inoremap <A-Left> <Esc>:tabp<Enter>
 

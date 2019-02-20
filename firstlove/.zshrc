@@ -128,6 +128,7 @@ alias cfza="${EDITOR} ~/.config/zathura/zathurarc"
 alias cfr="${EDITOR} ~/.config/ranger/rc.conf"
 alias cfd="${EDITOR} ~/.config/dunst/dunstrc"
 alias cfv="${EDITOR} ~/.config/nvim/init.vim"
+alias cfm="${EDITOR} ~/.tmux.conf"
 
 # git aliases
 alias gits="git status"
