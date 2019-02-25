@@ -1,5 +1,8 @@
 # Yashasvi Sriram's i3 config
 
+################ Sem specific bindings ################
+bindsym F1 exec "feh /home/pandu/school/8/BTP/5G-system-design.png"
+
 ################ Definitions ################
 set $alt_key Mod1
 set $windows_key Mod4

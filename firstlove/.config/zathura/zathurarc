@@ -1,5 +1,4 @@
 set font "monospace normal 13"
-set selection-clipboard clipboard
 
 map <Left> navigate previous
 map <Right> navigate next
