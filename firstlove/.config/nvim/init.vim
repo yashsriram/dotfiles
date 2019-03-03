@@ -115,6 +115,7 @@ augroup END
 " replace
   nnoremap <C-r> :%s///gc<Left><Left><Left><Left>
   nnoremap <C-A-r> viw"ry:%s/<C-r>r//gc<Left><Left><Left>
+  vnoremap <C-r> "ry:%s///gc<Left><Left><Left><Left><C-r>r<Right>
 
 " command mode
   cnoremap <c-a> <home>
@@ -142,6 +143,9 @@ augroup END
   nnoremap <Tab> zO
   nnoremap <leader><leader> zMzvzz
 
+" tags
+  nnoremap <C-[> <C-t>
+
 " ranger
   nnoremap <A-1> :RangerWorkingDirectory<Enter>
   nnoremap <A-2> :RangerCurrentDirectory<Enter>
@@ -151,9 +155,9 @@ augroup END
   let g:deoplete#enable_at_startup = 1
 
 " brackets
-  for i in ['{}', '[]', '()', '""', "''", '``']
-    :execute "inoremap " . i[0] . " " . i . "<Esc>i"
-    :execute "vnoremap " . i[0] . " " . "di" . i[0] . "<Esc>pa" . i[1]
+  for brackets in ['{}', '[]', '()', '""', "''", '``']
+    :execute "inoremap " . brackets[0] . " " . brackets . "<Esc>i"
+    :execute "vnoremap " . brackets[0] . " " . "di" . brackets[0] . "<Esc>pa" . brackets[1]
   endfor
 
 

@@ -138,6 +138,7 @@ alias cfr="${EDITOR} ~/.config/ranger/rc.conf"
 alias cfd="${EDITOR} ~/.config/dunst/dunstrc"
 alias cfv="${EDITOR} ~/.config/nvim/init.vim"
 alias cfm="${EDITOR} ~/.tmux.conf"
+alias cfmt="${EDITOR} ~/.neomutt/neomuttrc"
 
 # git aliases
 alias gits="git status"
