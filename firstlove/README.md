@@ -7,13 +7,14 @@
   * i3lock-blur
   * i3-battery-popup
 * ranger [file manager]
-* ranger_devicons [icons for ranger, depends on nerd-fonts]
+* ranger\_devicons [icons for ranger, depends on nerd-fonts]
 * nerd-fonts-source-code-pro, ttf-emojione-color [for unicode emojis]
 * xclip [for manual clipboard management]
 * htop
 * mons [for multi monitor display control]
 * d\_menu [general selection from menu]
-* feh [for images]
+* feh [to set background picture]
+* sxiv [for images]
 * zathura [for pdfs]
 * pamixer [for volume control]
 * bc [for i3scripts]
@@ -32,4 +33,11 @@
 * In file `/etc/systemd/logind.conf` set HandlePowerKey=ignore [for disabling immediate shutdown on power button press]
 * enable `NetworkManager.service`
 * use `.config/cronscripts/crontab` as crontab file and enable `cronie.service`
+
+## Pacman
+* in /etc/pacman.conf uncomment
+  * VerbosePkgList
+  * Color
+* add a line in Misc options (for easter egg)
+  * ILoveCandy
 

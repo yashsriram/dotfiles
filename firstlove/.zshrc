@@ -127,6 +127,7 @@ alias pacr="sudo pacman -R"
 alias pacu="sudo pacman -Syu"
 alias pacac="cat /var/log/pacman.log | grep -aE '(installed|removed)' | sort -r | less"
 alias pacclean="sudo pacman -Rns $(pacman -Qtdq)"
+alias paccachedrop="sudo pacman -Scc"
 
 # config files
 alias cfi3="${EDITOR} ~/.config/i3/config"
@@ -138,7 +139,7 @@ alias cfr="${EDITOR} ~/.config/ranger/rc.conf"
 alias cfd="${EDITOR} ~/.config/dunst/dunstrc"
 alias cfv="${EDITOR} ~/.config/nvim/init.vim"
 alias cfm="${EDITOR} ~/.tmux.conf"
-alias cfmt="${EDITOR} ~/.neomutt/neomuttrc"
+alias cfmt="${EDITOR} ~/.mutt/muttrc"
 
 # git aliases
 alias gits="git status"
