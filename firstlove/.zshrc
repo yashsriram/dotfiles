@@ -148,6 +148,8 @@ alias gitc="git commit"
 alias gitp="git push"
 alias gitd="git diff"
 alias gitb="git branch"
+alias gito="git checkout"
+alias gitk="nohup gitk --all > /dev/null &"
 
 #jetbrains aliases
 alias pycharm="nohup ~/jetbrains/pycharm/bin/pycharm.sh > /dev/null &"

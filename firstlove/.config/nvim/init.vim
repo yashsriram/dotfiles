@@ -36,6 +36,8 @@ call plug#end()
 
 " appearance
   colorscheme PaperColor
+  highlight Visual ctermfg=NONE
+  highlight visual ctermbg=237
   let g:airline_theme='dark'
   set cursorline
 

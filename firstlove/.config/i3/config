@@ -1,7 +1,7 @@
 # Yashasvi Sriram's i3 config
 
 ################ Sem specific bindings ################
-bindsym F1 exec "feh /home/pandu/school/8/BTP/5G-system-design.png"
+bindsym F1 exec "zathura /home/pandu/school/8/BTP/5GTB-Design-AMF-ver0.pdf"
 
 ################ Definitions ################
 set $alt_key Mod1
