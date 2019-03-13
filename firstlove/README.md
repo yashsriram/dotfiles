@@ -6,6 +6,7 @@
   * i3blocks
   * i3lock-blur
   * i3-battery-popup
+* neovim [text editor] & nvr [to open new file in exisiting nvim session]
 * ranger [file manager]
 * ranger\_devicons [icons for ranger, depends on nerd-fonts]
 * nerd-fonts-source-code-pro, ttf-emojione-color [for unicode emojis]

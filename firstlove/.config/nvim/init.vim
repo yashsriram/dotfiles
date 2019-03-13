@@ -15,6 +15,7 @@ call plug#begin()
   Plug 'tpope/vim-commentary' " comment and uncomment quickly
   Plug 'tpope/vim-abolish' " supercharged substitution, case changing and abbreviations(auto-corrections)
   Plug 'tpope/vim-fugitive' " git plugin
+  Plug 'airblade/vim-gitgutter' " gutter for git
   Plug 'Yashasvi-Sriram/vim-searchindex' " gives number and count of matches
   Plug 'vim-airline/vim-airline' " status line plugin
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " sublime like autocomplete
@@ -27,12 +28,10 @@ call plug#end()
   set number relativenumber
   set splitbelow splitright
   set encoding=utf-8
-  set tabstop=2
-  set shiftwidth=2
-  set expandtab
+  set tabstop=2 shiftwidth=2 expandtab
   set foldmethod=indent
-  set listchars=tab:→\ ,trail:•,nbsp:‡,extends:⟩,precedes:⟨
-  set list
+  set listchars=tab:→\ ,trail:•,nbsp:‡,extends:⟩,precedes:⟨ list
+  set updatetime=100
 
 " appearance
   colorscheme PaperColor
@@ -52,12 +51,12 @@ call plug#end()
   nnoremap <Down> g<Down>
   nnoremap <C-Right> e
   nnoremap <C-Left> b
-  nnoremap <c-a-right> g_
-  nnoremap <c-a-left> g0
-  inoremap <c-a-right> <Esc>g_a
-  inoremap <c-a-left> <Esc>g0a
-  vnoremap <c-a-right> g_i
-  vnoremap <c-a-left> g0i
+  nnoremap <C-A-right> g_
+  nnoremap <C-A-left> g0
+  inoremap <C-A-right> <Esc>g_a
+  inoremap <C-A-left> <Esc>g0a
+  vnoremap <C-A-right> g_i
+  vnoremap <C-A-left> g0i
   nnoremap <C-b> %
 
 " selection
@@ -66,6 +65,15 @@ call plug#end()
   nnoremap vL ^vg_
   nnoremap vl vg_
   nnoremap vA ggVG
+  " shift arrow select select
+  nnoremap <S-Up> V<Up>
+  vnoremap <S-Up> <Up>
+  nnoremap <S-Down> V<Down>
+  vnoremap <S-Down> <Down>
+  nnoremap <S-Left> v<Left>
+  vnoremap <S-Left> <Left>
+  nnoremap <S-Right> v<Right>
+  vnoremap <S-Right> <Right>
 
 " common editing shortcuts
   nnoremap <C-d> yyp
@@ -119,13 +127,24 @@ augroup END
   nnoremap <C-A-r> viw"ry:%s/<C-r>r//gc<Left><Left><Left>
   vnoremap <C-r> "ry:%s///gc<Left><Left><Left><Left><C-r>r<Right>
 
+" remove all trailing whitespace
+  nnoremap gws :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><Enter>
+
+" convert b/w tabs and spaces
+  nnoremap gts :set tabstop=2 shiftwidth=2 expandtab<Bar>:retab<Enter>
+  nnoremap gtt :set tabstop=2 shiftwidth=2 noexpandtab<Bar>:%retab!<Enter>
+
+" reformat the entire file
+  nnoremap grf magg=G`a
+
 " command mode
-  cnoremap <c-a> <home>
-  cnoremap <c-e> <end>
+  cnoremap <C-a> <home>
+  cnoremap <C-e> <end>
 
 " buffers
-  nnoremap <A-]> :bn<Enter>
-  nnoremap <A-[> :bp<Enter>
+  nnoremap <A-w> :bd<Enter>
+  nnoremap <A-Up> :bp<Enter>
+  nnoremap <A-Down> :bn<Enter>
   nnoremap <A-h> :sp<Enter>
   nnoremap <A-v> :vsp<Enter>
 
@@ -146,7 +165,12 @@ augroup END
   nnoremap <leader><leader> zMzvzz
 
 " tags
-  nnoremap <C-[> <C-t>
+  nnoremap <leader><Right> <C-]>
+  nnoremap <leader><Left> <C-t>
+
+" jumps
+  nnoremap <leader><Up> <C-I>
+  nnoremap <leader><Down> <C-O>
 
 " ranger
   nnoremap <A-1> :RangerWorkingDirectory<Enter>
@@ -161,7 +185,6 @@ augroup END
     :execute "inoremap " . brackets[0] . " " . brackets . "<Esc>i"
     :execute "vnoremap " . brackets[0] . " " . "di" . brackets[0] . "<Esc>pa" . brackets[1]
   endfor
-
 
 " airline
   let g:airline#extensions#tabline#enabled = 1
