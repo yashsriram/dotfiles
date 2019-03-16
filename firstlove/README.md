@@ -29,6 +29,7 @@
 * xcompmgr [composition manager - mostly used to remove black regions above titlebars]
 * cronie [for cron tabs]
 * flite and SoX [for text to speech utility]
+* xf86-input-synaptics [touchpad driver for X]
 
 # Config
 * In file `/etc/systemd/logind.conf` set HandlePowerKey=ignore [for disabling immediate shutdown on power button press]
@@ -41,4 +42,11 @@
   * Color
 * add a line in Misc options (for easter egg)
   * ILoveCandy
+
+## Synaptics
+* Can be configured on the fly using synclient or written to config file at /etc/X11/xorg.conf.d/70-synaptics.conf, refer to wiki for format
+* Additional preferred options are
+  * PalmDetect=1
+  * TapButton1=1
+  * HorizTwoFingerScroll=1
 

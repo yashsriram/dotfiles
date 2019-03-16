@@ -25,6 +25,7 @@ call plug#end()
 " basic options
   syntax on
   filetype plugin on
+  set bg=dark
   set number relativenumber
   set splitbelow splitright
   set encoding=utf-8

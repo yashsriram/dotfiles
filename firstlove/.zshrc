@@ -168,6 +168,7 @@ alias umountubuntu="sudo umount /home/pandu/mounts/ubuntu"
 alias sshmars="nohup xterm -e ssh yashsriram@mars.cse.iitb.ac.in > /dev/null &"
 alias sshkrishna="ssh yashasvi@10.129.2.170"
 alias sshpascal="ssh yashsriram@10.129.131.78"
+alias sshrpi="ssh pi@10.9.160.83"
 
 # sshfs aliases
 unmount_all_ssh_filesystems () {
@@ -183,5 +184,8 @@ alias usshfspascal="fusermount -u /home/pandu/sshfs/pascal"
 # krishna
 alias sshfskrishna="sshfs /home/pandu/sshfs/krishna yashasvi@10.129.2.170: ; ranger /home/pandu/sshfs/krishna/comma/results/8thsem/"
 alias usshfskrishna="fusermount -u /home/pandu/sshfs/krishna"
+# raspberrypi
+alias sshfsrpi="sshfs /home/pandu/sshfs/raspberrypi pi@10.9.160.83: ; ranger /home/pandu/sshfs/raspberrypi"
+alias usshfsrpi="fusermount -u /home/pandu/sshfs/raspberrypi"
 
 
