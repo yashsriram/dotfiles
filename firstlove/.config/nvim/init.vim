@@ -33,6 +33,8 @@ call plug#end()
   set foldmethod=indent
   set listchars=tab:→\ ,trail:•,nbsp:‡,extends:⟩,precedes:⟨ list
   set updatetime=100
+  set noswapfile
+  set autoread
 
 " appearance
   colorscheme PaperColor
@@ -76,6 +78,9 @@ call plug#end()
   nnoremap <S-Right> v<Right>
   vnoremap <S-Right> <Right>
 
+" make Y behave
+  nnoremap Y y$
+
 " common editing shortcuts
   nnoremap <C-d> yyp
   inoremap <C-d> <Esc>yypi
@@ -108,15 +113,12 @@ augroup END
 " copy-paste system clipboard
   vnoremap <C-y> "+y
   " paste with C-S-v in insert mode or <C-r>*
-  " select last pasted text
-  nnoremap <leader>v V`]
 
 " undo-redo
   nnoremap U <C-r>
 
 " find
   set nowrapscan
-  nnoremap <leader>/ :execute 'vimgrep /'.@/.'/g %'<Enter>:copen<Enter>
   nnoremap <C-f> /
   nnoremap <A-f> :set hlsearch!<Enter>
   nnoremap <A-c> :set ignorecase!<Enter>
@@ -221,3 +223,8 @@ augroup END
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 
+" c/cpp completions
+  autocmd FileType c,cpp inoremap <buffer> /p printf("");<Esc>F"i
+  autocmd FileType cpp inoremap <buffer> /o std::cout << * << std::endl;<Esc>F*s
+  autocmd FileType cpp inoremap <buffer> /e std::cerr << * << std::endl;<Esc>F*s
+  autocmd FileType c,cpp inoremap <buffer> /f for (int i = 0; i < *; ++i) {}<Esc>F*s
