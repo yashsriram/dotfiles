@@ -30,6 +30,7 @@
 * cronie [for cron tabs]
 * flite and SoX [for text to speech utility]
 * xf86-input-synaptics [touchpad driver for X]
+* tmux
 
 # Config
 * In file `/etc/systemd/logind.conf` set HandlePowerKey=ignore [for disabling immediate shutdown on power button press]

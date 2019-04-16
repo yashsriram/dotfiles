@@ -10,6 +10,7 @@ import os;
 # My advice is to use NerdFonts which can be found here:
 # https://github.com/ryanoasis/nerd-fonts
 file_node_extensions = {
+    'out'      : '',
     '7z'       : '',
     'ai'       : '',
     'apk'      : '',
@@ -18,6 +19,7 @@ file_node_extensions = {
     'bmp'      : '',
     'bz2'      : '',
     'c'        : '',
+    'h'        : '',
     'c++'      : '',
     'cab'      : '',
     'cc'       : '',
@@ -29,6 +31,7 @@ file_node_extensions = {
     'cp'       : '',
     'cpio'     : '',
     'cpp'      : '',
+    'hpp'      : '',
     'css'      : '',
     'cxx'      : '',
     'd'        : '',
