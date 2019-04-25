@@ -1,0 +1,94 @@
+######## paths ########
+set folder = ~/.mail
+set header_cache = ~/.neomutt/cache/headers
+set message_cachedir = ~/.neomutt/cache/bodies
+set certificate_file = /etc/ssl/certs/ca-certificates.crt
+set mailcap_path = ~/.neomutt/mailcap
+set tmpdir = ~/.neomutt/tmp
+
+######## basic options ########
+set mbox_type = Maildir
+set editor = "nvim"
+set date_format = "%d.%h.%y %I:%M %p"
+set wait_key = no
+set timeout = 3
+set mail_check = 240
+set sleep_time=0
+set smart_wrap
+set sort = threads
+set sort_aux = reverse-last-date-received
+set uncollapse_jump
+set sort_re
+set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+set send_charset = "utf-8:iso-8859-1:us-ascii"
+set charset = "utf-8"
+ignore *
+unignore from: to: cc: bcc: date: subject:
+unhdr_order *
+hdr_order from: to: cc: bcc: date: subject:
+alternative_order text/plain text/enriched text/html
+auto_view text/html
+
+######## source files ########
+source ~/.neomutt/colors
+
+######## status line ########
+set status_chars = " *%A"
+set status_format = "[ Folder: %f ] [%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]%>─%?p?( %p postponed )?"
+
+######## index view ########
+set index_format = "%M [%Z] %?X?A& ? %D  %15.15F  %s (%e)"
+bind index <left> previous-entry
+bind index <right> next-entry
+bind index g noop
+bind index gg first-entry
+bind index G last-entry
+
+######## pager view ########
+set pager_index_lines = 10
+set pager_context = 3
+set pager_stop
+set menu_scroll
+set tilde
+unset markers
+bind pager <down> next-line
+bind pager <up> previous-line
+bind pager g noop
+bind pager gg top
+bind pager G bottom
+
+######## compose view ########
+set edit_headers                     # show headers when composing
+set fast_reply                       # skip to compose when replying
+set askcc                            # ask for CC:
+set fcc_attach                       # save attachments with the body
+set forward_format = "Fwd: %s"       # format of subject when forwarding
+set forward_decode                   # decode when forwarding
+set attribution = "On %d, %n wrote:" # format of quoting header
+set reply_to                         # reply to Reply to: field
+set reverse_name                     # reply as whomever it was to
+set include                          # include message in replies
+set forward_quote                    # include message in forwards
+set text_flowed
+unset sig_dashes                     # no dashes before sig
+unset mime_forward                   # forward attachments as part of body
+mailboxes =cse/inbox =cse/sent =cse/drafts =cse/junk =cse/trash
+
+######## global keymaps ########
+bind index,pager @ compose-to-sender
+bind index,pager R group-reply
+bind index,pager D purge-message
+bind index <tab> sync-mailbox
+bind index <space> collapse-thread
+
+macro index,pager O "<shell-escape>mbsync -a<enter>" "run mbsync to sync all mail"
+
+# CSE Account
+set from = "yashsriram@cse.iitb.ac.in"
+set sendmail = "/bin/msmtp -a cse"
+set spoolfile = "+cse/inbox"
+set postponed = "+cse/drafts"
+set record = "+cse/sent"
+set trash = "+cse/trash"
+

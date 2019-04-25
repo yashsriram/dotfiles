@@ -134,12 +134,14 @@ alias cfi3="${EDITOR} ~/.config/i3/config"
 alias cfi3b="${EDITOR} ~/.i3blocks.conf"
 alias cft="${EDITOR} ~/.config/termite/config"
 alias cfz="${EDITOR} ~/.zshrc"
-alias cfza="${EDITOR} ~/.config/zathura/zathurarc"
 alias cfr="${EDITOR} ~/.config/ranger/rc.conf"
-alias cfd="${EDITOR} ~/.config/dunst/dunstrc"
 alias cfv="${EDITOR} ~/.config/nvim/init.vim"
-alias cfm="${EDITOR} ~/.tmux.conf"
-alias cfmt="${EDITOR} ~/.mutt/muttrc"
+alias cfzathura="${EDITOR} ~/.config/zathura/zathurarc"
+alias cfdunst="${EDITOR} ~/.config/dunst/dunstrc"
+alias cftmux="${EDITOR} ~/.tmux.conf"
+alias cfmutt="${EDITOR} ~/.neomutt/neomuttrc"
+alias cfmbsync="${EDITOR} ~/.mbsyncrc"
+alias cfmsmpt="${EDITOR} ~/.msmtprc"
 
 # git aliases
 alias gits="git status"
@@ -169,6 +171,7 @@ alias sshmars="nohup xterm -e ssh yashsriram@mars.cse.iitb.ac.in > /dev/null &"
 alias sshkrishna="ssh yashasvi@10.129.2.170"
 alias sshpascal="ssh yashsriram@10.129.131.78"
 alias sshrpi="ssh pi@10.9.160.83"
+alias sshjohn="ssh yashsriram@10.198.44.121"
 
 # sshfs aliases
 unmount_all_ssh_filesystems () {

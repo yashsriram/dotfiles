@@ -9,7 +9,7 @@ call plug#begin()
   Plug 'francoiscabrol/ranger.vim' " ranger integration to open files
   Plug 'Yggdroot/indentLine' " indent guide
   Plug 'ntpeters/vim-better-whitespace' " highlights unwanted whitespaces
-  Plug 'itchyny/vim-cursorword' ", { 'on': 'CursorWord' } underlines all instances of current word
+  Plug 'dominikduda/vim_current_word' " highlight all instances of current word
   Plug 'tpope/vim-repeat' " makes surround and commentary plugins repeatable
   Plug 'tpope/vim-surround' " surround text with anything
   Plug 'tpope/vim-commentary' " comment and uncomment quickly
@@ -20,6 +20,7 @@ call plug#begin()
   Plug 'vim-airline/vim-airline' " status line plugin
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " sublime like autocomplete
   Plug 'junegunn/goyo.vim' " distraction free writing
+  Plug 'lervag/vimtex' " tex plugin
 call plug#end()
 
 " basic options
@@ -83,13 +84,9 @@ call plug#end()
 
 " common editing shortcuts
   nnoremap <C-d> yyp
-  inoremap <C-d> <Esc>yypi
   nnoremap <C-x> dd
-  inoremap <C-x> <Esc>ddi
   nnoremap <C-c> yy
-  inoremap <C-c> <Esc>yyi
   nnoremap <C-v> P
-  inoremap <C-v> <Esc>Pi
 
 " save
   nnoremap <C-s> :write<Enter>
@@ -152,7 +149,7 @@ augroup END
   nnoremap <A-v> :vsp<Enter>
 
 " tabs
-  nnoremap <C-n> :tabnew<Enter>
+  nnoremap <C-n> :tabnew<Enter>:RangerWorkingDirectory<Enter>
   nnoremap <A-Right> :tabn<Enter>
   nnoremap <A-Left> :tabp<Enter>
 
@@ -223,8 +220,14 @@ augroup END
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 
-" c/cpp completions
-  autocmd FileType c,cpp inoremap <buffer> /p printf("");<Esc>F"i
-  autocmd FileType cpp inoremap <buffer> /o std::cout << * << std::endl;<Esc>F*s
-  autocmd FileType cpp inoremap <buffer> /e std::cerr << * << std::endl;<Esc>F*s
-  autocmd FileType c,cpp inoremap <buffer> /f for (int i = 0; i < *; ++i) {}<Esc>F*s
+" c/cpp
+  autocmd FileType c,cpp inoremap <buffer> \p printf("");<Esc>F"i
+  autocmd FileType cpp inoremap <buffer> \o std::cout << * << std::endl;<Esc>F*s
+  autocmd FileType cpp inoremap <buffer> \e std::cerr << * << std::endl;<Esc>F*s
+  autocmd FileType c,cpp inoremap <buffer> \f for (int i = 0; i < *; ++i) {}<Esc>F*s
+
+" vim_current_word
+  hi CurrentWord cterm=underline
+  hi CurrentWordTwins cterm=underline
+
+

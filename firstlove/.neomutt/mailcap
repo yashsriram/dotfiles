@@ -1,0 +1,6 @@
+text/plain; less '%s';
+text/csv; less '%s';
+text/html; less %s;
+image/jpeg; feh '%s';
+application/pdf; zathura '%s';
+application/x-ipynb+json; less '%s';

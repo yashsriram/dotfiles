@@ -1,0 +1,58 @@
+## mutt colors
+
+## colors:
+#  white     black  green  magenta  blue  cyan  yellow  red  default
+# lightgray                                     brown
+# bright... (foreground only)
+
+
+#---------------------------------------------------------------------------
+# colors
+#---------------------------------------------------------------------------
+color attachment  brightyellow  default
+# highlight mail addresses:
+color body        brightred     default  (mailto:)?[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+\\.[\-\.a-zA-Z0-9]+[a-zA-Z]
+# highlight URLs:
+color body        magenta       default  (((ht|f)tps?:)|www\\.)(//)?[-\.,/%~_:?&\#=a-zA-Z0-9+]+\\.[-\.,/%~_:?&\#=a-zA-Z0-9+]+[/~_:?&\#=a-zA-Z0-9]
+# highlight TOFU protection:
+color body        brightmagenta default  ^\\[---.*
+# highlight verbatim marks:
+color body        green         default  ^\#v[-+]
+color bold        brightyellow  default
+color error       brightred     default
+color header      brightgreen   default  ^From:
+color header      brightcyan    default  ^To:
+color header      brightgreen   default  ^Reply-To:
+color header      brightcyan    default  ^Cc:
+color header      brightred     default  ^Subject:
+color hdrdefault  cyan          default
+#color index       default       default  pattern
+color indicator   black         cyan
+color markers     brightred     default
+color message     yellow        default
+color normal      default       default
+color quoted      green         default
+color quoted1     magenta       default
+color quoted2     green         default
+color quoted3     yellow        default
+color quoted4     yellow        default
+color quoted5     yellow        default
+color quoted6     yellow        default
+color quoted7     yellow        default
+#color search      brightwhite   default
+color search      black         yellow
+color signature   cyan          default
+color status      brightgreen   blue
+color tilde       blue          default
+color tree        red           default
+color underline   yellow        default
+
+#---------------------------------------------------------------------------
+# mono attributes
+#---------------------------------------------------------------------------
+# none  bold  underline  reverse  standout
+
+mono header  bold  ^Subject:
+
+# vim:ft=muttrc:tw=0:
+
