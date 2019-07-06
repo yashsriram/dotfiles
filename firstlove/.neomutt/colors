@@ -1,23 +1,43 @@
-## mutt colors
+# vim: filetype=neomuttrc
 
-## colors:
-#  white     black  green  magenta  blue  cyan  yellow  red  default
-# lightgray                                     brown
-# bright... (foreground only)
+# Colors available: white black green magenta blue cyan yellow red default lightgray brown; bright... (foreground only)
 
+# Default index colors:
+color index yellow default '.*'
+color index_number green default
+color index_author red default '.*'
+color index_subject cyan default '.*'
 
-#---------------------------------------------------------------------------
-# colors
-#---------------------------------------------------------------------------
+# New mail index colors:
+color index brightyellow black "~N"
+color index_author brightred black "~N"
+color index_subject brightcyan black "~N"
+
+color sidebar_highlight red default
+color sidebar_divider brightblack black
+color sidebar_flagged red black
+color sidebar_new green black
+
+color body        brightred     default  "[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+" # highlight mail addresses:
+color body        brightmagenta default  "(https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+" # URL
+color body        brightmagenta default   ^\\[---.* # highlight TOFU protection:
+color body        green         default   ^\#v[-+] # highlight verbatim marks:
+color body        green         default  "\`[^\`]*\`" # Green text between ` and `
+color body        brightblue    default  "^# \.*" # Headings as bold blue
+color body        brightcyan    default  "^## \.*" # Subheadings as bold cyan
+color body        brightgreen   default  "^### \.*" # Subsubheadings as bold green
+color body        yellow        default  "^(\t| )*(-|\\*) \.*" # List items as yellow
+color body        brightcyan    default  "[;:][-o][)/(|]" # emoticons
+color body        brightcyan    default  "[;:][)(|]" # emoticons
+color body        brightcyan    default  "[ ][*][^*]*[*][ ]?" # more emoticon?
+color body        brightcyan    default  "[ ]?[*][^*]*[*][ ]" # more emoticon?
+color body        red           default  "(BAD signature)"
+color body        cyan          default  "(Good signature)"
+color body        brightblack   default  "^gpg: Good signature .*"
+color body        brightyellow  default  "^gpg: "
+color body        brightyellow  red      "^gpg: BAD signature from.*"
+
 color attachment  brightyellow  default
-# highlight mail addresses:
-color body        brightred     default  (mailto:)?[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+\\.[\-\.a-zA-Z0-9]+[a-zA-Z]
-# highlight URLs:
-color body        magenta       default  (((ht|f)tps?:)|www\\.)(//)?[-\.,/%~_:?&\#=a-zA-Z0-9+]+\\.[-\.,/%~_:?&\#=a-zA-Z0-9+]+[/~_:?&\#=a-zA-Z0-9]
-# highlight TOFU protection:
-color body        brightmagenta default  ^\\[---.*
-# highlight verbatim marks:
-color body        green         default  ^\#v[-+]
 color bold        brightyellow  default
 color error       brightred     default
 color header      brightgreen   default  ^From:
@@ -26,7 +46,6 @@ color header      brightgreen   default  ^Reply-To:
 color header      brightcyan    default  ^Cc:
 color header      brightred     default  ^Subject:
 color hdrdefault  cyan          default
-#color index       default       default  pattern
 color indicator   black         cyan
 color markers     brightred     default
 color message     yellow        default
@@ -39,10 +58,9 @@ color quoted4     yellow        default
 color quoted5     yellow        default
 color quoted6     yellow        default
 color quoted7     yellow        default
-#color search      brightwhite   default
 color search      black         yellow
 color signature   cyan          default
-color status      brightgreen   blue
+color status      brightblack   white
 color tilde       blue          default
 color tree        red           default
 color underline   yellow        default
@@ -53,6 +71,9 @@ color underline   yellow        default
 # none  bold  underline  reverse  standout
 
 mono header  bold  ^Subject:
-
-# vim:ft=muttrc:tw=0:
-
+mono body bold "^gpg: Good signature"
+mono body bold "^gpg: BAD signature from.*"
+mono bold bold
+mono underline underline
+mono indicator reverse
+mono error bold

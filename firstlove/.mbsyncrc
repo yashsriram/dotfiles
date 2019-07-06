@@ -1,0 +1,85 @@
+Create Both
+Expunge Both
+SyncState *
+
+######## yash.3997@gmail.com ########
+IMAPAccount FirstGmail
+Host imap.gmail.com
+Port 993
+User yash.3997@gmail.com
+PassCmd "secret-tool lookup host smtp.gmail.com service smtp user yash.3997"
+SSLType IMAPS
+AuthMechs LOGIN
+
+IMAPStore gmail1-remote
+Account FirstGmail
+
+MaildirStore gmail1-local
+Path ~/.mail/gmail1/
+Inbox ~/.mail/gmail1/inbox
+
+Channel gmail1-inbox
+Master :gmail1-remote:
+Slave :gmail1-local:
+Patterns "INBOX"
+
+Channel gmail1-sent
+Master :gmail1-remote:"[Gmail]/Sent Mail"
+Slave :gmail1-local:sent
+
+Channel gmail1-trash
+Master :gmail1-remote:"[Gmail]/Trash"
+Slave :gmail1-local:trash
+
+Group gmail1
+Channel gmail1-inbox
+Channel gmail1-sent
+Channel gmail1-trash
+
+# ######## CSE Account ########
+# IMAPAccount CSE
+# Host imap.cse.iitb.ac.in
+# Port 993
+# User yashsriram@cse.iitb.ac.in
+# PassCmd "secret-tool lookup host smtp.cse.iitb.ac.in service smtp user yashsriram"
+# SSLType IMAPS
+# CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+# IMAPStore cse-remote
+# Account CSE
+
+# MaildirStore cse-local
+# Subfolders Verbatim
+# # The trailing "/" is important
+# Path ~/.mail/cse/
+# Inbox ~/.mail/cse/inbox/
+
+# Channel cse-inbox
+# Master :cse-remote:"Inbox"
+# Slave :cse-local:
+
+# Channel cse-drafts
+# Master :cse-remote:"Drafts"
+# Slave :cse-local:drafts
+
+# Channel cse-sent
+# Master :cse-remote:"Sent"
+# Slave :cse-local:sent
+
+# Channel cse-junk
+# Master :cse-remote:"Junk"
+# Slave :cse-local:junk
+
+# Channel cse-trash
+# Master :cse-remote:"Deleted Messages"
+# Slave :cse-local:trash
+
+# Gmail mailboxes:
+# "All Mail"
+# "Drafts"
+# "Important"
+# "Sent Mail"
+# "Spam"
+# "Starred"
+# "Trash"
+

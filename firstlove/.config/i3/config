@@ -29,7 +29,7 @@ bindsym Control+$alt_key+l exec i3lock --fuzzy -l
 bindsym $windows_key+Shift+q kill
 
 bindsym $windows_key+Return exec termite
-bindsym $windows_key+j exec ~/.i3scripts/emojis_select
+bindsym $windows_key+l exec ~/.i3scripts/emojis_select
 bindsym $windows_key+m exec ~/.i3scripts/talk_to_me
 bindsym $windows_key+t exec ~/.i3scripts/timer
 bindsym $windows_key+a exec speedcrunch
@@ -37,7 +37,7 @@ for_window [class="SpeedCrunch"] floating enable resize set 840 500
 for_window [class="SpeedCrunch"] border pixel 2
 for_window [class="SpeedCrunch"] move position center
 bindsym $windows_key+s exec subl
-bindsym $windows_key+v exec termite -e nvim
+bindsym $windows_key+v exec termite -e neomutt
 bindsym $windows_key+c exec google-chrome-stable
 bindsym $windows_key+x exec firefox
 
@@ -91,10 +91,10 @@ bindsym $windows_key+Shift+i gaps inner current minus 5
 bindsym $alt_key+q focus mode_toggle
 
 ################ Window Size Control ################
-bindsym $windows_key+k resize shrink width 30 px or 30 ppt
-bindsym $windows_key+Shift+k resize grow width 30 px or 30 ppt
-bindsym $windows_key+l resize shrink height 30 px or 30 ppt
-bindsym $windows_key+Shift+l resize grow height 30 px or 30 ppt
+bindsym $windows_key+k resize grow width 30 px or 30 ppt
+bindsym $windows_key+Shift+k resize shrink width 30 px or 30 ppt
+bindsym $windows_key+j resize grow height 30 px or 30 ppt
+bindsym $windows_key+Shift+j resize shrink height 30 px or 30 ppt
 
 ################ Window Postion Control ################
 bindsym $windows_key+Shift+Left move left 30 px
@@ -113,6 +113,8 @@ client.unfocused        #000000 #000000 #ffffff #292d2e   #222222
 client.urgent           #000000 #d81b60 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
+
+for_window [class=".*"] title_format "⮀ <b>%title</b>"
 
 # remove borders
 default_border normal 0

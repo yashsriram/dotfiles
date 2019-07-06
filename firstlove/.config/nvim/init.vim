@@ -37,6 +37,9 @@ call plug#end()
   set noswapfile
   set autoread
 
+" spelling
+  nnoremap <C-l> 1z=
+
 " appearance
   colorscheme PaperColor
   highlight Visual ctermfg=NONE
@@ -160,6 +163,7 @@ augroup END
   nnoremap <A-S-Right> <C-w>l
 
 " folding
+  set foldlevel=99
   nnoremap <S-Tab> zC
   nnoremap <Tab> zO
   nnoremap <leader><leader> zMzvzz

@@ -118,6 +118,7 @@ alias v="nvim"
 alias htop="htop --tree"
 alias mounts="mount | grep -E '(/dev/sd|@|ifuse)'"
 alias tig="tig --all"
+alias matlab="/home/pandu/matlab/bin/matlab"
 
 # pacman aliases
 alias pacc="pacman -Q | wc -l"
@@ -167,10 +168,10 @@ alias mountubuntu="sudo mount /dev/sda7 /home/pandu/mounts/ubuntu && ranger /hom
 alias umountubuntu="sudo umount /home/pandu/mounts/ubuntu"
 
 # ssh aliases
-alias sshmars="nohup xterm -e ssh yashsriram@mars.cse.iitb.ac.in > /dev/null &"
+alias sshmars="ssh yashsriram@mars.cse.iitb.ac.in"
 alias sshkrishna="ssh yashasvi@10.129.2.170"
 alias sshpascal="ssh yashsriram@10.129.131.78"
-alias sshrpi="ssh pi@10.9.160.83"
+alias sshrpi="ssh pi@10.9.160.221"
 alias sshjohn="ssh yashsriram@10.198.44.121"
 
 # sshfs aliases
@@ -190,5 +191,4 @@ alias usshfskrishna="fusermount -u /home/pandu/sshfs/krishna"
 # raspberrypi
 alias sshfsrpi="sshfs /home/pandu/sshfs/raspberrypi pi@10.9.160.83: ; ranger /home/pandu/sshfs/raspberrypi"
 alias usshfsrpi="fusermount -u /home/pandu/sshfs/raspberrypi"
-
 

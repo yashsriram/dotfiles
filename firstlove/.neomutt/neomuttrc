@@ -6,15 +6,25 @@ set certificate_file = /etc/ssl/certs/ca-certificates.crt
 set mailcap_path = ~/.neomutt/mailcap
 set tmpdir = ~/.neomutt/tmp
 
+######## source files ########
+source ~/.neomutt/colors
+
+######## per-account options ########
+# folder-hook 'cse' 'source ~/.neomutt/cse.iitb.ac.in'
+# folder-hook 'gpo' 'source ~/.neomutt/iitb.ac.in'
+source ~/.neomutt/accounts/gmail1.com
+mailboxes =gmail1/inbox =gmail1/sent =gmail1/trash
+
 ######## basic options ########
 set mbox_type = Maildir
 set editor = "nvim"
-set date_format = "%d.%h.%y %I:%M %p"
+set sleep_time=0
+set date_format = "%h %d %Y %I:%M %p"
+set smart_wrap
+
 set wait_key = no
 set timeout = 3
-set mail_check = 240
-set sleep_time=0
-set smart_wrap
+set mail_check = 120
 set sort = threads
 set sort_aux = reverse-last-date-received
 set uncollapse_jump
@@ -27,68 +37,69 @@ ignore *
 unignore from: to: cc: bcc: date: subject:
 unhdr_order *
 hdr_order from: to: cc: bcc: date: subject:
-alternative_order text/plain text/enriched text/html
-auto_view text/html
-
-######## source files ########
-source ~/.neomutt/colors
+auto_view text/html application/text application/pdf
+alternative_order text/enriched text/html text/plain text
 
 ######## status line ########
 set status_chars = " *%A"
 set status_format = "[ Folder: %f ] [%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]%>─%?p?( %p postponed )?"
 
 ######## index view ########
-set index_format = "%M [%Z] %?X?A& ? %D  %15.15F  %s (%e)"
-bind index <left> previous-entry
-bind index <right> next-entry
+set index_format = "%4C %M [%Z] %?X?A& ? %15.15F %-114.114s (%e/%E) %D"
+bind index <left> noop
+bind index <right> display-message
+bind index [ display-message
+bind index ] display-message
 bind index g noop
 bind index gg first-entry
 bind index G last-entry
+bind index N search-opposite
+bind index gr toggle-new
 
 ######## pager view ########
-set pager_index_lines = 10
-set pager_context = 3
-set pager_stop
-set menu_scroll
-set tilde
-unset markers
+set pager_index_lines = 0
+set pager_context = 0
+bind pager <right> view-attachments
+bind pager <left> exit
 bind pager <down> next-line
 bind pager <up> previous-line
+bind pager [ previous-entry
+bind pager ] next-entry
 bind pager g noop
 bind pager gg top
 bind pager G bottom
 
+set pager_stop
+set menu_scroll
+set tilde
+unset markers
+
+######## attach view ########
+bind attach <left> exit
+bind attach <right> view-attach
+
 ######## compose view ########
 set edit_headers                     # show headers when composing
-set fast_reply                       # skip to compose when replying
-set askcc                            # ask for CC:
-set fcc_attach                       # save attachments with the body
-set forward_format = "Fwd: %s"       # format of subject when forwarding
-set forward_decode                   # decode when forwarding
 set attribution = "On %d, %n wrote:" # format of quoting header
-set reply_to                         # reply to Reply to: field
-set reverse_name                     # reply as whomever it was to
+set forward_format = "Fwd: %s"       # format of subject when forwarding
 set include                          # include message in replies
 set forward_quote                    # include message in forwards
+
+set fcc_attach                       # save attachments with the body
+set forward_decode                   # decode when forwarding
+set reply_to                         # reply to Reply to: field
+set reverse_name                     # reply as whomever it was to
 set text_flowed
 unset sig_dashes                     # no dashes before sig
 unset mime_forward                   # forward attachments as part of body
-mailboxes =cse/inbox =cse/sent =cse/drafts =cse/junk =cse/trash
 
 ######## global keymaps ########
 bind index,pager @ compose-to-sender
-bind index,pager R group-reply
-bind index,pager D purge-message
 bind index <tab> sync-mailbox
 bind index <space> collapse-thread
+macro index,pager O "<shell-escape>mbsync -a<enter>" "Sync all mail using mbsync"
 
-macro index,pager O "<shell-escape>mbsync -a<enter>" "run mbsync to sync all mail"
+bind index,pager D purge-message
+bind index,pager R group-reply
 
-# CSE Account
-set from = "yashsriram@cse.iitb.ac.in"
-set sendmail = "/bin/msmtp -a cse"
-set spoolfile = "+cse/inbox"
-set postponed = "+cse/drafts"
-set record = "+cse/sent"
-set trash = "+cse/trash"
 
