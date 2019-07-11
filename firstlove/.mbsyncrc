@@ -3,7 +3,7 @@ Expunge Both
 SyncState *
 
 ######## yash.3997@gmail.com ########
-IMAPAccount FirstGmail
+IMAPAccount yash.3997@gmail.com
 Host imap.gmail.com
 Port 993
 User yash.3997@gmail.com
@@ -11,30 +11,64 @@ PassCmd "secret-tool lookup host smtp.gmail.com service smtp user yash.3997"
 SSLType IMAPS
 AuthMechs LOGIN
 
-IMAPStore gmail1-remote
-Account FirstGmail
+IMAPStore yash.3997@gmail.com-remote
+Account yash.3997@gmail.com
 
-MaildirStore gmail1-local
-Path ~/.mail/gmail1/
-Inbox ~/.mail/gmail1/inbox
+MaildirStore yash.3997@gmail.com-local
+Path ~/.mail/yash.3997@gmail.com/
+Inbox ~/.mail/yash.3997@gmail.com/inbox
 
-Channel gmail1-inbox
-Master :gmail1-remote:
-Slave :gmail1-local:
+Channel yash.3997@gmail.com-inbox
+Master :yash.3997@gmail.com-remote:
+Slave :yash.3997@gmail.com-local:
 Patterns "INBOX"
 
-Channel gmail1-sent
-Master :gmail1-remote:"[Gmail]/Sent Mail"
-Slave :gmail1-local:sent
+Channel yash.3997@gmail.com-sent
+Master :yash.3997@gmail.com-remote:"[Gmail]/Sent Mail"
+Slave :yash.3997@gmail.com-local:sent
 
-Channel gmail1-trash
-Master :gmail1-remote:"[Gmail]/Trash"
-Slave :gmail1-local:trash
+Channel yash.3997@gmail.com-trash
+Master :yash.3997@gmail.com-remote:"[Gmail]/Trash"
+Slave :yash.3997@gmail.com-local:trash
 
-Group gmail1
-Channel gmail1-inbox
-Channel gmail1-sent
-Channel gmail1-trash
+Group yash.3997@gmail.com
+Channel yash.3997@gmail.com-inbox
+Channel yash.3997@gmail.com-sent
+Channel yash.3997@gmail.com-trash
+
+######## yspatkuri@gmail.com ########
+IMAPAccount yspatkuri@gmail.com
+Host imap.gmail.com
+Port 993
+User yspatkuri@gmail.com
+PassCmd "secret-tool lookup host smtp.gmail.com service smtp user yspatkuri"
+SSLType IMAPS
+AuthMechs LOGIN
+
+IMAPStore yspatkuri@gmail.com-remote
+Account yspatkuri@gmail.com
+
+MaildirStore yspatkuri@gmail.com-local
+Path ~/.mail/yspatkuri@gmail.com/
+Inbox ~/.mail/yspatkuri@gmail.com/inbox
+
+Channel yspatkuri@gmail.com-inbox
+Master :yspatkuri@gmail.com-remote:
+Slave :yspatkuri@gmail.com-local:
+Patterns "INBOX"
+
+Channel yspatkuri@gmail.com-sent
+Master :yspatkuri@gmail.com-remote:"[Gmail]/Sent Mail"
+Slave :yspatkuri@gmail.com-local:sent
+
+Channel yspatkuri@gmail.com-trash
+Master :yspatkuri@gmail.com-remote:"[Gmail]/Trash"
+Slave :yspatkuri@gmail.com-local:trash
+
+Group yspatkuri@gmail.com
+Channel yspatkuri@gmail.com-inbox
+Channel yspatkuri@gmail.com-sent
+Channel yspatkuri@gmail.com-trash
 
 # ######## CSE Account ########
 # IMAPAccount CSE

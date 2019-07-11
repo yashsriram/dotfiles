@@ -152,7 +152,7 @@ augroup END
   nnoremap <A-v> :vsp<Enter>
 
 " tabs
-  nnoremap <C-n> :tabnew<Enter>:RangerWorkingDirectory<Enter>
+  nnoremap <C-n> :tabnew<Enter>
   nnoremap <A-Right> :tabn<Enter>
   nnoremap <A-Left> :tabp<Enter>
 

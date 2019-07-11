@@ -5,13 +5,13 @@
 # Default index colors:
 color index yellow default '.*'
 color index_number green default
-color index_author red default '.*'
-color index_subject cyan default '.*'
+color index_author brightwhite default '.*'
+color index_subject brightgreen default '.*'
 
 # New mail index colors:
 color index brightyellow black "~N"
 color index_author brightred black "~N"
-color index_subject brightcyan black "~N"
+color index_subject red black "~N"
 
 color sidebar_highlight red default
 color sidebar_divider brightblack black
@@ -60,7 +60,7 @@ color quoted6     yellow        default
 color quoted7     yellow        default
 color search      black         yellow
 color signature   cyan          default
-color status      brightblack   white
+color status      white         default
 color tilde       blue          default
 color tree        red           default
 color underline   yellow        default

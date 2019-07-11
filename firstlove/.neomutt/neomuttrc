@@ -10,10 +10,10 @@ set tmpdir = ~/.neomutt/tmp
 source ~/.neomutt/colors
 
 ######## per-account options ########
-# folder-hook 'cse' 'source ~/.neomutt/cse.iitb.ac.in'
-# folder-hook 'gpo' 'source ~/.neomutt/iitb.ac.in'
-source ~/.neomutt/accounts/gmail1.com
-mailboxes =gmail1/inbox =gmail1/sent =gmail1/trash
+folder-hook 'yash.3997@gmail.com' 'source ~/.neomutt/accounts/yash.3997@gmail.com'
+folder-hook 'yspatkuri@gmail.com' 'source ~/.neomutt/accounts/yspatkuri@gmail.com'
+source ~/.neomutt/accounts/yash.3997@gmail.com
+mailboxes =yash.3997@gmail.com/inbox =yash.3997@gmail.com/sent =yash.3997@gmail.com/trash =yspatkuri@gmail.com/inbox =yspatkuri@gmail.com/sent =yspatkuri@gmail.com/trash
 
 ######## basic options ########
 set mbox_type = Maildir
@@ -45,7 +45,7 @@ set status_chars = " *%A"
 set status_format = "[ Folder: %f ] [%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]%>─%?p?( %p postponed )?"
 
 ######## index view ########
-set index_format = "%4C %M [%Z] %?X?A& ? %15.15F %-114.114s (%e/%E) %D"
+set index_format = "%4C %M [%Z] %?X?A& ? %15.15F (%5.5c) %-100.100s (%e/%E) %D"
 bind index <left> noop
 bind index <right> display-message
 bind index [ display-message
