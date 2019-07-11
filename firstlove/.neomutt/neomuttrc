@@ -13,7 +13,23 @@ source ~/.neomutt/colors
 folder-hook 'yash.3997@gmail.com' 'source ~/.neomutt/accounts/yash.3997@gmail.com'
 folder-hook 'yspatkuri@gmail.com' 'source ~/.neomutt/accounts/yspatkuri@gmail.com'
 source ~/.neomutt/accounts/yash.3997@gmail.com
-mailboxes =yash.3997@gmail.com/inbox =yash.3997@gmail.com/sent =yash.3997@gmail.com/trash =yspatkuri@gmail.com/inbox =yspatkuri@gmail.com/sent =yspatkuri@gmail.com/trash
+mailboxes =yash.3997@gmail.com
+mailboxes =yash.3997@gmail.com/inbox =yash.3997@gmail.com/sent =yash.3997@gmail.com/trash
+mailboxes =" "
+mailboxes =yspatkuri@gmail.com
+mailboxes =yspatkuri@gmail.com/inbox =yspatkuri@gmail.com/sent =yspatkuri@gmail.com/trash
+
+######## side-bar options ########
+set sidebar_visible
+set sidebar_format = "%B %?N?(%N)?%*"
+set mail_check_stats
+set sidebar_short_path
+set sidebar_delim_chars="/"
+set sidebar_folder_indent
+set sidebar_indent_string=" › "
+# bind index,pager , sidebar-prev
+# bind index,pager . sidebar-next
+# bind index,pager > sidebar-open
 
 ######## basic options ########
 set mbox_type = Maildir
@@ -44,10 +60,15 @@ alternative_order text/enriched text/html text/plain text
 set status_chars = " *%A"
 set status_format = "[ Folder: %f ] [%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]%>─%?p?( %p postponed )?"
 
+######## browser view ########
+bind browser <right> select-entry
+
 ######## index view ########
-set index_format = "%4C %M [%Z] %?X?A& ? %15.15F (%5.5c) %-100.100s (%e/%E) %D"
-bind index <left> noop
+set index_format = "%4C %M [%Z] %?X?A& ? %15.15F %-100.100s (%5.5c) (%e/%E) %D"
+macro index <left> "<change-folder>?" "Open mailboxes"
 bind index <right> display-message
+bind index <up> previous-entry
+bind index <down> next-entry
 bind index [ display-message
 bind index ] display-message
 bind index g noop
@@ -57,7 +78,7 @@ bind index N search-opposite
 bind index gr toggle-new
 
 ######## pager view ########
-set pager_index_lines = 0
+set pager_index_lines = 10
 set pager_context = 0
 bind pager <right> view-attachments
 bind pager <left> exit

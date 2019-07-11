@@ -13,8 +13,8 @@ color index brightyellow black "~N"
 color index_author brightred black "~N"
 color index_subject red black "~N"
 
-color sidebar_highlight red default
-color sidebar_divider brightblack black
+color sidebar_highlight default red
+color sidebar_divider default default
 color sidebar_flagged red black
 color sidebar_new green black
 
@@ -60,7 +60,7 @@ color quoted6     yellow        default
 color quoted7     yellow        default
 color search      black         yellow
 color signature   cyan          default
-color status      white         default
+color status      black          white
 color tilde       blue          default
 color tree        red           default
 color underline   yellow        default
