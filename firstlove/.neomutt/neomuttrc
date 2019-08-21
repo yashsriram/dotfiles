@@ -12,24 +12,29 @@ source ~/.neomutt/colors
 ######## per-account options ########
 folder-hook 'yash.3997@gmail.com' 'source ~/.neomutt/accounts/yash.3997@gmail.com'
 folder-hook 'yspatkuri@gmail.com' 'source ~/.neomutt/accounts/yspatkuri@gmail.com'
+folder-hook 'patku001@umn.edu' 'source ~/.neomutt/accounts/patku001@umn.edu'
 source ~/.neomutt/accounts/yash.3997@gmail.com
+
 mailboxes =yash.3997@gmail.com
-mailboxes =yash.3997@gmail.com/inbox =yash.3997@gmail.com/sent =yash.3997@gmail.com/trash
-mailboxes =" "
+mailboxes =yash.3997@gmail.com/inbox =yash.3997@gmail.com/sent =yash.3997@gmail.com/trash =yash.3997@gmail.com/allmail
 mailboxes =yspatkuri@gmail.com
-mailboxes =yspatkuri@gmail.com/inbox =yspatkuri@gmail.com/sent =yspatkuri@gmail.com/trash
+mailboxes =yspatkuri@gmail.com/inbox =yspatkuri@gmail.com/sent =yspatkuri@gmail.com/trash =yspatkuri@gmail.com/allmail
+mailboxes =patku001@umn.edu
+mailboxes =patku001@umn.edu/inbox =patku001@umn.edu/sent =patku001@umn.edu/trash =patku001@umn.edu/allmail
 
 ######## side-bar options ########
 set sidebar_visible
 set sidebar_format = "%B %?N?(%N)?%*"
 set mail_check_stats
+set sidebar_width = 25
+set sidebar_divider_char = '│'
 set sidebar_short_path
 set sidebar_delim_chars="/"
 set sidebar_folder_indent
-set sidebar_indent_string=" › "
-# bind index,pager , sidebar-prev
-# bind index,pager . sidebar-next
-# bind index,pager > sidebar-open
+set sidebar_indent_string=" ‣ "
+bind index,pager <PageUp> sidebar-prev
+bind index,pager <PageDown> sidebar-next
+bind index,pager + sidebar-open
 
 ######## basic options ########
 set mbox_type = Maildir
@@ -64,7 +69,7 @@ set status_format = "[ Folder: %f ] [%r%m messages%?n? (%n new)?%?d? (%d to dele
 bind browser <right> select-entry
 
 ######## index view ########
-set index_format = "%4C %M [%Z] %?X?A& ? %15.15F %-100.100s (%5.5c) (%e/%E) %D"
+set index_format = "%4C %M [%Z] %?X?A& ? %25.25F %-70.70s (%e/%E) (%5.5c) %D"
 macro index <left> "<change-folder>?" "Open mailboxes"
 bind index <right> display-message
 bind index <up> previous-entry
@@ -75,7 +80,7 @@ bind index g noop
 bind index gg first-entry
 bind index G last-entry
 bind index N search-opposite
-bind index gr toggle-new
+bind index R toggle-new
 
 ######## pager view ########
 set pager_index_lines = 10
@@ -114,13 +119,13 @@ set text_flowed
 unset sig_dashes                     # no dashes before sig
 unset mime_forward                   # forward attachments as part of body
 
-######## global keymaps ########
+######## misc keymaps ########
+macro index,pager S "<shell-escape>mbsync -a<enter>" "Sync all mail using mbsync"
+bind index <space> collapse-thread
 bind index,pager @ compose-to-sender
 bind index <tab> sync-mailbox
-bind index <space> collapse-thread
-macro index,pager O "<shell-escape>mbsync -a<enter>" "Sync all mail using mbsync"
-
-bind index,pager D purge-message
-bind index,pager R group-reply
-
-
+macro index gf "<enter-command>set my_old_pipe_decode=\$pipe_decode my_old_wait_key=\$wait_key nopipe_decode nowait_key<enter>\
+<shell-escape>notmuch-mutt -r --prompt search<enter>\
+<change-folder-readonly>`echo ${XDG_CACHE_HOME:-$HOME/.cache}/notmuch/mutt/results`<enter>\
+<enter-command>set pipe_decode=\$my_old_pipe_decode wait_key=\$my_old_wait_key<enter>" \
+ "notmuch: search mail"<Paste>

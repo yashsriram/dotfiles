@@ -3,7 +3,7 @@
 # Uses mbsync to sync mailboxes and check for new mails
 # mbsync configuration (imap settings, password, mailboxes etc...) for all accounts is assumed to be complete
 
-ACCOUNTS=( "yash.3997@gmail.com" "yspatkuri@gmail.com" )
+ACCOUNTS=( "yash.3997@gmail.com" "yspatkuri@gmail.com" "patku001@umn.edu" )
 NEW_MAIL_TOTAL=0
 
 for ACCOUNT in "${ACCOUNTS[@]}"

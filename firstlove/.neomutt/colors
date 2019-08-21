@@ -13,6 +13,10 @@ color index brightyellow black "~N"
 color index_author brightred black "~N"
 color index_subject red black "~N"
 
+color index brightyellow black "~O"
+color index_author brightgreen black "~O"
+color index_subject green black "~O"
+
 color sidebar_highlight default red
 color sidebar_divider default default
 color sidebar_flagged red black

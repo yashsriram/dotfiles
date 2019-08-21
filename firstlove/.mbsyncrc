@@ -23,6 +23,10 @@ Master :yash.3997@gmail.com-remote:
 Slave :yash.3997@gmail.com-local:
 Patterns "INBOX"
 
+Channel yash.3997@gmail.com-allmail
+Master :yash.3997@gmail.com-remote:"[Gmail]/All Mail"
+Slave :yash.3997@gmail.com-local:allmail
+
 Channel yash.3997@gmail.com-sent
 Master :yash.3997@gmail.com-remote:"[Gmail]/Sent Mail"
 Slave :yash.3997@gmail.com-local:sent
@@ -34,6 +38,7 @@ Slave :yash.3997@gmail.com-local:trash
 Group yash.3997@gmail.com
 Channel yash.3997@gmail.com-inbox
 Channel yash.3997@gmail.com-sent
+Channel yash.3997@gmail.com-allmail
 Channel yash.3997@gmail.com-trash
 
 ######## yspatkuri@gmail.com ########
@@ -57,6 +62,10 @@ Master :yspatkuri@gmail.com-remote:
 Slave :yspatkuri@gmail.com-local:
 Patterns "INBOX"
 
+Channel yspatkuri@gmail.com-allmail
+Master :yspatkuri@gmail.com-remote:"[Gmail]/All Mail"
+Slave :yspatkuri@gmail.com-local:allmail
+
 Channel yspatkuri@gmail.com-sent
 Master :yspatkuri@gmail.com-remote:"[Gmail]/Sent Mail"
 Slave :yspatkuri@gmail.com-local:sent
@@ -68,7 +77,47 @@ Slave :yspatkuri@gmail.com-local:trash
 Group yspatkuri@gmail.com
 Channel yspatkuri@gmail.com-inbox
 Channel yspatkuri@gmail.com-sent
+Channel yspatkuri@gmail.com-allmail
 Channel yspatkuri@gmail.com-trash
+
+######## patku001@umn.edu ########
+IMAPAccount patku001@umn.edu
+Host imap.gmail.com
+Port 993
+User patku001@umn.edu
+PassCmd "secret-tool lookup host smtp.gmail.com service smtp user patku001"
+SSLType IMAPS
+AuthMechs LOGIN
+
+IMAPStore patku001@umn.edu-remote
+Account patku001@umn.edu
+
+MaildirStore patku001@umn.edu-local
+Path ~/.mail/patku001@umn.edu/
+Inbox ~/.mail/patku001@umn.edu/inbox
+
+Channel patku001@umn.edu-inbox
+Master :patku001@umn.edu-remote:
+Slave :patku001@umn.edu-local:
+Patterns "INBOX"
+
+Channel patku001@umn.edu-allmail
+Master :patku001@umn.edu-remote:"[Gmail]/All Mail"
+Slave :patku001@umn.edu-local:allmail
+
+Channel patku001@umn.edu-sent
+Master :patku001@umn.edu-remote:"[Gmail]/Sent Mail"
+Slave :patku001@umn.edu-local:sent
+
+Channel patku001@umn.edu-trash
+Master :patku001@umn.edu-remote:"[Gmail]/Trash"
+Slave :patku001@umn.edu-local:trash
+
+Group patku001@umn.edu
+Channel patku001@umn.edu-inbox
+Channel patku001@umn.edu-sent
+Channel patku001@umn.edu-allmail
+Channel patku001@umn.edu-trash
 
 # ######## CSE Account ########
 # IMAPAccount CSE

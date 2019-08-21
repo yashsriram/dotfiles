@@ -1,0 +1,7 @@
+#!/bin/sh
+
+while true; do
+  SELECTED_WALLPAPER=$(ls /home/pandu/wallpapers | shuf -n 1)
+  feh --bg-fill "/home/pandu/wallpapers/${SELECTED_WALLPAPER}"
+  sleep 300
+done

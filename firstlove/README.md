@@ -31,7 +31,8 @@
 * flite and SoX [for text to speech utility]
 * xf86-input-synaptics [touchpad driver for X]
 * tmux
-* mbsync, msmtp, gnome-keyring, neomutt for mail
+* mbsync, msmtp, gnome-keyring, neomutt, notmuch for mail
+* bluez, bluez-utils, blueman for bluetooth
 
 # Config
 * In file `/etc/systemd/logind.conf` set HandlePowerKey=ignore [for disabling immediate shutdown on power button press]
@@ -68,4 +69,8 @@
   * PalmDetect=1
   * TapButton1=1
   * HorizTwoFingerScroll=1
+
+## Bluetooth
+* The generic Bluetooth driver is the btusb Kernel module. Check whether that module is loaded. If it's not, then load the module.
+* Start/enable bluetooth.service
 

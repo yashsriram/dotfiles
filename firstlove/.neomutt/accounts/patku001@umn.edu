@@ -1,0 +1,9 @@
+# vim: filetype=neomuttrc
+
+######## patku001@umn.edu ########
+set spoolfile = "+patku001@umn.edu/inbox"
+set record = "+patku001@umn.edu/sent"
+set trash = "+patku001@umn.edu/trash"
+set from = "patku001@umn.edu"
+set realname = "Yashasvi Sriram"
+set sendmail = "/bin/msmtp -a patku001@umn.edu"
