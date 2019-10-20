@@ -22,6 +22,9 @@ bindsym $windows_key+Shift+d exec ~/.i3scripts/dmenu_prompt 'Do you really want 
 # lock
 bindsym Control+$alt_key+l exec i3lock --fuzzy -l
 
+################ Application startup positions ################
+for_window [class="SpeedCrunch"] floating enable, resize set 960 540, move position 960 px 0 px, border pixel 1
+
 ################ Application Keymaps ################
 bindsym $windows_key+Shift+q kill
 
@@ -30,9 +33,6 @@ bindsym $windows_key+l exec ~/.i3scripts/emojis_select
 bindsym $windows_key+m exec ~/.i3scripts/talk_to_me
 bindsym $windows_key+t exec ~/.i3scripts/timer
 bindsym $windows_key+a exec speedcrunch
-for_window [class="SpeedCrunch"] floating enable resize set 840 500
-for_window [class="SpeedCrunch"] border pixel 2
-for_window [class="SpeedCrunch"] move position center
 bindsym $windows_key+s exec subl
 bindsym $windows_key+n exec termite -e neomutt
 bindsym $windows_key+c exec google-chrome-stable
