@@ -146,6 +146,7 @@ alias cfmsmpt="${EDITOR} ~/.msmtprc"
 
 # git aliases
 alias gits="git status"
+alias gitl="git log"
 alias gita="git add"
 alias gitc="git commit"
 alias gitp="git push"
@@ -158,6 +159,7 @@ alias gitk="nohup gitk --all > /dev/null &"
 alias pycharm="nohup ~/jetbrains/pycharm/bin/pycharm.sh > /dev/null &"
 alias clion="nohup ~/jetbrains/clion/bin/clion.sh > /dev/null &"
 alias android-studio="nohup ~/jetbrains/android-studio/bin/studio.sh > /dev/null &"
+alias adb="~/jetbrains/android/platform-tools/adb"
 
 # mount aliases
 alias mountwinc="sudo mount /dev/sda4 /home/pandu/mounts/winc"

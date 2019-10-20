@@ -1,13 +1,9 @@
 #!/bin/bash
 
-case $BLOCK_BUTTON in
-1) echo $(pamixer --get-volume)%;;
-3) pamixer -t ;;
-4) pamixer -i 5 ;;
-5) pamixer -d 5 ;;
-esac
+if [[ $(pamixer --get-mute) = "true" ]];
+then
+  echo Mute
+else
+  echo $(pamixer --get-volume)%
+fi
 
-printpastatus() { [[ $(pamixer --get-mute) = "true" ]] && echo -n Mute && exit
-echo $(pamixer --get-volume)% ;}
-
-printpastatus

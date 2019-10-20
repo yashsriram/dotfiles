@@ -74,3 +74,8 @@
 * The generic Bluetooth driver is the btusb Kernel module. Check whether that module is loaded. If it's not, then load the module.
 * Start/enable bluetooth.service
 
+## Prime Video in Google Chrome
+* Install `chromium-widevine`
+* Symlink /usr/lib/chromium/libwidevinecdm.so to /opt/google/chrome/libwidevinecdm.so (forcefully if needed)
+  * `ln -s /usr/lib/chromium/libwidevinecdm.so /opt/google/chrome/`
+

@@ -13,14 +13,14 @@ source ~/.neomutt/colors
 folder-hook 'yash.3997@gmail.com' 'source ~/.neomutt/accounts/yash.3997@gmail.com'
 folder-hook 'yspatkuri@gmail.com' 'source ~/.neomutt/accounts/yspatkuri@gmail.com'
 folder-hook 'patku001@umn.edu' 'source ~/.neomutt/accounts/patku001@umn.edu'
-source ~/.neomutt/accounts/yash.3997@gmail.com
+source ~/.neomutt/accounts/patku001@umn.edu
 
-mailboxes =yash.3997@gmail.com
-mailboxes =yash.3997@gmail.com/inbox =yash.3997@gmail.com/sent =yash.3997@gmail.com/trash =yash.3997@gmail.com/allmail
-mailboxes =yspatkuri@gmail.com
-mailboxes =yspatkuri@gmail.com/inbox =yspatkuri@gmail.com/sent =yspatkuri@gmail.com/trash =yspatkuri@gmail.com/allmail
 mailboxes =patku001@umn.edu
 mailboxes =patku001@umn.edu/inbox =patku001@umn.edu/sent =patku001@umn.edu/trash =patku001@umn.edu/allmail
+mailboxes =yspatkuri@gmail.com
+mailboxes =yspatkuri@gmail.com/inbox =yspatkuri@gmail.com/sent =yspatkuri@gmail.com/trash =yspatkuri@gmail.com/allmail
+mailboxes =yash.3997@gmail.com
+mailboxes =yash.3997@gmail.com/inbox =yash.3997@gmail.com/sent =yash.3997@gmail.com/trash =yash.3997@gmail.com/allmail
 
 ######## side-bar options ########
 set sidebar_visible
