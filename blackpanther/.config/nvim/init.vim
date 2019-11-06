@@ -18,8 +18,9 @@ call plug#begin()
   Plug 'airblade/vim-gitgutter' " gutter for git
   Plug 'Yashasvi-Sriram/vim-searchindex' " gives number and count of matches
   Plug 'vim-airline/vim-airline' " status line plugin
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " sublime like autocomplete
   Plug 'junegunn/goyo.vim' " distraction free writing
+  Plug 'lifepillar/vim-mucomplete'
+  Plug 'lervag/vimtex' " tex plugin
 call plug#end()
 
 " basic options
@@ -83,13 +84,9 @@ call plug#end()
 
 " common editing shortcuts
   nnoremap <C-d> yyp
-  inoremap <C-d> <Esc>yypi
   nnoremap <C-x> dd
-  inoremap <C-x> <Esc>ddi
   nnoremap <C-c> yy
-  inoremap <C-c> <Esc>yyi
   nnoremap <C-v> P
-  inoremap <C-v> <Esc>Pi
 
 " save
   nnoremap <C-s> :write<Enter>
@@ -152,7 +149,7 @@ augroup END
   nnoremap <A-v> :vsp<Enter>
 
 " tabs
-  nnoremap <C-n> :tabnew<Enter>
+  nnoremap <C-n> :tabnew<Enter>:RangerWorkingDirectory<Enter>
   nnoremap <A-Right> :tabn<Enter>
   nnoremap <A-Left> :tabp<Enter>
 
@@ -163,6 +160,7 @@ augroup END
   nnoremap <A-S-Right> <C-w>l
 
 " folding
+  set foldlevelstart=99
   nnoremap <S-Tab> zC
   nnoremap <Tab> zO
   nnoremap <leader><leader> zMzvzz
@@ -180,8 +178,11 @@ augroup END
   nnoremap <A-2> :RangerCurrentDirectory<Enter>
   let g:ranger_replace_netrw = 1
 
-" deoplete
-  let g:deoplete#enable_at_startup = 1
+" mucomplete
+  set completeopt+=menuone
+  set completeopt+=noselect
+  let g:mucomplete#enable_auto_at_startup = 1
+  let g:mucomplete#completion_delay = 1
 
 " brackets
   for brackets in ['{}', '[]', '()', '""', "''", '``']
@@ -224,7 +225,7 @@ augroup END
   let g:airline_symbols.linenr = ''
 
 " c/cpp completions
-  autocmd FileType c,cpp inoremap <buffer> /p printf("");<Esc>F"i
+  autocmd FileType c,cpp,cu inoremap <buffer> /p printf("");<Esc>F"i
   autocmd FileType cpp inoremap <buffer> /o std::cout << * << std::endl;<Esc>F*s
   autocmd FileType cpp inoremap <buffer> /e std::cerr << * << std::endl;<Esc>F*s
-  autocmd FileType c,cpp inoremap <buffer> /f for (int i = 0; i < *; ++i) {}<Esc>F*s
+  autocmd FileType c,cpp,cu inoremap <buffer> /f for (int i = 0; i < *; ++i) {}<Esc>F*s

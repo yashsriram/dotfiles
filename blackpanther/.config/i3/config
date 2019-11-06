@@ -1,14 +1,11 @@
 # Yashasvi Sriram's i3 config
 
-################ Sem specific bindings ################
-bindsym F1 exec "zathura /home/pandu/school/8/BTP/5GTB-Design-AMF-ver0.pdf"
-
 ################ Definitions ################
 set $alt_key Mod1
 set $windows_key Mod4
 
 ################ Daemons ################
-exec --no-startup-id i3-battery-popup -n -m "Battery low!"
+exec --no-startup-id i3-battery-popup -L 20 -n -m "Battery low!"
 exec --no-startup-id dunst
 
 ################ High Level Commands ################
@@ -52,8 +49,8 @@ bindsym XF86AudioLowerVolume exec pamixer -d 5 && pkill -RTMIN+2 i3blocks
 bindsym XF86AudioMute exec pamixer -t && pkill -RTMIN+2 i3blocks
 
 ################ Brightness Control ################
-bindsym XF86MonBrightnessUp exec lux -a 5% && pkill -RTMIN+1 i3blocks
-bindsym XF86MonBrightnessDown exec lux -s 5% && pkill -RTMIN+1 i3blocks
+bindsym XF86MonBrightnessUp exec ~/.i3scripts/ch_oled_brightness 5
+bindsym XF86MonBrightnessDown exec ~/.i3scripts/ch_oled_brightness -5
 
 ################ Window Layout ################
 # change container layout (stacked, tabbed, toggle split)
@@ -104,7 +101,7 @@ bindsym $windows_key+Shift+Right move right 30 px
 
 ################ Styling ################
 # Font for window titles. Will also be used by the bar unless a different font
-font pango:fira mono 12
+font pango:fira mono 18
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #000000 #ffe57f #000000 #267fb5   #267fb5

@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # check if input is number
-TIMER_SECONDS=$(echo -e "15\n30\n60\n120\n180\n240\n300" | dmenu -i -p "Specify seconds for timer")
+TIMER_SECONDS=$(echo -e "15\n30\n60\n120\n180\n240\n300\n600" | dmenu -i -p "Specify seconds for timer")
 
 [ "${TIMER_SECONDS}" = "" ] && exit 0
 

@@ -116,7 +116,7 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 alias r="ranger"
 alias v="nvim"
 alias htop="htop --tree"
-alias mounts="mount | grep -E '(/dev/sd|@|ifuse)'"
+alias mounts="mount | grep -E '(/dev/nvme|@|ifuse)'"
 alias tig="tig --all"
 
 # pacman aliases
@@ -147,6 +147,7 @@ alias gita="git add"
 alias gitc="git commit"
 alias gitp="git push"
 alias gitd="git diff"
+alias gitl="git log"
 alias gitb="git branch"
 alias gito="git checkout"
 alias gitk="nohup gitk --all > /dev/null &"
@@ -155,20 +156,16 @@ alias gitk="nohup gitk --all > /dev/null &"
 alias pycharm="nohup ~/jetbrains/pycharm/bin/pycharm.sh > /dev/null &"
 alias clion="nohup ~/jetbrains/clion/bin/clion.sh > /dev/null &"
 alias android-studio="nohup ~/jetbrains/android-studio/bin/studio.sh > /dev/null &"
+alias adb="~/jetbrains/android/platform-tools/adb"
 
 # mount aliases
-alias mountwinc="sudo mount /dev/sda4 /home/pandu/mounts/winc"
-alias umountwinc="sudo umount /home/pandu/mounts/winc"
-alias mounthyperdrive="sudo mount /dev/sda5 /home/pandu/mounts/hyperdrive"
+alias mounthyperdrive="sudo mount /dev/nvme0n1p5 /home/pandu/mounts/hyperdrive"
 alias umounthyperdrive="sudo umount /home/pandu/mounts/hyperdrive"
-alias mountubuntu="sudo mount /dev/sda7 /home/pandu/mounts/ubuntu && ranger /home/pandu/mounts/ubuntu/home/pandu/"
-alias umountubuntu="sudo umount /home/pandu/mounts/ubuntu"
 
 # ssh aliases
 alias sshmars="nohup xterm -e ssh yashsriram@mars.cse.iitb.ac.in > /dev/null &"
 alias sshkrishna="ssh yashasvi@10.129.2.170"
 alias sshpascal="ssh yashsriram@10.129.131.78"
-alias sshrpi="ssh pi@10.9.160.83"
 
 # sshfs aliases
 unmount_all_ssh_filesystems () {
