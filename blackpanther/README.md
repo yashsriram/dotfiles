@@ -29,6 +29,7 @@
 * cronie [for cron tabs]
 * flite and SoX [for text to speech utility]
 * tmux
+* blueberry [bluetooth]
 
 # Config
 * In file `/etc/systemd/logind.conf` set HandlePowerKey=ignore [for disabling immediate shutdown on power button press]
@@ -81,8 +82,10 @@
     Target=nvidia
 
     [Action]
+    Description=Update Nvidia module in initcpio
     Depends=mkinitcpio
     When=PostTransaction
+    NeedsTargets
     Exec=/usr/bin/mkinitcpio -P
 ```
 # run selected programs only on nvidia GPU (switching)
