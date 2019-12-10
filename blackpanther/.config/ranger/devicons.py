@@ -34,6 +34,8 @@ file_node_extensions = {
     'cpp'      : '',
     'hpp'      : '♞',
     'glsl'     : '◩',
+    'frag'     : '◩',
+    'vert'     : '◩',
     'css'      : '',
     'cxx'      : '',
     'd'        : '',

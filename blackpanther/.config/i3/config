@@ -30,6 +30,7 @@ bindsym $windows_key+j exec ~/.i3scripts/emojis_select
 bindsym $windows_key+m exec ~/.i3scripts/talk_to_me
 bindsym $windows_key+t exec ~/.i3scripts/timer
 bindsym $windows_key+a exec speedcrunch
+for_window [class="OpenGL"] floating enable
 for_window [class="SpeedCrunch"] floating enable resize set 840 500
 for_window [class="SpeedCrunch"] border pixel 2
 for_window [class="SpeedCrunch"] move position center
@@ -49,8 +50,9 @@ bindsym XF86AudioLowerVolume exec pamixer -d 5 && pkill -RTMIN+2 i3blocks
 bindsym XF86AudioMute exec pamixer -t && pkill -RTMIN+2 i3blocks
 
 ################ Brightness Control ################
-bindsym XF86MonBrightnessUp exec ~/.i3scripts/ch_oled_brightness 5
-bindsym XF86MonBrightnessDown exec ~/.i3scripts/ch_oled_brightness -5
+bindsym XF86MonBrightnessUp exec ~/.i3scripts/change_oled_brightness 5
+bindsym XF86MonBrightnessDown exec ~/.i3scripts/change_oled_brightness -5
+bindsym XF86TouchpadToggle exec ~/.i3scripts/toggle_screen
 
 ################ Window Layout ################
 # change container layout (stacked, tabbed, toggle split)
