@@ -5,7 +5,7 @@ set $alt_key Mod1
 set $windows_key Mod4
 
 ################ Daemons ################
-exec --no-startup-id i3-battery-popup -L 20 -n -m "Battery low!"
+exec --no-startup-id i3-battery-popup -L 30 -n -m "Battery low!"
 exec --no-startup-id dunst
 
 ################ High Level Commands ################
@@ -112,6 +112,8 @@ client.unfocused        #000000 #000000 #ffffff #292d2e   #222222
 client.urgent           #000000 #d81b60 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
+
+for_window [class=".*"] title_format "⮀ <b>%class</b>"
 
 # remove borders
 default_border normal 0
