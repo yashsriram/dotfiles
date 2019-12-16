@@ -90,10 +90,10 @@ bindsym $windows_key+Shift+i gaps inner current minus 5
 bindsym $alt_key+q focus mode_toggle
 
 ################ Window Size Control ################
-bindsym $windows_key+k resize shrink width 30 px or 30 ppt
-bindsym $windows_key+Shift+k resize grow width 30 px or 30 ppt
-bindsym $windows_key+l resize shrink height 30 px or 30 ppt
-bindsym $windows_key+Shift+l resize grow height 30 px or 30 ppt
+bindsym $windows_key+$alt_key+Left resize shrink width 30 px or 30 ppt
+bindsym $windows_key+$alt_key+Right resize grow width 30 px or 30 ppt
+bindsym $windows_key+$alt_key+Up resize shrink height 30 px or 30 ppt
+bindsym $windows_key+$alt_key+Down resize grow height 30 px or 30 ppt
 
 ################ Window Postion Control ################
 bindsym $windows_key+Shift+Left move left 30 px

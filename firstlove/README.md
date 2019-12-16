@@ -9,7 +9,7 @@
 * neovim [text editor] & nvr [to open new file in exisiting nvim session]
 * ranger [file manager]
 * ranger\_devicons [icons for ranger, depends on nerd-fonts]
-* nerd-fonts-source-code-pro, ttf-emojione-color [for unicode emojis]
+* nerd-fonts-source-code-pro, ttf-emojione-color, noto-fonts-emoji [for unicode emojis]
 * xclip [for manual clipboard management]
 * htop
 * mons [for multi monitor display control]

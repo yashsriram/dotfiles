@@ -125,6 +125,8 @@ file_node_extensions = {
     'tgz'      : '',
     'ts'       : '',
     'twig'     : '',
+    'tex'      : 'τ',
+    'sty'      : 'ζ',
     'vim'      : '',
     'vimrc'    : '',
     'wav'      : '',

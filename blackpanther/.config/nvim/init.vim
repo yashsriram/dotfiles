@@ -9,7 +9,7 @@ call plug#begin()
   Plug 'francoiscabrol/ranger.vim' " ranger integration to open files
   Plug 'Yggdroot/indentLine' " indent guide
   Plug 'ntpeters/vim-better-whitespace' " highlights unwanted whitespaces
-  Plug 'itchyny/vim-cursorword' ", { 'on': 'CursorWord' } underlines all instances of current word
+  Plug 'itchyny/vim-cursorword' , { 'on': 'CursorWord' } " underlines all instances of current word
   Plug 'tpope/vim-repeat' " makes surround and commentary plugins repeatable
   Plug 'tpope/vim-surround' " surround text with anything
   Plug 'tpope/vim-commentary' " comment and uncomment quickly
@@ -19,7 +19,8 @@ call plug#begin()
   Plug 'Yashasvi-Sriram/vim-searchindex' " gives number and count of matches
   Plug 'vim-airline/vim-airline' " status line plugin
   Plug 'junegunn/goyo.vim' " distraction free writing
-  Plug 'lifepillar/vim-mucomplete'
+  Plug 'lifepillar/vim-mucomplete' " completion engine
+  Plug 'sirver/ultisnips' " Customizable snippets
   Plug 'lervag/vimtex' " tex plugin
 call plug#end()
 
@@ -87,6 +88,8 @@ call plug#end()
   nnoremap <C-x> dd
   nnoremap <C-c> yy
   nnoremap <C-v> P
+  nnoremap <C-S-Up> ddkP
+  nnoremap <C-S-Down> ddp
 
 " save
   nnoremap <C-s> :write<Enter>
@@ -161,8 +164,6 @@ augroup END
 
 " folding
   set foldlevelstart=99
-  nnoremap <S-Tab> zC
-  nnoremap <Tab> zO
   nnoremap <leader><leader> zMzvzz
 
 " tags
@@ -201,7 +202,7 @@ augroup END
       let g:airline_symbols = {}
   endif
 
-  " unicode symbols
+" unicode symbols
   let g:airline_left_sep = '»'
   let g:airline_left_sep = '▶'
   let g:airline_right_sep = '«'
@@ -215,7 +216,7 @@ augroup END
   let g:airline_symbols.paste = '∥'
   let g:airline_symbols.whitespace = 'Ξ'
 
-  " airline symbols
+" airline symbols
   let g:airline_left_sep = ''
   let g:airline_left_alt_sep = ''
   let g:airline_right_sep = ''
@@ -224,8 +225,18 @@ augroup END
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 
-" c/cpp completions
-  autocmd FileType c,cpp,cu inoremap <buffer> /p printf("");<Esc>F"i
-  autocmd FileType cpp inoremap <buffer> /o std::cout << * << std::endl;<Esc>F*s
-  autocmd FileType cpp inoremap <buffer> /e std::cerr << * << std::endl;<Esc>F*s
-  autocmd FileType c,cpp,cu inoremap <buffer> /f for (int i = 0; i < *; ++i) {}<Esc>F*s
+" vimtex
+  let g:tex_flavor='latex'
+  " enable this if you need forward and backward search
+  " let g:vimtex_view_method='zathura'
+  let g:vimtex_quickfix_mode=2
+
+" ultisnips
+  let g:UltiSnipsExpandTrigger="<Tab>"
+  let g:UltiSnipsJumpForwardTrigger="<Tab>"
+  let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+
+" smart spell check
+  setlocal spell
+  set spelllang=en_us
+  inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
