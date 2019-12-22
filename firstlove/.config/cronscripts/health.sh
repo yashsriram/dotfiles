@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
 messages=(
-  "Close your eyes tightly for one minute"
-  "Drink a lot of water"
-  "Take your eyes off screen for 2 minutes"
   "Exercise your wrists and neck"
-  "Have a fruity snack"
+  "Happiness is the result, not the process"
+  "Remember you are gonna die one day, so relax and enjoy!"
+  "Take a look out of the screen you are alive, actually alive!"
+  "Happiness cannot be extracted from others"
+  "Only you are responsible for your happiness"
+  "Wanting more positive experience is itself a negative experience ironically, accepting negative one is itself a positive experience"
+  "Love is within you. Always!"
   )
 
 message=${messages[$RANDOM % ${#messages[@]} ]}

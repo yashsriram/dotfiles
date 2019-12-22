@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --bg-fill '/home/pandu/wallpapers/sauske.jpg' 
+feh --no-fehbg --bg-fill '/home/pandu/wallpapers/abstract.jpg' 

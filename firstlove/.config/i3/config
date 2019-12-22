@@ -111,7 +111,10 @@ client.urgent           #000000 #d81b60 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
-for_window [class=".*"] title_format "⮀ <b>%title</b>"
+for_window [class=".*"] title_format "⮀ <b>%class</b>"
+for_window [title="pandu@firstlove*"] title_format "⮀ <b>Termite</b>"
+for_window [title="nvr*"] title_format "⮀ <b>Vim</b>"
+for_window [title="ranger*"] title_format "⮀ <b>Ranger</b>"
 
 # remove borders
 default_border normal 0

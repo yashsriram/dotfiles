@@ -7,20 +7,21 @@ call plug#begin()
   Plug 'mboughaba/i3config.vim' " i3 highlights
   Plug 'rbgrouleff/bclose.vim' " required for ranger plugin
   Plug 'francoiscabrol/ranger.vim' " ranger integration to open files
-  Plug 'Yggdroot/indentLine' " indent guide
   Plug 'ntpeters/vim-better-whitespace' " highlights unwanted whitespaces
-  Plug 'dominikduda/vim_current_word' " highlight all instances of current word
+  Plug 'itchyny/vim-cursorword' , { 'on': 'CursorWord' } " underlines all instances of current word
   Plug 'tpope/vim-repeat' " makes surround and commentary plugins repeatable
   Plug 'tpope/vim-surround' " surround text with anything
   Plug 'tpope/vim-commentary' " comment and uncomment quickly
   Plug 'tpope/vim-abolish' " supercharged substitution, case changing and abbreviations(auto-corrections)
   Plug 'tpope/vim-fugitive' " git plugin
+  Plug 'tpope/vim-eunuch' " UNIX shell commands that need it the most
   Plug 'airblade/vim-gitgutter' " gutter for git
   Plug 'Yashasvi-Sriram/vim-searchindex' " gives number and count of matches
   Plug 'vim-airline/vim-airline' " status line plugin
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " sublime like autocomplete
   Plug 'junegunn/goyo.vim' " distraction free writing
   Plug 'lervag/vimtex' " tex plugin
+  Plug 'lifepillar/vim-mucomplete' " completion engine
+  Plug 'sirver/ultisnips' " Customizable snippets
 call plug#end()
 
 " basic options
@@ -69,9 +70,12 @@ call plug#end()
 " selection
   vnoremap > >gv
   vnoremap < <gv
-  nnoremap vL ^vg_
-  nnoremap vl vg_
-  nnoremap vA ggVG
+  nnoremap vl ^vg_
+  nnoremap yl ^vg_y
+  nnoremap cl ^vg_"+y
+  nnoremap vall ggVG
+  nnoremap yall ggVGy
+  nnoremap call ggVG"+y
   " shift arrow select select
   nnoremap <S-Up> V<Up>
   vnoremap <S-Up> <Up>
@@ -86,6 +90,7 @@ call plug#end()
   nnoremap Y y$
 
 " common editing shortcuts
+  nnoremap <C-z> u
   nnoremap <C-d> yyp
   nnoremap <C-x> dd
   nnoremap <C-c> yy
@@ -146,8 +151,10 @@ augroup END
 
 " buffers
   nnoremap <A-w> :bd<Enter>
-  nnoremap <A-Up> :bp<Enter>
-  nnoremap <A-Down> :bn<Enter>
+  nnoremap <A-Up> :w<Enter>:bp<Enter>
+  nnoremap <A-Down> :w<Enter>:bn<Enter>
+  inoremap <A-Up> <Esc>:w<Enter>:bp<Enter>
+  inoremap <A-Down> <Esc>:w<Enter>:bn<Enter>
   nnoremap <A-h> :sp<Enter>
   nnoremap <A-v> :vsp<Enter>
 
@@ -224,14 +231,22 @@ augroup END
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 
-" c/cpp
-  autocmd FileType c,cpp inoremap <buffer> \p printf("");<Esc>F"i
-  autocmd FileType cpp inoremap <buffer> \o std::cout << * << std::endl;<Esc>F*s
-  autocmd FileType cpp inoremap <buffer> \e std::cerr << * << std::endl;<Esc>F*s
-  autocmd FileType c,cpp inoremap <buffer> \f for (int i = 0; i < *; ++i) {}<Esc>F*s
-
 " vim_current_word
   hi CurrentWord cterm=underline
   hi CurrentWordTwins cterm=underline
+
+" vimtex
+  let g:tex_flavor='latex'
+  " enable this if you need forward and backward search
+  " let g:vimtex_view_method='zathura'
+  let g:vimtex_quickfix_mode=2
+
+" ultisnips
+  let g:UltiSnipsExpandTrigger="<Tab>"
+  let g:UltiSnipsJumpForwardTrigger="<Tab>"
+  let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+
+" smart spell check
+  autocmd BufReadPost,BufNewFile *.tex setlocal spell | set spelllang=en_us | inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 
