@@ -64,7 +64,13 @@ ZSH_THEME="yashasvisriram"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  zsh-syntax-highlighting
+  command-time
 )
+
+ZSH_COMMAND_TIME_MIN_SECONDS=1
+ZSH_COMMAND_TIME_MSG="time: %s sec"
+ZSH_COMMAND_TIME_COLOR="red"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -118,7 +124,8 @@ alias v="nvim"
 alias htop="htop --tree"
 alias mounts="mount | grep -E '(/dev/sd|@|ifuse)'"
 alias tig="tig --all"
-alias matlab="/home/pandu/matlab/bin/matlab"
+alias processing="/home/pandu/school/10/Animation\&Planning/processing-3.5.3/processing"
+alias processing-java="/home/pandu/school/10/Animation\&Planning/processing-3.5.3/processing-java"
 
 # pacman aliases
 alias pacc="pacman -Q | wc -l"
@@ -193,4 +200,6 @@ alias usshfskrishna="fusermount -u /home/pandu/sshfs/krishna"
 # raspberrypi
 alias sshfsrpi="sshfs /home/pandu/sshfs/raspberrypi pi@10.9.160.83: ; ranger /home/pandu/sshfs/raspberrypi"
 alias usshfsrpi="fusermount -u /home/pandu/sshfs/raspberrypi"
-
+# raspberrypi
+alias sshfscselabs="sshfs /home/pandu/sshfs/cselabs patku001@cs-trombone.cs.umn.edu: ; ranger /home/pandu/sshfs/cselabs"
+alias usshfscselabs="fusermount -u /home/pandu/sshfs/cselabs"

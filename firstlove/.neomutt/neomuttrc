@@ -1,3 +1,4 @@
+# Modes of neomutt: Browser, Index, Pager, Attach
 ######## paths ########
 set folder = ~/.mail
 set header_cache = ~/.neomutt/cache/headers
@@ -15,28 +16,23 @@ folder-hook 'yspatkuri@gmail.com' 'source ~/.neomutt/accounts/yspatkuri@gmail.co
 folder-hook 'patku001@umn.edu' 'source ~/.neomutt/accounts/patku001@umn.edu'
 source ~/.neomutt/accounts/patku001@umn.edu
 
-mailboxes =patku001@umn.edu
-mailboxes =patku001@umn.edu/inbox =patku001@umn.edu/sent =patku001@umn.edu/trash =patku001@umn.edu/allmail
-mailboxes =yspatkuri@gmail.com
-mailboxes =yspatkuri@gmail.com/inbox =yspatkuri@gmail.com/sent =yspatkuri@gmail.com/trash =yspatkuri@gmail.com/allmail
-mailboxes =yash.3997@gmail.com
-mailboxes =yash.3997@gmail.com/inbox =yash.3997@gmail.com/sent =yash.3997@gmail.com/trash =yash.3997@gmail.com/allmail
+named-mailboxes "patku001@umn.edu/inbox" ="patku001@umn.edu/inbox"
+named-mailboxes "patku001@umn.edu/sent" ="patku001@umn.edu/sent"
+named-mailboxes "patku001@umn.edu/trash" ="patku001@umn.edu/trash"
+named-mailboxes "patku001@umn.edu/allmail" ="patku001@umn.edu/allmail"
 
-######## side-bar options ########
-set sidebar_visible
-set sidebar_format = "%B %?N?(%N)?%*"
-set mail_check_stats
-set sidebar_width = 25
-set sidebar_divider_char = '│'
-set sidebar_short_path
-set sidebar_delim_chars="/"
-set sidebar_folder_indent
-set sidebar_indent_string=" ‣ "
-bind index,pager <PageUp> sidebar-prev
-bind index,pager <PageDown> sidebar-next
-bind index,pager + sidebar-open
+named-mailboxes "yspatkuri@gmail.com/inbox" ="yspatkuri@gmail.com/inbox"
+named-mailboxes "yspatkuri@gmail.com/sent" ="yspatkuri@gmail.com/sent"
+named-mailboxes "yspatkuri@gmail.com/trash" ="yspatkuri@gmail.com/trash"
+named-mailboxes "yspatkuri@gmail.com/allmail" ="yspatkuri@gmail.com/allmail"
+
+named-mailboxes "yash.3997@gmail.com/inbox" ="yash.3997@gmail.com/inbox"
+named-mailboxes "yash.3997@gmail.com/sent" ="yash.3997@gmail.com/sent"
+named-mailboxes "yash.3997@gmail.com/trash" ="yash.3997@gmail.com/trash"
+named-mailboxes "yash.3997@gmail.com/allmail" ="yash.3997@gmail.com/allmail"
 
 ######## basic options ########
+color progress white red
 set mbox_type = Maildir
 set editor = "nvim"
 set sleep_time=0
@@ -69,28 +65,51 @@ set status_format = "[ Folder: %f ] [%r%m messages%?n? (%n new)?%?d? (%d to dele
 bind browser <right> select-entry
 
 ######## index view ########
-set index_format = "%4C %M [%Z] %?X?A& ? %25.25F %-70.70s (%e/%E) (%5.5c) %D"
-macro index <left> "<change-folder>?" "Open mailboxes"
-bind index <right> display-message
-bind index <up> previous-entry
-bind index <down> next-entry
-bind index [ display-message
-bind index ] display-message
+push <first-entry>
+
+set index_format = "%4C   %M [%Z] %?X?A& ? %25.25F %-70.70s (%e/%E) (%5.5c) %D"
+
+# collapse threads
+folder-hook '.' 'push \eV'
+set collapse_unread=yes
+set uncollapse_jump=yes
+bind index - collapse-thread
+bind index _ collapse-all
+
+macro index <Left> "<change-folder>?" "Open mailboxes"
+bind index <Right> noop
+bind index <Up> previous-entry
+bind index <Down> next-entry
+
 bind index g noop
 bind index gg first-entry
 bind index G last-entry
 bind index N search-opposite
 bind index R toggle-new
 
+macro index gpi "<change-folder> =patku001@umn.edu/inbox<enter>"
+macro index gps "<change-folder> =patku001@umn.edu/sent<enter>"
+macro index gpt "<change-folder> =patku001@umn.edu/trash<enter>"
+macro index gpa "<change-folder> =patku001@umn.edu/allmail<enter>"
+
+macro index gsi "<change-folder> =yspatkuri@gmail.com/inbox<enter>"
+macro index gss "<change-folder> =yspatkuri@gmail.com/sent<enter>"
+macro index gst "<change-folder> =yspatkuri@gmail.com/trash<enter>"
+macro index gsa "<change-folder> =yspatkuri@gmail.com/allmail<enter>"
+
+macro index ghi "<change-folder> =yash.3997@gmail.com/inbox<enter>"
+macro index ghs "<change-folder> =yash.3997@gmail.com/sent<enter>"
+macro index ght "<change-folder> =yash.3997@gmail.com/trash<enter>"
+macro index gha "<change-folder> =yash.3997@gmail.com/allmail<enter>"
+
 ######## pager view ########
-set pager_index_lines = 10
+set pager_index_lines = 20
 set pager_context = 0
-bind pager <right> view-attachments
-bind pager <left> exit
-bind pager <down> next-line
-bind pager <up> previous-line
-bind pager [ previous-entry
-bind pager ] next-entry
+bind pager <Down> next-entry
+bind pager <Up> previous-entry
+bind pager <Left> previous-line
+bind pager <Right> next-line
+bind pager <Return> exit
 bind pager g noop
 bind pager gg top
 bind pager G bottom

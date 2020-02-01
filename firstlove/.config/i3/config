@@ -24,19 +24,25 @@ bindsym Control+$alt_key+l exec i3lock --fuzzy -l
 
 ################ Application startup positions ################
 for_window [class="SpeedCrunch"] floating enable, resize set 960 540, move position 960 px 0 px, border pixel 1
+for_window [class="Matplotlib"] floating enable
+for_window [class="FPS"] floating enable
+for_window [class="Processing"] floating enable
+for_window [class="SimpleScreenRecorder"] floating enable
 
 ################ Application Keymaps ################
 bindsym $windows_key+Shift+q kill
 
 bindsym $windows_key+Return exec termite
-bindsym $windows_key+l exec ~/.i3scripts/emojis_select
+bindsym $windows_key+z exec ~/.i3scripts/emojis_select
 bindsym $windows_key+m exec ~/.i3scripts/talk_to_me
 bindsym $windows_key+t exec ~/.i3scripts/timer
 bindsym $windows_key+a exec speedcrunch
 bindsym $windows_key+s exec subl
-bindsym $windows_key+n exec termite -e neomutt
 bindsym $windows_key+c exec google-chrome-stable
 bindsym $windows_key+x exec firefox
+bindsym $windows_key+j exec nohup termite -e 'nvr -s --remote-tab-silent /home/pandu/journal/templatex/main.templatex' > /dev/null &
+bindsym $windows_key+k exec termite -d ~/journal
+bindsym $windows_key+l exec zathura ~/journal/tex/main.pdf
 
 ################ Screenshot Keymaps ################
 bindsym --release Print exec --no-startup-id scrot /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot Captured"
@@ -88,10 +94,10 @@ bindsym $windows_key+Shift+i gaps inner current minus 5
 bindsym $alt_key+q focus mode_toggle
 
 ################ Window Size Control ################
-bindsym $windows_key+k resize grow width 30 px or 30 ppt
-bindsym $windows_key+Shift+k resize shrink width 30 px or 30 ppt
-bindsym $windows_key+j resize grow height 30 px or 30 ppt
-bindsym $windows_key+Shift+j resize shrink height 30 px or 30 ppt
+bindsym $windows_key+$alt_key+Left resize shrink width 30 px or 30 ppt
+bindsym $windows_key+$alt_key+Right resize grow width 30 px or 30 ppt
+bindsym $windows_key+$alt_key+Up resize shrink height 30 px or 30 ppt
+bindsym $windows_key+$alt_key+Down resize grow height 30 px or 30 ppt
 
 ################ Window Postion Control ################
 bindsym $windows_key+Shift+Left move left 30 px
@@ -113,8 +119,10 @@ client.background       #ffffff
 
 for_window [class=".*"] title_format "⮀ <b>%class</b>"
 for_window [title="pandu@firstlove*"] title_format "⮀ <b>Termite</b>"
-for_window [title="nvr*"] title_format "⮀ <b>Vim</b>"
-for_window [title="ranger*"] title_format "⮀ <b>Ranger</b>"
+for_window [title="neomutt"] title_format "⮀ <b>Mutt</b>"
+for_window [title="nvim"] title_format "⮀ <b>Vim</b>"
+for_window [title="ranger"] title_format "⮀ <b>Ranger</b>"
+for_window [class="Google-chrome"] title_format "⮀ <b>Chrome</b>"
 
 # remove borders
 default_border normal 0

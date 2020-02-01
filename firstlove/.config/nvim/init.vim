@@ -4,6 +4,8 @@ let mapleader=" "
 
 call plug#begin()
   Plug 'NLKNguyen/papercolor-theme' " theme
+  Plug 'morhetz/gruvbox' " theme
+  Plug 'tomasr/molokai' " theme
   Plug 'mboughaba/i3config.vim' " i3 highlights
   Plug 'rbgrouleff/bclose.vim' " required for ranger plugin
   Plug 'francoiscabrol/ranger.vim' " ranger integration to open files
@@ -66,6 +68,8 @@ call plug#end()
   vnoremap <C-A-right> g_i
   vnoremap <C-A-left> g0i
   nnoremap <C-b> %
+  nnoremap gf <C-W>gf
+  nnoremap gcf :e <cfile><Enter>
 
 " selection
   vnoremap > >gv
@@ -95,6 +99,8 @@ call plug#end()
   nnoremap <C-x> dd
   nnoremap <C-c> yy
   nnoremap <C-v> P
+  vnoremap D "_d
+  nnoremap cii{ vi{"_dP
 
 " save
   nnoremap <C-s> :write<Enter>
@@ -132,7 +138,7 @@ augroup END
 
 " replace
   nnoremap <C-r> :%s///gc<Left><Left><Left><Left>
-  nnoremap <C-A-r> viw"ry:%s/<C-r>r//gc<Left><Left><Left>
+  nnoremap <C-A-r> viw"ry:%s/<C-r>r/<C-r>r/gc<Left><Left><Left>
   vnoremap <C-r> "ry:%s///gc<Left><Left><Left><Left><C-r>r<Right>
 
 " remove all trailing whitespace
@@ -151,10 +157,10 @@ augroup END
 
 " buffers
   nnoremap <A-w> :bd<Enter>
-  nnoremap <A-Up> :w<Enter>:bp<Enter>
-  nnoremap <A-Down> :w<Enter>:bn<Enter>
-  inoremap <A-Up> <Esc>:w<Enter>:bp<Enter>
-  inoremap <A-Down> <Esc>:w<Enter>:bn<Enter>
+  nnoremap <A-Up> :bp<Enter>
+  nnoremap <A-Down> :bn<Enter>
+  inoremap <A-Up> <Esc>:bp<Enter>
+  inoremap <A-Down> <Esc>:bn<Enter>
   nnoremap <A-h> :sp<Enter>
   nnoremap <A-v> :vsp<Enter>
 
@@ -184,8 +190,7 @@ augroup END
   nnoremap <leader><Down> <C-O>
 
 " ranger
-  nnoremap <A-1> :RangerWorkingDirectory<Enter>
-  nnoremap <A-2> :RangerCurrentDirectory<Enter>
+  nnoremap <A-1> :RangerCurrentFileNewTab<Enter>
   let g:ranger_replace_netrw = 1
 
 " deoplete
@@ -239,7 +244,7 @@ augroup END
   let g:tex_flavor='latex'
   " enable this if you need forward and backward search
   " let g:vimtex_view_method='zathura'
-  let g:vimtex_quickfix_mode=2
+  let g:vimtex_quickfix_mode=0
 
 " ultisnips
   let g:UltiSnipsExpandTrigger="<Tab>"

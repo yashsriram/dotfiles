@@ -1,0 +1,130 @@
+snippet today "Date"
+`date +%F`
+endsnippet
+
+snippet box "Box"
+`!p snip.rv = '┌' + '─' * (len(t[1]) + 2) + '┐'`
+│ $1 │
+`!p snip.rv = '└' + '─' * (len(t[1]) + 2) + '┘'`
+$0
+endsnippet
+
+# Latex
+snippet table "Table environment" b
+\begin{table}[${1:htpb}]
+	\centering
+	\caption{${2:caption}}
+	\label{tab:${3:label}}
+	\begin{tabular}{${5:c}}
+	$0${5/((?<=.)c|l|r)|./(?1: & )/g}
+	\end{tabular}
+\end{table}
+endsnippet
+
+snippet tikz "Tikz figure"
+\begin{figure}[${1:htpb}]
+	\centering
+	\begin{tikzpicture}
+	$2
+	\end{tikzpicture}
+	\caption{$3}
+	\label{fig:$4}
+\end{figure}
+endsnippet
+
+snippet fig "Figure environment" b
+\begin{figure}[${1:htpb}]
+	\centering
+	${2:\includegraphics[width=0.8\textwidth]{$3}}
+	\caption{${4:$3}}
+	\label{fig:${5:${3/\W+/-/g}}}
+\end{figure}
+endsnippet
+
+snippet enum "Enumerate" bA
+\begin{enumerate}[nolistsep]
+	\item $1
+\end{enumerate}
+$0
+endsnippet
+
+snippet item "Itemize" bA
+\begin{itemize}
+	\item $0
+\end{itemize}
+endsnippet
+
+snippet mk "Math" wA
+$ ${1} $`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+		snip.rv = ' '
+else:
+		snip.rv = ''
+` $0
+endsnippet
+
+snippet dm "Math" wA
+\[
+$1
+.\] $0
+endsnippet
+
+snippet quo "Quotes" wA
+\`$1' $0
+endsnippet
+
+snippet bf "Boldface" wA
+\textbf{$1} $0
+endsnippet
+
+snippet clr "Color text" wA
+{\color{$1} $2} $0
+endsnippet
+
+snippet beg "begin{} / end{}" bA
+\begin{$1}
+	$0
+\end{$1}
+endsnippet
+
+snippet article "Article template"
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\title{$1}
+\author{${2:Yashasvi Sriram Patkuri}}
+
+\begin{document}
+\maketitle
+$0
+
+\end{document}
+endsnippet
+
+snippet stm "Statement" bA
+\${ add_statement(
+
+'$1',
+
+r'''
+$2
+''',
+
+r'''
+$3
+''',
+
+r'''
+${4:\proofbydefinition}
+'''
+
+) }
+$0
+
+endsnippet
+
