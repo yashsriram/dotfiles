@@ -4,8 +4,6 @@ let mapleader=" "
 
 call plug#begin()
   Plug 'NLKNguyen/papercolor-theme' " theme
-  Plug 'morhetz/gruvbox' " theme
-  Plug 'tomasr/molokai' " theme
   Plug 'mboughaba/i3config.vim' " i3 highlights
   Plug 'rbgrouleff/bclose.vim' " required for ranger plugin
   Plug 'francoiscabrol/ranger.vim' " ranger integration to open files
@@ -193,8 +191,12 @@ augroup END
   nnoremap <A-1> :RangerCurrentFileNewTab<Enter>
   let g:ranger_replace_netrw = 1
 
-" deoplete
-  let g:deoplete#enable_at_startup = 1
+" mucomplete
+  set completeopt+=menuone
+  set completeopt+=noselect
+  set shortmess+=c
+  let g:mucomplete#enable_auto_at_startup = 1
+  let g:mucomplete#completion_delay = 1
 
 " brackets
   for brackets in ['{}', '[]', '()', '""', "''", '``']

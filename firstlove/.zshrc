@@ -68,11 +68,28 @@ plugins=(
   command-time
 )
 
-ZSH_COMMAND_TIME_MIN_SECONDS=1
-ZSH_COMMAND_TIME_MSG="time: %s sec"
-ZSH_COMMAND_TIME_COLOR="red"
-
 source $ZSH/oh-my-zsh.sh
+
+zsh_command_time() {
+    if [ -n "$ZSH_COMMAND_TIME" ]; then
+        hours=$(($ZSH_COMMAND_TIME/3600))
+        min=$(($ZSH_COMMAND_TIME/60))
+        sec=$(($ZSH_COMMAND_TIME%60))
+        if [ "$ZSH_COMMAND_TIME" -le 60 ]; then
+            timer_show="$fg[green]$ZSH_COMMAND_TIME s."
+        elif [ "$ZSH_COMMAND_TIME" -gt 60 ] && [ "$ZSH_COMMAND_TIME" -le 180 ]; then
+            timer_show="$fg[yellow]$min min. $sec s."
+        else
+            if [ "$hours" -gt 0 ]; then
+                min=$(($min%60))
+                timer_show="$fg[red]$hours h. $min min. $sec s."
+            else
+                timer_show="$fg[red]$min min. $sec s."
+            fi
+        fi
+        printf "${ZSH_COMMAND_TIME_MSG}\n" "$timer_show"
+    fi
+}
 
 # User configuration
 
@@ -124,8 +141,8 @@ alias v="nvim"
 alias htop="htop --tree"
 alias mounts="mount | grep -E '(/dev/sd|@|ifuse)'"
 alias tig="tig --all"
-alias processing="/home/pandu/school/10/Animation\&Planning/processing-3.5.3/processing"
-alias processing-java="/home/pandu/school/10/Animation\&Planning/processing-3.5.3/processing-java"
+alias p="/home/pandu/school/10/Animation\&Planning/processing/processing"
+alias pj="/home/pandu/school/10/Animation\&Planning/processing/processing-java"
 
 # pacman aliases
 alias pacc="pacman -Q | wc -l"
@@ -167,6 +184,7 @@ alias pycharm="nohup ~/jetbrains/pycharm/bin/pycharm.sh > /dev/null &"
 alias clion="nohup ~/jetbrains/clion/bin/clion.sh > /dev/null &"
 alias android-studio="nohup ~/jetbrains/android-studio/bin/studio.sh > /dev/null &"
 alias adb="~/jetbrains/android/platform-tools/adb"
+alias idea="nohup ~/jetbrains/idea/bin/idea.sh > /dev/null &"
 
 # mount aliases
 alias mountwinc="sudo mount /dev/sda4 /home/pandu/mounts/winc"
@@ -203,3 +221,4 @@ alias usshfsrpi="fusermount -u /home/pandu/sshfs/raspberrypi"
 # raspberrypi
 alias sshfscselabs="sshfs /home/pandu/sshfs/cselabs patku001@cs-trombone.cs.umn.edu: ; ranger /home/pandu/sshfs/cselabs"
 alias usshfscselabs="fusermount -u /home/pandu/sshfs/cselabs"
+
