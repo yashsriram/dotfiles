@@ -22,22 +22,29 @@ bindsym $windows_key+Shift+d exec ~/.i3scripts/dmenu_prompt 'Do you really want 
 # lock
 bindsym Control+$alt_key+l exec i3lock --fuzzy -l
 
+################ Application startup positions ################
+for_window [class="SpeedCrunch"] floating enable, resize set 840 500, move position center, border pixel 2
+for_window [class="Matplotlib"] floating enable
+for_window [class="FPS"] floating enable
+for_window [class="SimpleScreenRecorder"] floating enable
+for_window [class="OpenGL"] floating enable
+for_window [title="^Processing$"] floating enable
+
 ################ Application Keymaps ################
 bindsym $windows_key+Shift+q kill
 
 bindsym $windows_key+Return exec termite
-bindsym $windows_key+j exec ~/.i3scripts/emojis_select
+bindsym $windows_key+space exec dmenu_run -fn 'Fira Mono-22'
+bindsym $windows_key+z exec ~/.i3scripts/emojis_select
 bindsym $windows_key+m exec ~/.i3scripts/talk_to_me
 bindsym $windows_key+t exec ~/.i3scripts/timer
 bindsym $windows_key+a exec speedcrunch
-for_window [class="OpenGL"] floating enable
-for_window [class="SpeedCrunch"] floating enable resize set 840 500
-for_window [class="SpeedCrunch"] border pixel 2
-for_window [class="SpeedCrunch"] move position center
 bindsym $windows_key+s exec subl
-bindsym $windows_key+v exec termite -e nvr
 bindsym $windows_key+c exec google-chrome-stable
-bindsym $windows_key+x exec firefox
+bindsym $windows_key+h exec nohup termite -e 'nvr -s --remote-tab-silent /home/pandu/journal/templatex/main.templatex' > /dev/null &
+bindsym $windows_key+j exec termite -d ~/journal
+bindsym $windows_key+k exec zathura ~/journal/tex/main.pdf
+bindsym $windows_key+l exec surf ~/journal/graph.html
 
 ################ Screenshot Keymaps ################
 bindsym --release Print exec --no-startup-id scrot /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot Captured"
@@ -60,9 +67,9 @@ workspace_layout tabbed
 bindsym $windows_key+w layout tabbed
 bindsym $windows_key+e layout toggle split
 # bindsym $windows_key+s layout stacking
-bindsym $windows_key+space fullscreen toggle
+bindsym $windows_key+f fullscreen toggle
 # split in horizontal orientation
-bindsym $windows_key+h split h
+# bindsym $windows_key+h split h
 # split in vertical orientation
 bindsym $windows_key+g split v
 # toggle tiling / floating
@@ -114,6 +121,11 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 for_window [class=".*"] title_format "⮀ <b>%class</b>"
+for_window [title="^pandu@blackpanther*"] title_format "⮀ <b>Termite</b>"
+for_window [title="^/bin/nvim"] title_format "⮀ <b>Vim</b>"
+for_window [title="^nvr -s --remote-tab-silent"] title_format "⮀ <b>Vim</b>"
+for_window [title="^ranger$"] title_format "⮀ <b>Ranger</b>"
+for_window [class="Google-chrome"] title_format "⮀ <b>Chrome</b>"
 
 # remove borders
 default_border normal 0

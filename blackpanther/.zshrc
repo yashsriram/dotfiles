@@ -64,9 +64,31 @@ ZSH_THEME="yashasvisriram"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
+
+zsh_command_time() {
+    if [ -n "$ZSH_COMMAND_TIME" ]; then
+        hours=$(($ZSH_COMMAND_TIME/3600))
+        min=$(($ZSH_COMMAND_TIME/60))
+        sec=$(($ZSH_COMMAND_TIME%60))
+        if [ "$ZSH_COMMAND_TIME" -le 60 ]; then
+            timer_show="$fg[green]$ZSH_COMMAND_TIME s."
+        elif [ "$ZSH_COMMAND_TIME" -gt 60 ] && [ "$ZSH_COMMAND_TIME" -le 180 ]; then
+            timer_show="$fg[yellow]$min min. $sec s."
+        else
+            if [ "$hours" -gt 0 ]; then
+                min=$(($min%60))
+                timer_show="$fg[red]$hours h. $min min. $sec s."
+            else
+                timer_show="$fg[red]$min min. $sec s."
+            fi
+        fi
+        printf "${ZSH_COMMAND_TIME_MSG}\n" "$timer_show"
+    fi
+}
 
 # User configuration
 
@@ -118,6 +140,8 @@ alias v="nvim"
 alias htop="htop --tree"
 alias mounts="mount | grep -E '(/dev/nvme|@|ifuse)'"
 alias tig="tig --all"
+alias p="/home/pandu/school/10/Animation\&Planning/processing/processing"
+alias pj="/home/pandu/school/10/Animation\&Planning/processing/processing-java"
 
 # pacman aliases
 alias pacc="pacman -Q | wc -l"
@@ -153,6 +177,7 @@ alias gito="git checkout"
 alias gitk="nohup gitk --all > /dev/null &"
 
 #jetbrains aliases
+alias idea="nohup ~/jetbrains/idea/bin/idea.sh > /dev/null &"
 alias pycharm="nohup ~/jetbrains/pycharm/bin/pycharm.sh > /dev/null &"
 alias clion="nohup ~/jetbrains/clion/bin/clion.sh > /dev/null &"
 alias android-studio="nohup ~/jetbrains/android-studio/bin/studio.sh > /dev/null &"
@@ -184,5 +209,7 @@ alias usshfskrishna="fusermount -u /home/pandu/sshfs/krishna"
 # raspberrypi
 alias sshfsrpi="sshfs /home/pandu/sshfs/raspberrypi pi@10.9.160.83: ; ranger /home/pandu/sshfs/raspberrypi"
 alias usshfsrpi="fusermount -u /home/pandu/sshfs/raspberrypi"
-
+# umn
+alias sshfsumn="sshfs /home/pandu/sshfs/umn patku001@nebula.cs.umn.edu: ; ranger /home/pandu/sshfs/umn/.www/"
+alias usshfsumn="fusermount -u /home/pandu/sshfs/umn"
 

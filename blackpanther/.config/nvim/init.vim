@@ -7,9 +7,8 @@ call plug#begin()
   Plug 'mboughaba/i3config.vim' " i3 highlights
   Plug 'rbgrouleff/bclose.vim' " required for ranger plugin
   Plug 'francoiscabrol/ranger.vim' " ranger integration to open files
-  Plug 'Yggdroot/indentLine' " indent guide
   Plug 'ntpeters/vim-better-whitespace' " highlights unwanted whitespaces
-  Plug 'itchyny/vim-cursorword' , { 'on': 'CursorWord' } " underlines all instances of current word
+  Plug 'itchyny/vim-cursorword' " , { 'on': 'CursorWord' } underlines all instances of current word
   Plug 'tpope/vim-repeat' " makes surround and commentary plugins repeatable
   Plug 'tpope/vim-surround' " surround text with anything
   Plug 'tpope/vim-commentary' " comment and uncomment quickly
@@ -63,6 +62,7 @@ call plug#end()
   vnoremap <C-A-right> g_i
   vnoremap <C-A-left> g0i
   nnoremap <C-b> %
+  nnoremap gf <C-w>gf
 
 " selection
   vnoremap > >gv
@@ -86,10 +86,12 @@ call plug#end()
 " common editing shortcuts
   nnoremap <C-d> yyp
   nnoremap <C-x> dd
+  nnoremap <C-z> <nop>
   nnoremap <C-c> yy
   nnoremap <C-v> P
   nnoremap <C-S-Up> ddkP
   nnoremap <C-S-Down> ddp
+  nnoremap clr ggVGd
 
 " save
   nnoremap <C-s> :write<Enter>
@@ -119,7 +121,7 @@ augroup END
 
 " find
   set nowrapscan
-  nnoremap <C-f> /
+  nnoremap <C-f> /\c
   nnoremap <A-f> :set hlsearch!<Enter>
   nnoremap <A-c> :set ignorecase!<Enter>
   nnoremap <C-A-f> *N
@@ -175,8 +177,7 @@ augroup END
   nnoremap <leader><Down> <C-O>
 
 " ranger
-  nnoremap <A-1> :RangerWorkingDirectory<Enter>
-  nnoremap <A-2> :RangerCurrentDirectory<Enter>
+  nnoremap <A-1> :RangerCurrentDirectoryNewTab<Enter>
   let g:ranger_replace_netrw = 1
 
 " mucomplete
@@ -238,3 +239,7 @@ augroup END
 
 " smart spell check
   autocmd BufReadPost,BufNewFile *.tex setlocal spell | set spelllang=en_us | inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+  let g:indentLine_fileTypeExclude = ['tex', 'markdown']
+
+" temporary bindings
+  nnoremap <C-l> :!~/school/10/Animation\&Planning/processing/processing-java --sketch=/home/pandu/school/10/Animation\&Planning/assignments/1.particlesystem/fire --output=/home/pandu/school/10/Animation\&Planning/assignments/1.particlesystem/fire/build --force --run<Enter>
