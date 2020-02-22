@@ -47,9 +47,8 @@ bindsym $windows_key+l exec surf ~/journal/graph.html
 bindsym $windows_key+t exec ~/.i3scripts/timer
 
 ################ Screenshot Keymaps ################
-bindsym --release Print exec --no-startup-id scrot /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot Captured"
-bindsym --release $windows_key+Print exec --no-startup-id scrot -s /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot of area Captured"
-bindsym --release $windows_key+Shift+Print exec --no-startup-id scrot -u /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot of app Captured"
+bindsym --release Print exec ~/.i3scripts/screenshot "Screenshot name" "" "Screenshot captured"
+bindsym --release $windows_key+Print exec exec ~/.i3scripts/screenshot "Patchshot name" "-s" "Screenshot of patch captured"
 
 ################ Volume Control ################
 bindsym XF86AudioRaiseVolume exec pamixer -i 5 && pkill -RTMIN+2 i3blocks

@@ -1,4 +1,4 @@
-set nocompatible
+﻿set nocompatible
 
 let mapleader=" "
 
@@ -27,8 +27,8 @@ call plug#end()
 " basic options
   syntax on
   filetype plugin on
+  set number
   set bg=dark
-  set number relativenumber
   set splitbelow splitright
   set encoding=utf-8
   set tabstop=2 shiftwidth=2 expandtab
@@ -196,7 +196,7 @@ augroup END
   set completeopt+=noselect
   set shortmess+=c
   let g:mucomplete#enable_auto_at_startup = 1
-  let g:mucomplete#completion_delay = 1
+  let g:mucomplete#completion_delay = 3
 
 " brackets
   for brackets in ['{}', '[]', '()', '""', "''", '``']
@@ -255,5 +255,4 @@ augroup END
 
 " smart spell check
   autocmd BufReadPost,BufNewFile *.tex setlocal spell | set spelllang=en_us | inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
-
 

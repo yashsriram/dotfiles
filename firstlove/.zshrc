@@ -143,6 +143,8 @@ alias mounts="mount | grep -E '(/dev/sd|@|ifuse)'"
 alias tig="tig --all"
 alias p="/home/pandu/school/10/Animation\&Planning/processing/processing"
 alias pj="/home/pandu/school/10/Animation\&Planning/processing/processing-java"
+alias javac="/home/pandu/jetbrains/idea/jbr/bin/javac"
+alias java="/home/pandu/jetbrains/idea/jbr/bin/java"
 
 # pacman aliases
 alias pacc="pacman -Q | wc -l"
