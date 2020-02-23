@@ -48,7 +48,7 @@ bindsym $windows_key+t exec ~/.i3scripts/timer
 
 ################ Screenshot Keymaps ################
 bindsym --release Print exec ~/.i3scripts/screenshot "Screenshot name" "" "Screenshot captured"
-bindsym --release $windows_key+Print exec exec ~/.i3scripts/screenshot "Patchshot name" "-s" "Screenshot of patch captured"
+bindsym --release $windows_key+Print exec exec ~/.i3scripts/screenshot "Patchshot name" "-s" "Patchshot captured"
 
 ################ Volume Control ################
 bindsym XF86AudioRaiseVolume exec pamixer -i 5 && pkill -RTMIN+2 i3blocks
@@ -125,7 +125,7 @@ for_window [title="/bin/nvim"] title_format "⮀ <b>Vim</b>"
 for_window [title="nvr -s --remote-tab-silent"] title_format "⮀ <b>Vim</b>"
 for_window [title="^ranger$"] title_format "⮀ <b>Ranger</b>"
 for_window [class="^Google-chrome$"] title_format "⮀ <b>Chrome</b>"
-for_window [class="^Zathura$"] title_format "⮀ <b>Zathura</b>"
+for_window [class="^Zathura$"] title_format "⮀ <b>%title</b>"
 
 # remove borders
 default_border normal 0

@@ -2,5 +2,5 @@
 
 FILE_NAME=$(echo "" | dmenu -fn 'Fira Mono-14' -i -p "${1}")
 
-[ $? -eq 0 ] && scrot ${2} "/home/pandu/screenshots/%Y-%M-%d_%T@${FILE_NAME}.png" && notify-send -a "screenshot" "${3}" -t 1000
+[ $? -eq 0 ] && scrot ${2} "/home/pandu/screenshots/%Y-%M-%d_%T@${FILE_NAME}.png" && notify-send -a "screenshot" "${FILE_NAME} : ${3}" -t 1000
 
