@@ -1,5 +1,5 @@
 # Font
-set font "Fira mono normal 14"
+set font " Fira mono normal 14"
 
 # Misc
 set show-recent 20

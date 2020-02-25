@@ -47,8 +47,8 @@ bindsym $windows_key+l exec surf ~/journal/graph.html
 bindsym $windows_key+t exec ~/.i3scripts/timer
 
 ################ Screenshot Keymaps ################
-bindsym --release Print exec ~/.i3scripts/screenshot "Screenshot name" "" "Screenshot captured"
-bindsym --release $windows_key+Print exec exec ~/.i3scripts/screenshot "Patchshot name" "-s" "Patchshot captured"
+bindsym --release Print exec ~/.i3scripts/screenshot 'Screenshot name' '' 'Screenshot captured'
+bindsym --release $windows_key+Print exec exec ~/.i3scripts/screenshot 'Patchshot name' '-s' 'Patchshot captured'
 
 ################ Volume Control ################
 bindsym XF86AudioRaiseVolume exec pamixer -i 5 && pkill -RTMIN+2 i3blocks
