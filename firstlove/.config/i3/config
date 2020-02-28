@@ -23,7 +23,7 @@ bindsym $windows_key+Shift+d exec ~/.i3scripts/dmenu_prompt 'Do you really want 
 bindsym Control+$alt_key+l exec i3lock --fuzzy -l
 
 ################ Application startup positions ################
-for_window [class="SpeedCrunch"] floating enable, resize set 960 540, move position 960 px 0 px, border pixel 1
+for_window [class="SpeedCrunch"] floating enable, resize set 500 500, move position 1400 px 20 px, border pixel 1
 for_window [class="Matplotlib"] floating enable
 for_window [class="FPS"] floating enable
 for_window [class="SimpleScreenRecorder"] floating enable
@@ -44,11 +44,15 @@ bindsym $windows_key+h exec nohup termite -e 'nvr -s --remote-tab-silent /home/p
 bindsym $windows_key+j exec termite -d ~/journal
 bindsym $windows_key+k exec zathura ~/journal/tex/main.pdf
 bindsym $windows_key+l exec surf ~/journal/graph.html
-bindsym $windows_key+t exec ~/.i3scripts/timer
+bindsym $windows_key+y exec ~/.i3scripts/timer
 
 ################ Screenshot Keymaps ################
 bindsym --release Print exec ~/.i3scripts/screenshot 'Screenshot name' '' 'Screenshot captured'
 bindsym --release $windows_key+Print exec exec ~/.i3scripts/screenshot 'Patchshot name' '-s' 'Patchshot captured'
+
+################ Screencast Keymaps ################
+bindsym --release $windows_key+r exec ~/.i3scripts/screencast 'Screencast name' 'Screencast captured'
+bindsym --release $windows_key+t exec killall -SIGINT ffmpeg
 
 ################ Volume Control ################
 bindsym XF86AudioRaiseVolume exec pamixer -i 5 && pkill -RTMIN+2 i3blocks
@@ -125,7 +129,8 @@ for_window [title="/bin/nvim"] title_format "⮀ <b>Vim</b>"
 for_window [title="nvr -s --remote-tab-silent"] title_format "⮀ <b>Vim</b>"
 for_window [title="^ranger$"] title_format "⮀ <b>Ranger</b>"
 for_window [class="^Google-chrome$"] title_format "⮀ <b>Chrome</b>"
-for_window [class="^Zathura$"] title_format "⮀ <b>%title</b>"
+for_window [class="^Zathura$"] title_format "⮀ <b>Zathura - %title</b>"
+for_window [class="^ffplay$"] title_format "⮀ <b>FFPlay</b>"
 
 # remove borders
 default_border normal 0
