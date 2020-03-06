@@ -7,28 +7,29 @@ else
   VOLUME=$(pamixer --get-volume)
   NUM_DIVISIONS=20
   # Volume as progress bar
-  for ((i = 0; i < NUM_DIVISIONS; ++i)); do
-    if [ ${i} -lt $((VOLUME * NUM_DIVISIONS / 100)) ]; then
-      if [ $((i % 4)) -eq 0 ]; then
-        printf "◜"
-      elif [ $((i % 4)) -eq 1 ]; then
-        printf "◝"
-      elif [ $((i % 4)) -eq 2 ]; then
-        printf "◞"
-      elif [ $((i % 4)) -eq 3 ]; then
-        printf "◟"
-      fi
-    else
-      printf " "
-    fi
-  done
+  # for ((i = 0; i < NUM_DIVISIONS; ++i)); do
+  #   if [ ${i} -lt $((VOLUME * NUM_DIVISIONS / 100)) ]; then
+  #     if [ $((i % 4)) -eq 0 ]; then
+  #       printf "◜"
+  #     elif [ $((i % 4)) -eq 1 ]; then
+  #       printf "◝"
+  #     elif [ $((i % 4)) -eq 2 ]; then
+  #       printf "◞"
+  #     elif [ $((i % 4)) -eq 3 ]; then
+  #       printf "◟"
+  #     fi
+  #   else
+  #     printf " "
+  #   fi
+  # done
   # Volume as text
-  if [ ${VOLUME} -lt 10 ]; then
-    echo "   ${VOLUME}%"
-  elif [ ${VOLUME} -gt 99 ]; then
-    echo " ${VOLUME}%"
-  else
-    echo "  ${VOLUME}%"
-  fi
+  # if [ ${VOLUME} -lt 10 ]; then
+  #   echo "   ${VOLUME}%"
+  # elif [ ${VOLUME} -gt 99 ]; then
+  #   echo " ${VOLUME}%"
+  # else
+  #   echo "  ${VOLUME}%"
+  # fi
+  echo "${VOLUME}%"
 fi
 

@@ -24,10 +24,12 @@ bindsym Control+$alt_key+l exec i3lock --fuzzy -l
 
 ################ Application startup positions ################
 for_window [class="SpeedCrunch"] floating enable, resize set 500 500, move position 1400 px 20 px, border pixel 1
+for_window [title="^clac$"] floating enable, resize set 500 500, move position 1400 px 20 px, border pixel 1
 for_window [class="Matplotlib"] floating enable
 for_window [class="FPS"] floating enable
 for_window [class="SimpleScreenRecorder"] floating enable
 for_window [title="^Processing$"] floating enable
+for_window [title="^OpenGL$"] floating enable
 
 ################ Application Keymaps ################
 bindsym $windows_key+Shift+q kill
@@ -35,7 +37,8 @@ bindsym $windows_key+Shift+q kill
 bindsym $windows_key+Return exec termite
 bindsym $windows_key+space exec dmenu_run -fn 'Fira Mono-14'
 bindsym $windows_key+z exec ~/.i3scripts/emojis_select
-bindsym $windows_key+c exec google-chrome-stable
+bindsym $windows_key+x exec firefox
+bindsym $windows_key+c exec nohup termite -e 'clac' > /dev/null &
 bindsym $windows_key+m exec ~/.i3scripts/talk_to_me
 bindsym $windows_key+n exec termite -e neomutt
 bindsym $windows_key+a exec speedcrunch
@@ -129,8 +132,10 @@ for_window [title="/bin/nvim"] title_format "⮀ <b>Vim</b>"
 for_window [title="nvr -s --remote-tab-silent"] title_format "⮀ <b>Vim</b>"
 for_window [title="^ranger$"] title_format "⮀ <b>Ranger</b>"
 for_window [class="^Google-chrome$"] title_format "⮀ <b>Chrome</b>"
-for_window [class="^Zathura$"] title_format "⮀ <b>Zathura - %title</b>"
+for_window [class="^firefox$"] title_format "⮀ <b>Firefox</b>"
+for_window [class="^Zathura$"] title_format "⮀ <b>%title</b>"
 for_window [class="^ffplay$"] title_format "⮀ <b>FFPlay</b>"
+for_window [title="^clac$"] title_format "⮀ <b>Clac</b>"
 
 # remove borders
 default_border normal 0

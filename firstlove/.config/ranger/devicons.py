@@ -19,7 +19,7 @@ file_node_extensions = {
     'bmp'      : '',
     'bz2'      : '',
     'c'        : '',
-    'cu'       : '◌',
+    'cu'       : 'C',
     'h'        : '',
     'c++'      : '',
     'cab'      : '',
@@ -224,6 +224,7 @@ file_node_exact_matches = {
     'react.jsx'                        : '',
     'user-dirs.dirs'                   : '',
     'Makefile'                         : 'M',
+    'makefile'                         : 'M',
     'CMakeLists.txt'                   : 'C',
 }
 

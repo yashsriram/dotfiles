@@ -62,7 +62,7 @@ snippet item "Itemize" bA
 \end{itemize}
 endsnippet
 
-snippet mk "Math" wA
+snippet mathl "Math" wA
 $ ${1} $`!p
 if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
 		snip.rv = ' '
@@ -71,8 +71,7 @@ else:
 ` $0
 endsnippet
 
-
-snippet dm "Math" wA
+snippet mathb "Math" wA
 \[
 $0
 \]
@@ -100,7 +99,15 @@ snippet beg "begin{} / end{}" bA
 \end{$1}
 endsnippet
 
-snippet m3 "Matrix 3x3"
+snippet m21 "Matrix 2x1"
+\begin{bmatrix} $1 \\\\ $4 \end{bmatrix}
+endsnippet
+
+snippet m22 "Matrix 2x2"
+\begin{bmatrix} $1 & $2 \\\\ $4 & $5 \end{bmatrix}
+endsnippet
+
+snippet m33 "Matrix 3x3"
 \begin{bmatrix} $1 & $2 & $3 \\\\ $4 & $5 & $6 \\\\ $7 & $8 & $9 \end{bmatrix}
 endsnippet
 
