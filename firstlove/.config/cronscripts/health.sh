@@ -13,4 +13,4 @@ messages=(
 
 message=${messages[$RANDOM % ${#messages[@]} ]}
 
-notify-send -a "Your conscience" "${message}" -t 5000
+notify-send -a "Your conscience" "${message}" -i /usr/share/icons/Adwaita/24x24/emblems/emblem-favorite-symbolic.symbolic.png -t 5000

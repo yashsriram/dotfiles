@@ -8,6 +8,7 @@ else
   INFO=$(bluetoothctl info)
   if [ $? -eq 0 ]; then
     NAME=$(bluetoothctl info | grep Name | awk '{ for (i = 2; i <= NF; i++) s = s $i " "; print s }')
+    notify-send -a "i3 blocks" "Connected to ${NAME}" -i /usr/share/icons/Adwaita/24x24/devices/bluetooth-symbolic.symbolic.png -t 5000
     echo ${NAME}
   else
     echo "Error"

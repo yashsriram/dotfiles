@@ -19,8 +19,8 @@ bindsym $windows_key+Shift+e exec ~/.i3scripts/dmenu_prompt 'Do you really want 
 bindsym $windows_key+Shift+s exec ~/.i3scripts/dmenu_prompt 'Do you really want to shutdown?' 'shutdown now'
 # reboot
 bindsym $windows_key+Shift+d exec ~/.i3scripts/dmenu_prompt 'Do you really want to reboot?' 'reboot'
-# lock
-bindsym Control+$alt_key+l exec i3lock --fuzzy -l
+# kill application
+bindsym $windows_key+Shift+q kill
 
 ################ Application startup positions ################
 for_window [class="SpeedCrunch"] floating enable, resize set 500 500, move position 1400 px 20 px, border pixel 1
@@ -32,21 +32,23 @@ for_window [title="^Processing$"] floating enable
 for_window [title="^OpenGL$"] floating enable
 
 ################ Application Keymaps ################
-bindsym $windows_key+Shift+q kill
-
 bindsym $windows_key+Return exec termite
 bindsym $windows_key+space exec dmenu_run -fn 'Fira Mono-14'
 bindsym $windows_key+z exec ~/.i3scripts/emojis_select
 bindsym $windows_key+x exec firefox
 bindsym $windows_key+c exec nohup termite -e 'clac' > /dev/null &
+
 bindsym $windows_key+m exec ~/.i3scripts/talk_to_me
 bindsym $windows_key+n exec termite -e neomutt
+
 bindsym $windows_key+a exec speedcrunch
 bindsym $windows_key+s exec subl
+
 bindsym $windows_key+h exec nohup termite -e 'nvr -s --remote-tab-silent /home/pandu/journal/templatex/main.templatex' > /dev/null &
 bindsym $windows_key+j exec termite -d ~/journal
 bindsym $windows_key+k exec zathura ~/journal/tex/main.pdf
 bindsym $windows_key+l exec surf ~/journal/graph.html
+
 bindsym $windows_key+y exec ~/.i3scripts/timer
 
 ################ Screenshot Keymaps ################
@@ -72,7 +74,7 @@ workspace_layout tabbed
 bindsym $windows_key+w layout tabbed
 bindsym $windows_key+e layout toggle split
 # bindsym $windows_key+s layout stacking
-bindsym $windows_key+d fullscreen toggle
+bindsym $windows_key+v fullscreen toggle
 # split in horizontal orientation
 bindsym $windows_key+f split h
 # split in vertical orientation
@@ -132,7 +134,7 @@ for_window [title="/bin/nvim"] title_format "⮀ <b>Vim</b>"
 for_window [title="nvr -s --remote-tab-silent"] title_format "⮀ <b>Vim</b>"
 for_window [title="^ranger$"] title_format "⮀ <b>Ranger</b>"
 for_window [class="^Google-chrome$"] title_format "⮀ <b>Chrome</b>"
-for_window [class="^firefox$"] title_format "⮀ <b>Firefox</b>"
+for_window [class="^firefox$"] title_format "⮀ <b>Firefox </b>"
 for_window [class="^Zathura$"] title_format "⮀ <b>%title</b>"
 for_window [class="^ffplay$"] title_format "⮀ <b>FFPlay</b>"
 for_window [title="^clac$"] title_format "⮀ <b>Clac</b>"

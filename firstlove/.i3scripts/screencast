@@ -8,6 +8,7 @@ if [ $? -eq 0 ]; then
 fi
 
 FILE_NAME=$(echo "" | dmenu -fn 'Fira Mono-14' -i -p "${1}")
+[ $? -eq 0 ] || exit
 FILE_PATH="/home/pandu/screencasts/${FILE_NAME}.mkv"
 
 # Check if given file exists

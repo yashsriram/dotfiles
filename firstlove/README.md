@@ -32,7 +32,8 @@
 * xf86-input-synaptics [touchpad driver for X]
 * tmux
 * mbsync, msmtp, gnome-keyring, neomutt, notmuch for mail
-* bluez, bluez-utils, blueberry for bluetooth
+* bluez, bluez-utils, bluetoothctl for bluetooth
+* taskwarrior for managing tasks and todo lists
 
 # Config
 * In file `/etc/systemd/logind.conf` set HandlePowerKey=ignore [for disabling immediate shutdown on power button press]

@@ -160,6 +160,7 @@ alias paccachedrop="sudo pacman -Scc"
 alias cfi3="${EDITOR} ~/.config/i3/config"
 alias cfi3b="${EDITOR} ~/.i3blocks.conf"
 alias cft="${EDITOR} ~/.config/termite/config"
+alias cftask="${EDITOR} ~/.taskrc"
 alias cfz="${EDITOR} ~/.zshrc"
 alias cfr="${EDITOR} ~/.config/ranger/rc.conf"
 alias cfrifle="${EDITOR} ~/.config/ranger/rifle.conf"
@@ -181,6 +182,13 @@ alias gitd="git diff"
 alias gitb="git branch"
 alias gito="git checkout"
 alias gitk="nohup gitk --all > /dev/null &"
+
+# task warrior aliases
+alias ts="task summary"
+alias tp="task projects"
+alias tall="task all"
+alias t="task"
+alias ta="task add"
 
 #jetbrains aliases
 alias pycharm="nohup ~/jetbrains/pycharm/bin/pycharm.sh > /dev/null &"
