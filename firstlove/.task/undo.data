@@ -679,3 +679,294 @@ time 1584658407
 old [description:"lectures" entry:"1584655879" modified:"1584655909" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"04ceb1fb-16c3-4c9a-b9dd-9cb988cd6780"]
 new [description:"lecture" entry:"1584655879" modified:"1584658407" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"04ceb1fb-16c3-4c9a-b9dd-9cb988cd6780"]
 ---
+time 1584748097
+old [description:"setup simulation env" entry:"1584655871" modified:"1584655909" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"1c436fdb-d81e-433b-9d27-a7b3de91e17c"]
+new [description:"setup simulation env" end:"1584748097" entry:"1584655871" modified:"1584748097" priority:"M" project:"sensing_and_estimation" status:"completed" uuid:"1c436fdb-d81e-433b-9d27-a7b3de91e17c"]
+---
+time 1584748443
+new [description:"project proposal" entry:"1584748443" modified:"1584748443" project:"sensing_and_estimation" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+---
+time 1584748460
+old [description:"project proposal" entry:"1584748443" modified:"1584748443" project:"sensing_and_estimation" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+new [description:"project proposal" entry:"1584748443" modified:"1584748460" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+---
+time 1584748602
+old [description:"project proposal" entry:"1584748443" modified:"1584748460" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+new [description:"project proposal" due:"1585458000" entry:"1584748443" modified:"1584748602" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+---
+time 1584748660
+old [description:"project proposal" due:"1585458000" entry:"1584748443" modified:"1584748602" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+new [description:"append - mar 29" due:"1585458000" entry:"1584748443" modified:"1584748660" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+---
+time 1584748686
+old [description:"Hw3 submission - mar 30" entry:"1584652262" modified:"1584655239" priority:"M" project:"animation_and_planning" status:"pending" uuid:"f9f51d98-73f4-44e5-a8e9-c55858419c67"]
+new [description:"Hw3 submission - mar 30" due:"1585544400" entry:"1584652262" modified:"1584748686" priority:"M" project:"animation_and_planning" status:"pending" uuid:"f9f51d98-73f4-44e5-a8e9-c55858419c67"]
+---
+time 1584748694
+old [description:"Hw2 - mar 24" end:"1584653680" entry:"1584652294" modified:"1584655230" priority:"M" project:"robotics" status:"pending" uuid:"1ee61686-ef99-418b-8093-213d2b5e7f8a"]
+new [description:"Hw2 - mar 24" due:"1585026000" end:"1584653680" entry:"1584652294" modified:"1584748694" priority:"M" project:"robotics" status:"pending" uuid:"1ee61686-ef99-418b-8093-213d2b5e7f8a"]
+---
+time 1584748713
+old [description:"Midterm - mar 31" end:"1584653680" entry:"1584652306" modified:"1584655230" priority:"M" project:"robotics" status:"pending" uuid:"38dbb10d-df75-4686-a32c-9432fef581f5"]
+new [description:"Midterm - mar 31" due:"1585630800" end:"1584653680" entry:"1584652306" modified:"1584748713" priority:"M" project:"robotics" status:"pending" uuid:"38dbb10d-df75-4686-a32c-9432fef581f5"]
+---
+time 1584748732
+old [description:"Project mid-sem report - apr 15" end:"1584653680" entry:"1584652312" modified:"1584655230" priority:"M" project:"robotics" status:"pending" uuid:"eb8058e7-8008-4736-a98b-b3b838939425"]
+new [description:"Project mid-sem report - apr 15" due:"1586926800" end:"1584653680" entry:"1584652312" modified:"1584748732" priority:"M" project:"robotics" status:"pending" uuid:"eb8058e7-8008-4736-a98b-b3b838939425"]
+---
+time 1584772906
+old [description:"append - mar 29" due:"1585458000" entry:"1584748443" modified:"1584748660" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+new [description:"project proposal - mar 29" due:"1585458000" entry:"1584748443" modified:"1584772906" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+---
+time 1584773239
+old [description:"ros tutorial and get a robot working" end:"1584653680" entry:"1584652316" modified:"1584655230" priority:"M" project:"robotics" status:"pending" uuid:"1de4ad5d-e2c8-435a-acd7-1bee32fbc99a"]
+new [description:"ubuntu and ros install" end:"1584653680" entry:"1584652316" modified:"1584773239" priority:"M" project:"robotics" status:"pending" uuid:"1de4ad5d-e2c8-435a-acd7-1bee32fbc99a"]
+---
+time 1584824518
+new [description:"the beauty of the phrase exact approximation" entry:"1584824518" modified:"1584824518" project:"math" status:"pending" uuid:"7871c7f3-9ac0-44d8-90da-dead0b1c2344"]
+---
+time 1584827337
+old [description:"lecture" entry:"1584655879" modified:"1584658407" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"04ceb1fb-16c3-4c9a-b9dd-9cb988cd6780"]
+new [description:"lecture" end:"1584827337" entry:"1584655879" modified:"1584827337" priority:"M" project:"sensing_and_estimation" status:"completed" uuid:"04ceb1fb-16c3-4c9a-b9dd-9cb988cd6780"]
+---
+time 1584827606
+old [description:"transform composition" end:"1584653680" entry:"1584653582" modified:"1584656797" project:"math" status:"pending" uuid:"ddfae90e-7c6b-4678-8485-67bc58f63524"]
+new [description:"composition of linear transformations" end:"1584653680" entry:"1584653582" modified:"1584827606" project:"math" status:"pending" uuid:"ddfae90e-7c6b-4678-8485-67bc58f63524"]
+---
+time 1584836760
+new [description:"ask doubts in lecture" entry:"1584836760" modified:"1584836760" project:"sensing_and_estimation" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+---
+time 1584836787
+old [description:"ask doubts in lecture" entry:"1584836760" modified:"1584836760" project:"sensing_and_estimation" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+new [description:"ask doubts in lecture" entry:"1584836760" modified:"1584836787" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+---
+time 1584837457
+old [description:"rot mat - 3 unit vectors, 1 unit vector = 2 dof, perp unit vector 1 dof for sign, cross product 0 dof, hence total 3 dof for rot mat" end:"1584653680" entry:"1584653576" modified:"1584656796" project:"math" status:"pending" uuid:"fb55725b-26b2-4cf9-b485-ff454ec2b7ce"]
+new [description:"rot mat - 3 unit vectors, 1 unit vector = 2 dof, perp unit vector 1 dof for sign, cross product 0 dof, hence total 3 dof for rot mat" end:"1584653680" entry:"1584653576" modified:"1584837457" project:"math" status:"completed" uuid:"fb55725b-26b2-4cf9-b485-ff454ec2b7ce"]
+---
+time 1584837510
+old [description:"Deg of freedom 3 or 4 or 9 ? 3 only" end:"1584653680" entry:"1584653566" modified:"1584656796" project:"math" status:"pending" uuid:"e736f1ed-3b95-46c1-a622-03439d343d19"]
+new [description:"Deg of freedom 3 or 4 or 9 ? 3 only" end:"1584653680" entry:"1584653566" modified:"1584837510" project:"math" status:"completed" uuid:"e736f1ed-3b95-46c1-a622-03439d343d19"]
+---
+time 1584837937
+old [description:"move all gallery from yash.3997 drive to photos" end:"1584653202" entry:"1584653040" modified:"1584653209" project:"delete yash3997two@gmailcom" status:"completed" uuid:"1cd5b519-9d99-4756-8c63-d840fd5e7207"]
+new [description:"move all gallery from yash.3997 drive to photos" end:"1584653202" entry:"1584653040" modified:"1584837937" project:"delete_yash3997two_account_entirely" status:"completed" uuid:"1cd5b519-9d99-4756-8c63-d840fd5e7207"]
+---
+time 1584837937
+old [description:"move all files from yash.3997two drive to yash.3997 drive" end:"1584653209" entry:"1584653045" modified:"1584653209" project:"delete yash3997two@gmailcom" status:"completed" uuid:"3ea8b83c-528c-4f3c-9580-07f909f1191c"]
+new [description:"move all files from yash.3997two drive to yash.3997 drive" end:"1584653209" entry:"1584653045" modified:"1584837937" project:"delete_yash3997two_account_entirely" status:"completed" uuid:"3ea8b83c-528c-4f3c-9580-07f909f1191c"]
+---
+time 1584837938
+old [description:"reorganize all directories in yash.3997 drive" end:"1584653209" entry:"1584653049" modified:"1584653209" project:"delete yash3997two@gmailcom" status:"completed" uuid:"11fe334d-891a-4214-968c-b35a6a580aa6"]
+new [description:"reorganize all directories in yash.3997 drive" end:"1584653209" entry:"1584653049" modified:"1584837938" project:"delete_yash3997two_account_entirely" status:"completed" uuid:"11fe334d-891a-4214-968c-b35a6a580aa6"]
+---
+time 1584838028
+old [description:"Volkan Isler" entry:"1584652436" modified:"1584652570" project:"connect_profs_and_ta" status:"pending" uuid:"82f2a5e7-1017-48c2-81bd-67046dea9a50"]
+new [description:"Volkan Isler" entry:"1584652436" modified:"1584838028" project:"2nd_sem_directed_research" status:"pending" uuid:"82f2a5e7-1017-48c2-81bd-67046dea9a50"]
+---
+time 1584838028
+old [description:"Stergios" end:"1584653294" entry:"1584652444" modified:"1584653295" project:"connect_profs_and_ta" status:"completed" uuid:"3df7e0a0-7a8d-44c4-9d7d-01480d151f27"]
+new [description:"Stergios" end:"1584653294" entry:"1584652444" modified:"1584838028" project:"2nd_sem_directed_research" status:"completed" uuid:"3df7e0a0-7a8d-44c4-9d7d-01480d151f27"]
+---
+time 1584838029
+old [description:"Junaed Sattar" end:"1584653295" entry:"1584652449" modified:"1584653295" project:"connect_profs_and_ta" status:"completed" uuid:"77e8c1b8-5cbf-454d-bb76-a7515f1e098b"]
+new [description:"Junaed Sattar" end:"1584653295" entry:"1584652449" modified:"1584838029" project:"2nd_sem_directed_research" status:"completed" uuid:"77e8c1b8-5cbf-454d-bb76-a7515f1e098b"]
+---
+time 1584838029
+old [description:"Steven Guy" end:"1584653295" entry:"1584652453" modified:"1584653295" project:"connect_profs_and_ta" status:"completed" uuid:"6adc2e55-7caa-41de-a429-e3e4aed0214b"]
+new [description:"Steven Guy" end:"1584653295" entry:"1584652453" modified:"1584838029" project:"2nd_sem_directed_research" status:"completed" uuid:"6adc2e55-7caa-41de-a429-e3e4aed0214b"]
+---
+time 1584838029
+old [description:"Hyun soo park - fill form and meet" end:"1584653295" entry:"1584652456" modified:"1584653295" project:"connect_profs_and_ta" status:"completed" uuid:"7df6ae01-895a-4eb0-bc44-3a9369bacc6f"]
+new [description:"Hyun soo park - fill form and meet" end:"1584653295" entry:"1584652456" modified:"1584838029" project:"2nd_sem_directed_research" status:"completed" uuid:"7df6ae01-895a-4eb0-bc44-3a9369bacc6f"]
+---
+time 1584838030
+old [description:"Victoria Interante" end:"1584653295" entry:"1584652463" modified:"1584653295" project:"connect_profs_and_ta" status:"completed" uuid:"018531e7-ce4c-4a9c-b023-82ff66cdce79"]
+new [description:"Victoria Interante" end:"1584653295" entry:"1584652463" modified:"1584838030" project:"2nd_sem_directed_research" status:"completed" uuid:"018531e7-ce4c-4a9c-b023-82ff66cdce79"]
+---
+time 1584838103
+old [description:"Volkan Isler" entry:"1584652436" modified:"1584838028" project:"2nd_sem_directed_research" status:"pending" uuid:"82f2a5e7-1017-48c2-81bd-67046dea9a50"]
+new [description:"Volkan Isler" end:"1584838103" entry:"1584652436" modified:"1584838103" project:"2nd_sem_directed_research" status:"completed" uuid:"82f2a5e7-1017-48c2-81bd-67046dea9a50"]
+---
+time 1584838165
+old [description:"ask doubts in lecture" entry:"1584836760" modified:"1584836787" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+new [description:"ask doubts in lecture" entry:"1584836760" modified:"1584838165" priority:"H" project:"sensing_and_estimation" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+---
+time 1584838176
+old [description:"ask doubts in lecture" entry:"1584836760" modified:"1584838165" priority:"H" project:"sensing_and_estimation" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+new [description:"ask doubts in lecture" entry:"1584836760" modified:"1584838176" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+---
+time 1584838195
+old [description:"Hw3 submission - mar 30" due:"1585544400" entry:"1584652262" modified:"1584748686" priority:"M" project:"animation_and_planning" status:"pending" uuid:"f9f51d98-73f4-44e5-a8e9-c55858419c67"]
+new [description:"Hw3 submission - mar 30" due:"1585544400" entry:"1584652262" modified:"1584838195" project:"animation_and_planning" status:"pending" uuid:"f9f51d98-73f4-44e5-a8e9-c55858419c67"]
+---
+time 1584838195
+old [description:"Hw2 - mar 24" due:"1585026000" end:"1584653680" entry:"1584652294" modified:"1584748694" priority:"M" project:"robotics" status:"pending" uuid:"1ee61686-ef99-418b-8093-213d2b5e7f8a"]
+new [description:"Hw2 - mar 24" due:"1585026000" end:"1584653680" entry:"1584652294" modified:"1584838195" project:"robotics" status:"pending" uuid:"1ee61686-ef99-418b-8093-213d2b5e7f8a"]
+---
+time 1584838195
+old [description:"Midterm - mar 31" due:"1585630800" end:"1584653680" entry:"1584652306" modified:"1584748713" priority:"M" project:"robotics" status:"pending" uuid:"38dbb10d-df75-4686-a32c-9432fef581f5"]
+new [description:"Midterm - mar 31" due:"1585630800" end:"1584653680" entry:"1584652306" modified:"1584838195" project:"robotics" status:"pending" uuid:"38dbb10d-df75-4686-a32c-9432fef581f5"]
+---
+time 1584838195
+old [description:"Project mid-sem report - apr 15" due:"1586926800" end:"1584653680" entry:"1584652312" modified:"1584748732" priority:"M" project:"robotics" status:"pending" uuid:"eb8058e7-8008-4736-a98b-b3b838939425"]
+new [description:"Project mid-sem report - apr 15" due:"1586926800" end:"1584653680" entry:"1584652312" modified:"1584838195" project:"robotics" status:"pending" uuid:"eb8058e7-8008-4736-a98b-b3b838939425"]
+---
+time 1584838195
+old [description:"ubuntu and ros install" end:"1584653680" entry:"1584652316" modified:"1584773239" priority:"M" project:"robotics" status:"pending" uuid:"1de4ad5d-e2c8-435a-acd7-1bee32fbc99a"]
+new [description:"ubuntu and ros install" end:"1584653680" entry:"1584652316" modified:"1584838195" project:"robotics" status:"pending" uuid:"1de4ad5d-e2c8-435a-acd7-1bee32fbc99a"]
+---
+time 1584838195
+old [description:"project proposal - mar 29" due:"1585458000" entry:"1584748443" modified:"1584772906" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+new [description:"project proposal - mar 29" due:"1585458000" entry:"1584748443" modified:"1584838195" project:"sensing_and_estimation" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+---
+time 1584838195
+old [description:"ask doubts in lecture" entry:"1584836760" modified:"1584838176" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+new [description:"ask doubts in lecture" entry:"1584836760" modified:"1584838195" project:"sensing_and_estimation" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+---
+time 1584838195
+old [description:"lecture" end:"1584827337" entry:"1584655879" modified:"1584827337" priority:"M" project:"sensing_and_estimation" status:"completed" uuid:"04ceb1fb-16c3-4c9a-b9dd-9cb988cd6780"]
+new [description:"lecture" end:"1584827337" entry:"1584655879" modified:"1584838195" project:"sensing_and_estimation" status:"completed" uuid:"04ceb1fb-16c3-4c9a-b9dd-9cb988cd6780"]
+---
+time 1584838195
+old [description:"setup simulation env" end:"1584748097" entry:"1584655871" modified:"1584748097" priority:"M" project:"sensing_and_estimation" status:"completed" uuid:"1c436fdb-d81e-433b-9d27-a7b3de91e17c"]
+new [description:"setup simulation env" end:"1584748097" entry:"1584655871" modified:"1584838195" project:"sensing_and_estimation" status:"completed" uuid:"1c436fdb-d81e-433b-9d27-a7b3de91e17c"]
+---
+time 1584838195
+old [description:"Hw3 checkin - mar 18" end:"1584652968" entry:"1584652950" modified:"1584655239" priority:"M" project:"animation_and_planning" status:"completed" uuid:"7e0716e0-6d7a-4687-b482-962ddfde02e2"]
+new [description:"Hw3 checkin - mar 18" end:"1584652968" entry:"1584652950" modified:"1584838195" project:"animation_and_planning" status:"completed" uuid:"7e0716e0-6d7a-4687-b482-962ddfde02e2"]
+---
+time 1584838195
+old [description:"Hw1 cribs" end:"1584652860" entry:"1584652814" modified:"1584655194" priority:"M" project:"sensing_and_estimation" status:"completed" uuid:"013a36b3-fd9c-4fd9-8d8f-14aa4c33dee3"]
+new [description:"Hw1 cribs" end:"1584652860" entry:"1584652814" modified:"1584838195" project:"sensing_and_estimation" status:"completed" uuid:"013a36b3-fd9c-4fd9-8d8f-14aa4c33dee3"]
+---
+time 1584839076
+old [description:"project proposal - mar 29" due:"1585458000" entry:"1584748443" modified:"1584838195" project:"sensing_and_estimation" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+new [description:"project proposal - mar 29" due:"1585458000" entry:"1584748443" modified:"1584839076" project:"ser" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+---
+time 1584839076
+old [description:"ask doubts in lecture" entry:"1584836760" modified:"1584838195" project:"sensing_and_estimation" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+new [description:"ask doubts in lecture" entry:"1584836760" modified:"1584839076" project:"ser" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+---
+time 1584839076
+old [description:"lecture" end:"1584827337" entry:"1584655879" modified:"1584838195" project:"sensing_and_estimation" status:"completed" uuid:"04ceb1fb-16c3-4c9a-b9dd-9cb988cd6780"]
+new [description:"lecture" end:"1584827337" entry:"1584655879" modified:"1584839076" project:"ser" status:"completed" uuid:"04ceb1fb-16c3-4c9a-b9dd-9cb988cd6780"]
+---
+time 1584839076
+old [description:"setup simulation env" end:"1584748097" entry:"1584655871" modified:"1584838195" project:"sensing_and_estimation" status:"completed" uuid:"1c436fdb-d81e-433b-9d27-a7b3de91e17c"]
+new [description:"setup simulation env" end:"1584748097" entry:"1584655871" modified:"1584839076" project:"ser" status:"completed" uuid:"1c436fdb-d81e-433b-9d27-a7b3de91e17c"]
+---
+time 1584839076
+old [description:"Hw1 cribs" end:"1584652860" entry:"1584652814" modified:"1584838195" project:"sensing_and_estimation" status:"completed" uuid:"013a36b3-fd9c-4fd9-8d8f-14aa4c33dee3"]
+new [description:"Hw1 cribs" end:"1584652860" entry:"1584652814" modified:"1584839076" project:"ser" status:"completed" uuid:"013a36b3-fd9c-4fd9-8d8f-14aa4c33dee3"]
+---
+time 1584839093
+old [description:"project proposal - mar 29" due:"1585458000" entry:"1584748443" modified:"1584839076" project:"ser" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+new [description:"project proposal - mar 29" due:"1585458000" entry:"1584748443" modified:"1584839093" project:"sensing_and_estimation" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+---
+time 1584839093
+old [description:"ask doubts in lecture" entry:"1584836760" modified:"1584839076" project:"ser" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+new [description:"ask doubts in lecture" entry:"1584836760" modified:"1584839093" project:"sensing_and_estimation" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+---
+time 1584839093
+old [description:"lecture" end:"1584827337" entry:"1584655879" modified:"1584839076" project:"ser" status:"completed" uuid:"04ceb1fb-16c3-4c9a-b9dd-9cb988cd6780"]
+new [description:"lecture" end:"1584827337" entry:"1584655879" modified:"1584839093" project:"sensing_and_estimation" status:"completed" uuid:"04ceb1fb-16c3-4c9a-b9dd-9cb988cd6780"]
+---
+time 1584839093
+old [description:"setup simulation env" end:"1584748097" entry:"1584655871" modified:"1584839076" project:"ser" status:"completed" uuid:"1c436fdb-d81e-433b-9d27-a7b3de91e17c"]
+new [description:"setup simulation env" end:"1584748097" entry:"1584655871" modified:"1584839093" project:"sensing_and_estimation" status:"completed" uuid:"1c436fdb-d81e-433b-9d27-a7b3de91e17c"]
+---
+time 1584839093
+old [description:"Hw1 cribs" end:"1584652860" entry:"1584652814" modified:"1584839076" project:"ser" status:"completed" uuid:"013a36b3-fd9c-4fd9-8d8f-14aa4c33dee3"]
+new [description:"Hw1 cribs" end:"1584652860" entry:"1584652814" modified:"1584839093" project:"sensing_and_estimation" status:"completed" uuid:"013a36b3-fd9c-4fd9-8d8f-14aa4c33dee3"]
+---
+time 1584839104
+old [description:"project proposal - mar 29" due:"1585458000" entry:"1584748443" modified:"1584839093" project:"sensing_and_estimation" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+new [description:"project proposal - mar 29" due:"1585458000" entry:"1584748443" modified:"1584839104" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+---
+time 1584839104
+old [description:"ask doubts in lecture" entry:"1584836760" modified:"1584839093" project:"sensing_and_estimation" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+new [description:"ask doubts in lecture" entry:"1584836760" modified:"1584839104" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+---
+time 1584839104
+old [description:"lecture" end:"1584827337" entry:"1584655879" modified:"1584839093" project:"sensing_and_estimation" status:"completed" uuid:"04ceb1fb-16c3-4c9a-b9dd-9cb988cd6780"]
+new [description:"lecture" end:"1584827337" entry:"1584655879" modified:"1584839104" priority:"M" project:"sensing_and_estimation" status:"completed" uuid:"04ceb1fb-16c3-4c9a-b9dd-9cb988cd6780"]
+---
+time 1584839104
+old [description:"setup simulation env" end:"1584748097" entry:"1584655871" modified:"1584839093" project:"sensing_and_estimation" status:"completed" uuid:"1c436fdb-d81e-433b-9d27-a7b3de91e17c"]
+new [description:"setup simulation env" end:"1584748097" entry:"1584655871" modified:"1584839104" priority:"M" project:"sensing_and_estimation" status:"completed" uuid:"1c436fdb-d81e-433b-9d27-a7b3de91e17c"]
+---
+time 1584839104
+old [description:"Hw1 cribs" end:"1584652860" entry:"1584652814" modified:"1584839093" project:"sensing_and_estimation" status:"completed" uuid:"013a36b3-fd9c-4fd9-8d8f-14aa4c33dee3"]
+new [description:"Hw1 cribs" end:"1584652860" entry:"1584652814" modified:"1584839104" priority:"M" project:"sensing_and_estimation" status:"completed" uuid:"013a36b3-fd9c-4fd9-8d8f-14aa4c33dee3"]
+---
+time 1584839146
+old [description:"Hw2 - mar 24" due:"1585026000" end:"1584653680" entry:"1584652294" modified:"1584838195" project:"robotics" status:"pending" uuid:"1ee61686-ef99-418b-8093-213d2b5e7f8a"]
+new [description:"Hw2 - mar 24" due:"1585026000" end:"1584653680" entry:"1584652294" modified:"1584839146" priority:"M" project:"robotics" status:"pending" uuid:"1ee61686-ef99-418b-8093-213d2b5e7f8a"]
+---
+time 1584839146
+old [description:"Midterm - mar 31" due:"1585630800" end:"1584653680" entry:"1584652306" modified:"1584838195" project:"robotics" status:"pending" uuid:"38dbb10d-df75-4686-a32c-9432fef581f5"]
+new [description:"Midterm - mar 31" due:"1585630800" end:"1584653680" entry:"1584652306" modified:"1584839146" priority:"M" project:"robotics" status:"pending" uuid:"38dbb10d-df75-4686-a32c-9432fef581f5"]
+---
+time 1584839146
+old [description:"Project mid-sem report - apr 15" due:"1586926800" end:"1584653680" entry:"1584652312" modified:"1584838195" project:"robotics" status:"pending" uuid:"eb8058e7-8008-4736-a98b-b3b838939425"]
+new [description:"Project mid-sem report - apr 15" due:"1586926800" end:"1584653680" entry:"1584652312" modified:"1584839146" priority:"M" project:"robotics" status:"pending" uuid:"eb8058e7-8008-4736-a98b-b3b838939425"]
+---
+time 1584839146
+old [description:"ubuntu and ros install" end:"1584653680" entry:"1584652316" modified:"1584838195" project:"robotics" status:"pending" uuid:"1de4ad5d-e2c8-435a-acd7-1bee32fbc99a"]
+new [description:"ubuntu and ros install" end:"1584653680" entry:"1584652316" modified:"1584839146" priority:"M" project:"robotics" status:"pending" uuid:"1de4ad5d-e2c8-435a-acd7-1bee32fbc99a"]
+---
+time 1584839150
+old [description:"Hw3 submission - mar 30" due:"1585544400" entry:"1584652262" modified:"1584838195" project:"animation_and_planning" status:"pending" uuid:"f9f51d98-73f4-44e5-a8e9-c55858419c67"]
+new [description:"Hw3 submission - mar 30" due:"1585544400" entry:"1584652262" modified:"1584839150" priority:"M" project:"animation_and_planning" status:"pending" uuid:"f9f51d98-73f4-44e5-a8e9-c55858419c67"]
+---
+time 1584839150
+old [description:"Hw3 checkin - mar 18" end:"1584652968" entry:"1584652950" modified:"1584838195" project:"animation_and_planning" status:"completed" uuid:"7e0716e0-6d7a-4687-b482-962ddfde02e2"]
+new [description:"Hw3 checkin - mar 18" end:"1584652968" entry:"1584652950" modified:"1584839150" priority:"M" project:"animation_and_planning" status:"completed" uuid:"7e0716e0-6d7a-4687-b482-962ddfde02e2"]
+---
+time 1584841132
+old [description:"get an internship" entry:"1584655582" modified:"1584655582" project:"internship" status:"pending" uuid:"a7636ff5-b9a0-48ce-a61a-96fceb8391c2"]
+new [description:"get an internship" due:"1589346000" entry:"1584655582" modified:"1584841132" project:"internship" status:"pending" uuid:"a7636ff5-b9a0-48ce-a61a-96fceb8391c2"]
+---
+time 1584842849
+new [description:"9 Br cr + 6 8xxx cr + 1 Colloquium cr + 15 cs\/other cr" entry:"1584842849" modified:"1584842849" project:"umn_academic_plan" status:"pending" uuid:"f379f219-e908-4a89-878f-b2dc1f080ac1"]
+---
+time 1584842907
+new [description:"@12* Sensing and estimation in robotics" entry:"1584842907" modified:"1584842907" project:"umn_academic_plan.breadth" status:"pending" uuid:"26c14e47-acd2-4cc1-b6bc-4358d37a027d"]
+---
+time 1584843081
+new [description:"@21*\n1. Matrix theory\n2. Advanced Algo and data structures\n3. Machine Learning\n4. Numerical analysis" entry:"1584843081" modified:"1584843081" project:"umn_academic_plan.breadth" status:"pending" uuid:"47a6d948-0185-441d-a2fb-cecea6dbb1e9"]
+---
+time 1584843101
+new [description:"29 mod @12*\nSensing and estimation in robotics" entry:"1584843101" modified:"1584843101" status:"pending" uuid:"a395da07-21d7-4ac3-aea4-070b512ee84c"]
+---
+time 1584843129
+old [description:"@12* Sensing and estimation in robotics" entry:"1584842907" modified:"1584842907" project:"umn_academic_plan.breadth" status:"pending" uuid:"26c14e47-acd2-4cc1-b6bc-4358d37a027d"]
+new [description:"@12*\nSensing and estimation in robotics" entry:"1584842907" modified:"1584843129" project:"umn_academic_plan.breadth" status:"pending" uuid:"26c14e47-acd2-4cc1-b6bc-4358d37a027d"]
+---
+time 1584843213
+new [description:"@12\n1. Virtual reality" entry:"1584843213" modified:"1584843213" project:"umn_academic_plan.depth" status:"pending" uuid:"c31e61b3-12de-4497-8a4c-332b15a57388"]
+---
+time 1584843232
+new [description:"@21*\n1. Project\n2. Human-Computer Interaction and User Interface Technology\n2. Another 8xxx course (which have pre-reqs so decide soon)" entry:"1584843232" modified:"1584843232" project:"umn_academic_plan.depth" status:"pending" uuid:"33223894-4057-4598-adb4-8804c156160f"]
+---
+time 1584843279
+new [description:"@12*\nIntroduction to Intelligent Robotic Systems" entry:"1584843279" modified:"1584843279" project:"umn_academic_plan.filler" status:"pending" uuid:"71060ffb-65fc-4934-9388-4672bdb557fe"]
+---
+time 1584843290
+new [description:"@21*\n1. Software Eng" entry:"1584843290" modified:"1584843290" project:"umn_academic_plan.filler" status:"pending" uuid:"9454d511-d939-44f5-a86b-7e378e134cc6"]
+---
+time 1584843307
+new [description:"@12\n1. Animation and Planning in games\n2. Introduction to data mining" entry:"1584843307" modified:"1584843307" project:"umn_academic_plan.filler" status:"pending" uuid:"d3a03709-eb79-4124-a420-3f627cc2476d"]
+---
+time 1584886935
+old [description:"ubuntu and ros install" end:"1584653680" entry:"1584652316" modified:"1584839146" priority:"M" project:"robotics" status:"pending" uuid:"1de4ad5d-e2c8-435a-acd7-1bee32fbc99a"]
+new [description:"ubuntu and ros install" end:"1584653680" entry:"1584652316" modified:"1584886935" priority:"M" project:"robotics" status:"completed" uuid:"1de4ad5d-e2c8-435a-acd7-1bee32fbc99a"]
+---
+time 1584922098
+new [description:"multiplication of quaternions is not commutative" entry:"1584922098" modified:"1584922098" project:"math" status:"pending" uuid:"8d5d5435-20f7-46f7-96a6-0570e0ea396e"]
+---
+time 1584943558
+old [description:"Hw2 - mar 24" due:"1585026000" end:"1584653680" entry:"1584652294" modified:"1584839146" priority:"M" project:"robotics" status:"pending" uuid:"1ee61686-ef99-418b-8093-213d2b5e7f8a"]
+new [description:"Hw2 - mar 24" due:"1585112400" end:"1584653680" entry:"1584652294" modified:"1584943558" priority:"M" project:"robotics" status:"pending" uuid:"1ee61686-ef99-418b-8093-213d2b5e7f8a"]
+---

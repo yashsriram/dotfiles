@@ -34,6 +34,8 @@
 * mbsync, msmtp, gnome-keyring, neomutt, notmuch for mail
 * bluez, bluez-utils, bluetoothctl for bluetooth
 * taskwarrior for managing tasks and todo lists
+* trash-cli for trash file management
+* ntpd to automatically set time from internet
 
 # Config
 * In file `/etc/systemd/logind.conf` set HandlePowerKey=ignore [for disabling immediate shutdown on power button press]

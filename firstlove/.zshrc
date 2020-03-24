@@ -184,11 +184,15 @@ alias gito="git checkout"
 alias gitk="nohup gitk --all > /dev/null &"
 
 # task warrior aliases
-alias ts="task summary"
-alias tp="task projects"
-alias tall="task all"
 alias t="task"
+alias tser="task project:sensing_and_estimation"
+alias trob="task project:robotics"
+alias tapg="task project:animation_and_planning"
+alias ts="task summary"
+alias tcal="task calendar"
 alias ta="task add"
+alias tp="task projects"
+alias tl="task all"
 
 #jetbrains aliases
 alias pycharm="nohup ~/jetbrains/pycharm/bin/pycharm.sh > /dev/null &"

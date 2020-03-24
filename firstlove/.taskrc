@@ -10,12 +10,14 @@
 
 # Files
 data.location=~/.task
+
+# Configuration
+report.next.labels=Id,Due,Project,Description,ProjectDeps,P,Tag,Recur,S,Until,Urg
+report.next.columns=id,due.relative,project,description,depends,priority,tags,recur,scheduled.countdown,until.remaining,urgency
+report.next.sort=urgency,project
+summary.all.projects=no
 list.all.projects=yes
-summary.all.projects=yes
-report.all.sort=priority-,project
-report.next.sort=urgency-,project
-report.next.labels=ID,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Urg
-report.next.columns=id,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency
+report.all.sort=project
 
 # Color theme (uncomment one to use)
 #include /usr/share/doc/task/rc/light-16.theme
@@ -26,7 +28,7 @@ report.next.columns=id,depends,priority,project,tags,recur,scheduled.countdown,d
 #include /usr/share/doc/task/rc/dark-green-256.theme
 #include /usr/share/doc/task/rc/dark-blue-256.theme
 #include /usr/share/doc/task/rc/dark-violets-256.theme
-#include /usr/share/doc/task/rc/dark-yellow-green.theme
+include /usr/share/doc/task/rc/dark-yellow-green.theme
 #include /usr/share/doc/task/rc/dark-gray-256.theme
 #include /usr/share/doc/task/rc/dark-gray-blue-256.theme
 #include /usr/share/doc/task/rc/solarized-dark-256.theme
