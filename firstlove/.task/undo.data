@@ -970,3 +970,196 @@ time 1584943558
 old [description:"Hw2 - mar 24" due:"1585026000" end:"1584653680" entry:"1584652294" modified:"1584839146" priority:"M" project:"robotics" status:"pending" uuid:"1ee61686-ef99-418b-8093-213d2b5e7f8a"]
 new [description:"Hw2 - mar 24" due:"1585112400" end:"1584653680" entry:"1584652294" modified:"1584943558" priority:"M" project:"robotics" status:"pending" uuid:"1ee61686-ef99-418b-8093-213d2b5e7f8a"]
 ---
+time 1585032759
+old [description:"abritrary axis rotation, reflection - eigen basis" end:"1584653680" entry:"1584652360" modified:"1584654319" project:"math" status:"pending" uuid:"d9251770-35f9-4327-9fa5-8bfed8d6ccb9"]
+new [description:"abritrary axis rotation - eigen basis" end:"1584653680" entry:"1584652360" modified:"1585032759" project:"math" status:"pending" uuid:"d9251770-35f9-4327-9fa5-8bfed8d6ccb9"]
+---
+time 1585032830
+old [description:"abritrary axis rotation - eigen basis" end:"1584653680" entry:"1584652360" modified:"1585032759" project:"math" status:"pending" uuid:"d9251770-35f9-4327-9fa5-8bfed8d6ccb9"]
+new [description:"axis-angle <-> rotation matrix - eigen basis, null space finding" end:"1584653680" entry:"1584652360" modified:"1585032830" project:"math" status:"pending" uuid:"d9251770-35f9-4327-9fa5-8bfed8d6ccb9"]
+---
+time 1585032974
+old [description:"Cancel air tickets" entry:"1584652416" modified:"1584652416" status:"pending" uuid:"27b41894-03d1-48a9-af86-30e9e26d175c"]
+new [description:"Cancel air tickets" end:"1585032974" entry:"1584652416" modified:"1585032974" status:"completed" uuid:"27b41894-03d1-48a9-af86-30e9e26d175c"]
+---
+time 1585033026
+new [description:"website\/project pages\/cv" entry:"1585033026" modified:"1585033026" status:"pending" uuid:"a28df500-4e00-4af7-b124-6c66df76b9e3"]
+---
+time 1585033039
+old [description:"CSGSA website\/website\/project pages\/cv" entry:"1584652429" modified:"1584652429" status:"pending" uuid:"2a624bcc-e875-456d-8754-1f39ff55e991"]
+new [description:"CSGSA website" entry:"1584652429" modified:"1585033039" status:"pending" uuid:"2a624bcc-e875-456d-8754-1f39ff55e991"]
+---
+time 1585033046
+old [description:"CSGSA website" entry:"1584652429" modified:"1585033039" status:"pending" uuid:"2a624bcc-e875-456d-8754-1f39ff55e991"]
+new [description:"CSGSA website" entry:"1584652429" modified:"1585033046" priority:"M" status:"pending" uuid:"2a624bcc-e875-456d-8754-1f39ff55e991"]
+---
+time 1585105466
+old [description:"Hw2 - mar 24" due:"1585112400" end:"1584653680" entry:"1584652294" modified:"1584943558" priority:"M" project:"robotics" status:"pending" uuid:"1ee61686-ef99-418b-8093-213d2b5e7f8a"]
+new [description:"Hw2 - mar 24" due:"1585112400" end:"1584653680" entry:"1584652294" modified:"1585105466" priority:"M" project:"robotics" status:"completed" uuid:"1ee61686-ef99-418b-8093-213d2b5e7f8a"]
+---
+time 1585105514
+new [description:"ask doubts in lecture" entry:"1585105514" modified:"1585105514" project:"animation_and_planning" status:"pending" uuid:"8f3bffc1-2b47-4df6-8f22-1986d123ef7c"]
+---
+time 1585105553
+old [description:"ask doubts in lecture" entry:"1585105514" modified:"1585105514" project:"animation_and_planning" status:"pending" uuid:"8f3bffc1-2b47-4df6-8f22-1986d123ef7c"]
+new [description:"ask doubts in lecture" entry:"1585105514" modified:"1585105553" priority:"M" project:"animation_and_planning" status:"pending" uuid:"8f3bffc1-2b47-4df6-8f22-1986d123ef7c"]
+---
+time 1585105564
+old [description:"Apartment search" entry:"1584652420" modified:"1584652420" status:"pending" uuid:"300de943-bd7b-4a14-81fe-c86c6764362b"]
+new [description:"Apartment search" entry:"1584652420" modified:"1585105564" priority:"M" status:"pending" uuid:"300de943-bd7b-4a14-81fe-c86c6764362b"]
+---
+time 1585105578
+old [description:"Taxes" entry:"1584652424" modified:"1584652424" status:"pending" uuid:"b8dc7942-95d6-439b-9fac-d309dfcb1632"]
+new [description:"Taxes" entry:"1584652424" modified:"1585105578" priority:"M" status:"pending" uuid:"b8dc7942-95d6-439b-9fac-d309dfcb1632"]
+---
+time 1585224491
+old [description:"ask doubts in lecture" entry:"1584836760" modified:"1584839104" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+new [description:"lectures and doubts" entry:"1584836760" modified:"1585224491" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+---
+time 1585224494
+old [description:"ask doubts in lecture" entry:"1585105514" modified:"1585105553" priority:"M" project:"animation_and_planning" status:"pending" uuid:"8f3bffc1-2b47-4df6-8f22-1986d123ef7c"]
+new [description:"lectures and doubts" entry:"1585105514" modified:"1585224494" priority:"M" project:"animation_and_planning" status:"pending" uuid:"8f3bffc1-2b47-4df6-8f22-1986d123ef7c"]
+---
+time 1585224509
+new [description:"lectures and doubts" entry:"1585224509" modified:"1585224509" priority:"M" project:"robotics" status:"pending" uuid:"cec12621-9905-4e51-8cd4-9ab4f37124d4"]
+---
+time 1585224550
+old [description:"Midterm - mar 31" due:"1585630800" end:"1584653680" entry:"1584652306" modified:"1584839146" priority:"M" project:"robotics" status:"pending" uuid:"38dbb10d-df75-4686-a32c-9432fef581f5"]
+new [description:"midterm - mar 31; format, time, syllabus, rules" due:"1585630800" end:"1584653680" entry:"1584652306" modified:"1585224550" priority:"M" project:"robotics" status:"pending" uuid:"38dbb10d-df75-4686-a32c-9432fef581f5"]
+---
+time 1585224564
+old [description:"midterm - mar 31; format, time, syllabus, rules" due:"1585630800" end:"1584653680" entry:"1584652306" modified:"1585224550" priority:"M" project:"robotics" status:"pending" uuid:"38dbb10d-df75-4686-a32c-9432fef581f5"]
+new [description:"midterm - mar 31; find format, time, syllabus, rules" due:"1585630800" end:"1584653680" entry:"1584652306" modified:"1585224564" priority:"M" project:"robotics" status:"pending" uuid:"38dbb10d-df75-4686-a32c-9432fef581f5"]
+---
+time 1585224631
+old [description:"Taxes" entry:"1584652424" modified:"1585105578" priority:"M" status:"pending" uuid:"b8dc7942-95d6-439b-9fac-d309dfcb1632"]
+new [description:"Taxes" entry:"1584652424" modified:"1585224631" status:"pending" uuid:"b8dc7942-95d6-439b-9fac-d309dfcb1632"]
+---
+time 1585225616
+old [description:"CSGSA website" entry:"1584652429" modified:"1585033046" priority:"M" status:"pending" uuid:"2a624bcc-e875-456d-8754-1f39ff55e991"]
+new [description:"CSGSA website" due:"1585198800" entry:"1584652429" modified:"1585225616" priority:"M" status:"pending" uuid:"2a624bcc-e875-456d-8754-1f39ff55e991"]
+---
+time 1585225626
+old [description:"CSGSA website" due:"1585198800" entry:"1584652429" modified:"1585225616" priority:"M" status:"pending" uuid:"2a624bcc-e875-456d-8754-1f39ff55e991"]
+new [description:"CSGSA website" due:"1585285200" entry:"1584652429" modified:"1585225626" priority:"M" status:"pending" uuid:"2a624bcc-e875-456d-8754-1f39ff55e991"]
+---
+time 1585225688
+old [description:"lectures and doubts" entry:"1585224509" modified:"1585224509" priority:"M" project:"robotics" status:"pending" uuid:"cec12621-9905-4e51-8cd4-9ab4f37124d4"]
+new [description:"append , nannao rust animations" entry:"1585224509" modified:"1585225688" priority:"M" project:"robotics" status:"pending" uuid:"cec12621-9905-4e51-8cd4-9ab4f37124d4"]
+---
+time 1585225714
+old [description:"append , nannao rust animations" entry:"1585224509" modified:"1585225688" priority:"M" project:"robotics" status:"pending" uuid:"cec12621-9905-4e51-8cd4-9ab4f37124d4"]
+new [description:"lectures and doubts, nannao rust animations" entry:"1585224509" modified:"1585225714" priority:"M" project:"robotics" status:"pending" uuid:"cec12621-9905-4e51-8cd4-9ab4f37124d4"]
+---
+time 1585227428
+old [description:"Hw3 submission - mar 30" due:"1585544400" entry:"1584652262" modified:"1584839150" priority:"M" project:"animation_and_planning" status:"pending" uuid:"f9f51d98-73f4-44e5-a8e9-c55858419c67"]
+new [description:"Hw3 submission - mar 30" due:"1585544400" end:"1585227423" entry:"1584652262" modified:"1585227428" priority:"M" project:"animation_and_planning" status:"completed" uuid:"f9f51d98-73f4-44e5-a8e9-c55858419c67"]
+---
+time 1585227429
+old [description:"CSGSA website" due:"1585285200" entry:"1584652429" modified:"1585225626" priority:"M" status:"pending" uuid:"2a624bcc-e875-456d-8754-1f39ff55e991"]
+new [description:"CSGSA website" due:"1585285200" end:"1585227428" entry:"1584652429" modified:"1585227429" priority:"M" status:"completed" uuid:"2a624bcc-e875-456d-8754-1f39ff55e991"]
+---
+time 1585227430
+old [description:"midterm - mar 31; find format, time, syllabus, rules" due:"1585630800" end:"1584653680" entry:"1584652306" modified:"1585224564" priority:"M" project:"robotics" status:"pending" uuid:"38dbb10d-df75-4686-a32c-9432fef581f5"]
+new [description:"midterm - mar 31; find format, time, syllabus, rules" due:"1585630800" end:"1584653680" entry:"1584652306" modified:"1585227430" priority:"M" project:"robotics" status:"completed" uuid:"38dbb10d-df75-4686-a32c-9432fef581f5"]
+---
+time 1585227434
+old [description:"project proposal - mar 29" due:"1585458000" entry:"1584748443" modified:"1584839104" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+new [description:"project proposal - mar 29" due:"1585458000" end:"1585227430" entry:"1584748443" modified:"1585227434" priority:"M" project:"sensing_and_estimation" status:"completed" uuid:"6c25d591-43f1-4e97-b950-1bc93fc1bdf8"]
+---
+time 1585227434
+old [description:"lectures and doubts" entry:"1584836760" modified:"1585224491" priority:"M" project:"sensing_and_estimation" status:"pending" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+new [description:"lectures and doubts" end:"1585227434" entry:"1584836760" modified:"1585227434" priority:"M" project:"sensing_and_estimation" status:"completed" uuid:"47d6ae53-6091-4100-9289-d43af0ae3544"]
+---
+time 1585227435
+old [description:"lectures and doubts" entry:"1585105514" modified:"1585224494" priority:"M" project:"animation_and_planning" status:"pending" uuid:"8f3bffc1-2b47-4df6-8f22-1986d123ef7c"]
+new [description:"lectures and doubts" end:"1585227434" entry:"1585105514" modified:"1585227435" priority:"M" project:"animation_and_planning" status:"completed" uuid:"8f3bffc1-2b47-4df6-8f22-1986d123ef7c"]
+---
+time 1585227436
+old [description:"lectures and doubts, nannao rust animations" entry:"1585224509" modified:"1585225714" priority:"M" project:"robotics" status:"pending" uuid:"cec12621-9905-4e51-8cd4-9ab4f37124d4"]
+new [description:"lectures and doubts, nannao rust animations" end:"1585227435" entry:"1585224509" modified:"1585227436" priority:"M" project:"robotics" status:"completed" uuid:"cec12621-9905-4e51-8cd4-9ab4f37124d4"]
+---
+time 1585227476
+old [description:"Project mid-sem report - apr 15" due:"1586926800" end:"1584653680" entry:"1584652312" modified:"1584839146" priority:"M" project:"robotics" status:"pending" uuid:"eb8058e7-8008-4736-a98b-b3b838939425"]
+new [description:"Project mid-sem report - apr 15" due:"1586926800" end:"1584653680" entry:"1584652312" modified:"1585227476" priority:"M" project:"robotics" status:"completed" uuid:"eb8058e7-8008-4736-a98b-b3b838939425"]
+---
+time 1585227499
+old [description:"Apartment search" entry:"1584652420" modified:"1585105564" priority:"M" status:"pending" uuid:"300de943-bd7b-4a14-81fe-c86c6764362b"]
+new [description:"Apartment search" end:"1585227499" entry:"1584652420" modified:"1585227499" priority:"M" status:"completed" uuid:"300de943-bd7b-4a14-81fe-c86c6764362b"]
+---
+time 1585461956
+old [description:"get an internship" due:"1589346000" entry:"1584655582" modified:"1584841132" project:"internship" status:"pending" uuid:"a7636ff5-b9a0-48ce-a61a-96fceb8391c2"]
+new [description:"get an internship" due:"1589346000" end:"1585461956" entry:"1584655582" modified:"1585461956" project:"internship" status:"completed" uuid:"a7636ff5-b9a0-48ce-a61a-96fceb8391c2"]
+---
+time 1585895138
+old [description:"Taxes" entry:"1584652424" modified:"1585224631" status:"pending" uuid:"b8dc7942-95d6-439b-9fac-d309dfcb1632"]
+new [description:"Taxes" end:"1585895138" entry:"1584652424" modified:"1585895138" status:"completed" uuid:"b8dc7942-95d6-439b-9fac-d309dfcb1632"]
+---
+time 1585895138
+old [description:"Driving license" entry:"1584652663" modified:"1584652663" status:"pending" uuid:"a62344ef-fc91-48d3-8bd2-875277afcfe4"]
+new [description:"Driving license" end:"1585895138" entry:"1584652663" modified:"1585895138" status:"completed" uuid:"a62344ef-fc91-48d3-8bd2-875277afcfe4"]
+---
+time 1585895142
+old [description:"website\/project pages\/cv" entry:"1585033026" modified:"1585033026" status:"pending" uuid:"a28df500-4e00-4af7-b124-6c66df76b9e3"]
+new [description:"website\/project pages\/cv" end:"1585895142" entry:"1585033026" modified:"1585895142" status:"completed" uuid:"a28df500-4e00-4af7-b124-6c66df76b9e3"]
+---
+time 1585895186
+old [description:"Analytical coding" entry:"1584654735" modified:"1584654735" project:"bucket_list" status:"pending" uuid:"80db84f4-7e2d-4acf-bde7-c87a7b5049ef"]
+new [description:"Analytical coding" end:"1585895184" entry:"1584654735" modified:"1585895186" project:"bucket_list" status:"completed" uuid:"80db84f4-7e2d-4acf-bde7-c87a7b5049ef"]
+---
+time 1585895186
+old [description:"Film making" entry:"1584654745" modified:"1584654745" project:"bucket_list" status:"pending" uuid:"f66553f8-f16e-4c46-bad5-5609820d75c4"]
+new [description:"Film making" end:"1585895186" entry:"1584654745" modified:"1585895186" project:"bucket_list" status:"completed" uuid:"f66553f8-f16e-4c46-bad5-5609820d75c4"]
+---
+time 1585895186
+old [description:"Gaming" entry:"1584654749" modified:"1584654749" project:"bucket_list" status:"pending" uuid:"d70e21bf-2710-4fb1-8ef9-993cb068758e"]
+new [description:"Gaming" end:"1585895186" entry:"1584654749" modified:"1585895186" project:"bucket_list" status:"completed" uuid:"d70e21bf-2710-4fb1-8ef9-993cb068758e"]
+---
+time 1585898040
+old [description:"rot mat <-> eular angle, rpy" end:"1584653680" entry:"1584652348" modified:"1584654319" project:"math" status:"pending" uuid:"43d7c133-3eac-4f7b-9a88-e75a38548d55"]
+new [description:"rot mat <-> eular angle, rpy" end:"1584653680" entry:"1584652348" modified:"1585898040" project:"math" status:"completed" uuid:"43d7c133-3eac-4f7b-9a88-e75a38548d55"]
+---
+time 1585898040
+old [description:"what is gimbal lock? not single solution with gimbal lock?" end:"1584653680" entry:"1584652353" modified:"1584654319" project:"math" status:"pending" uuid:"665b3270-e9f4-43a9-b910-375a08989348"]
+new [description:"what is gimbal lock? not single solution with gimbal lock?" end:"1584653680" entry:"1584652353" modified:"1585898040" project:"math" status:"completed" uuid:"665b3270-e9f4-43a9-b910-375a08989348"]
+---
+time 1585898040
+old [description:"axis-angle <-> rotation matrix - eigen basis, null space finding" end:"1584653680" entry:"1584652360" modified:"1585032830" project:"math" status:"pending" uuid:"d9251770-35f9-4327-9fa5-8bfed8d6ccb9"]
+new [description:"axis-angle <-> rotation matrix - eigen basis, null space finding" end:"1584653680" entry:"1584652360" modified:"1585898040" project:"math" status:"completed" uuid:"d9251770-35f9-4327-9fa5-8bfed8d6ccb9"]
+---
+time 1585898040
+old [description:"Code\/Visualize\/Animate the math" entry:"1584655014" modified:"1584655014" project:"math" status:"pending" uuid:"688e2bdc-c4b9-452a-a15f-dd025976247f"]
+new [description:"Code\/Visualize\/Animate the math" end:"1585898040" entry:"1584655014" modified:"1585898040" project:"math" status:"completed" uuid:"688e2bdc-c4b9-452a-a15f-dd025976247f"]
+---
+time 1585898040
+old [description:"how to tell which system has how many and what type  of solutions? and what is a solution exactly?" entry:"1584655932" modified:"1584655932" project:"math" status:"pending" uuid:"a10476e3-b556-4949-aa1e-c78239ef1e7f"]
+new [description:"how to tell which system has how many and what type  of solutions? and what is a solution exactly?" end:"1585898040" entry:"1584655932" modified:"1585898040" project:"math" status:"completed" uuid:"a10476e3-b556-4949-aa1e-c78239ef1e7f"]
+---
+time 1585898040
+old [description:"sensing: hw1 p1 how is orientation not determinable?" entry:"1584655942" modified:"1584655942" project:"math" status:"pending" uuid:"4e20ba06-46db-44dd-a0c4-dc1a0c1c6c57"]
+new [description:"sensing: hw1 p1 how is orientation not determinable?" end:"1585898040" entry:"1584655942" modified:"1585898040" project:"math" status:"completed" uuid:"4e20ba06-46db-44dd-a0c4-dc1a0c1c6c57"]
+---
+time 1585898040
+old [description:"a^T * b = b^T * a iff a, b are vectors" end:"1584653680" entry:"1584653493" modified:"1584656793" project:"math" status:"pending" uuid:"7d6f8c69-070e-4e74-89b8-fffec96b12a3"]
+new [description:"a^T * b = b^T * a iff a, b are vectors" end:"1584653680" entry:"1584653493" modified:"1585898040" project:"math" status:"completed" uuid:"7d6f8c69-070e-4e74-89b8-fffec96b12a3"]
+---
+time 1585898040
+old [description:"what is determinant of transform matrix with only rotation and translation ? == 1" end:"1584653680" entry:"1584653557" modified:"1584656795" project:"math" status:"pending" uuid:"b52472d6-dc5a-45e5-9330-65a4f2789d6c"]
+new [description:"what is determinant of transform matrix with only rotation and translation ? == 1" end:"1584653680" entry:"1584653557" modified:"1585898040" project:"math" status:"completed" uuid:"b52472d6-dc5a-45e5-9330-65a4f2789d6c"]
+---
+time 1585898040
+old [description:"composition of linear transformations" end:"1584653680" entry:"1584653582" modified:"1584827606" project:"math" status:"pending" uuid:"ddfae90e-7c6b-4678-8485-67bc58f63524"]
+new [description:"composition of linear transformations" end:"1584653680" entry:"1584653582" modified:"1585898040" project:"math" status:"completed" uuid:"ddfae90e-7c6b-4678-8485-67bc58f63524"]
+---
+time 1585898040
+old [description:"rotation & quaternions" end:"1584653680" entry:"1584653660" modified:"1584656797" project:"math" status:"pending" uuid:"4a69ebb5-1519-4aff-88d0-dfcca73ebd34"]
+new [description:"rotation & quaternions" end:"1584653680" entry:"1584653660" modified:"1585898040" project:"math" status:"completed" uuid:"4a69ebb5-1519-4aff-88d0-dfcca73ebd34"]
+---
+time 1585898040
+old [description:"the beauty of the phrase exact approximation" entry:"1584824518" modified:"1584824518" project:"math" status:"pending" uuid:"7871c7f3-9ac0-44d8-90da-dead0b1c2344"]
+new [description:"the beauty of the phrase exact approximation" end:"1585898040" entry:"1584824518" modified:"1585898040" project:"math" status:"completed" uuid:"7871c7f3-9ac0-44d8-90da-dead0b1c2344"]
+---
+time 1585898040
+old [description:"multiplication of quaternions is not commutative" entry:"1584922098" modified:"1584922098" project:"math" status:"pending" uuid:"8d5d5435-20f7-46f7-96a6-0570e0ea396e"]
+new [description:"multiplication of quaternions is not commutative" end:"1585898040" entry:"1584922098" modified:"1585898040" project:"math" status:"completed" uuid:"8d5d5435-20f7-46f7-96a6-0570e0ea396e"]
+---

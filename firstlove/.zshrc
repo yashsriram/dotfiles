@@ -138,6 +138,7 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 # aliases
 alias r="ranger"
 alias v="nvim"
+alias tl="trash-list"
 alias htop="htop --tree"
 alias mounts="mount | grep -E '(/dev/sd|@|ifuse)'"
 alias tig="tig --all"
@@ -192,7 +193,6 @@ alias ts="task summary"
 alias tcal="task calendar"
 alias ta="task add"
 alias tp="task projects"
-alias tl="task all"
 
 #jetbrains aliases
 alias pycharm="nohup ~/jetbrains/pycharm/bin/pycharm.sh > /dev/null &"

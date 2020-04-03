@@ -58,6 +58,8 @@ bindsym --release $windows_key+Print exec exec ~/.i3scripts/screenshot 'Patchsho
 ################ Screencast Keymaps ################
 bindsym --release $windows_key+r exec ~/.i3scripts/screencast 'Screencast name' 'Screencast captured'
 bindsym --release $windows_key+t exec killall -SIGINT ffmpeg
+# bindsym --release $windows_key+y exec screenkey
+# bindsym --release $windows_key+u exec pkill screenkey
 
 ################ Volume Control ################
 bindsym XF86AudioRaiseVolume exec pamixer -i 5 && pkill -RTMIN+2 i3blocks

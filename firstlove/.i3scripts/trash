@@ -1,5 +1,7 @@
 #!/bin/bash
 
 SIZE=$(du -sh ~/.local/share/Trash/files | awk '{print $1}')
-COUNT=$(ls ~/.local/share/Trash/info | wc -w)
+COUNT=$(ls -a ~/.local/share/Trash/info | wc -w)
+# remove . and .. from count
+COUNT=$((COUNT - 2))
 echo "${COUNT} | ${SIZE}"
