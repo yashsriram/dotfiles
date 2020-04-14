@@ -7,19 +7,18 @@
   * i3lock-blur
   * i3-battery-popup
 * neovim [text editor] & nvr [to open new file in exisiting nvim session]
-* ranger [file manager]
-* ranger\_devicons [icons for ranger, depends on nerd-fonts]
+* ranger [file manager], ranger\_devicons [icons for ranger, depends on nerd-fonts]
 * nerd-fonts-source-code-pro, ttf-emojione-color, noto-fonts-emoji [for unicode emojis]
 * xclip [for manual clipboard management]
 * htop
 * mons [for multi monitor display control]
 * d\_menu [general selection from menu]
+* surf as a minimal brower
 * feh [to set background picture]
 * sxiv [for images]
 * zathura [for pdfs]
 * pamixer [for volume control]
 * bc [for i3scripts]
-* xterm [for remote logins]
 * tig [git tui client]
 * networkmanager [instead of netctl]
 * dunst [for notifications]

@@ -14,7 +14,6 @@ call plug#begin()
   Plug 'tpope/vim-commentary' " comment and uncomment quickly
   Plug 'tpope/vim-abolish' " supercharged substitution, case changing and abbreviations(auto-corrections)
   Plug 'tpope/vim-fugitive' " git plugin
-  Plug 'tpope/vim-eunuch' " UNIX shell commands that need it the most
   Plug 'airblade/vim-gitgutter' " gutter for git
   Plug 'Yashasvi-Sriram/vim-searchindex' " gives number and count of matches
   Plug 'vim-airline/vim-airline' " status line plugin
@@ -197,12 +196,6 @@ augroup END
   set shortmess+=c
   let g:mucomplete#enable_auto_at_startup = 1
   let g:mucomplete#completion_delay = 3
-
-" brackets
-  for brackets in ['{}', '[]', '()', '""', "''", '``']
-    :execute "inoremap " . brackets[0] . " " . brackets . "<Esc>i"
-    :execute "vnoremap " . brackets[0] . " " . "di" . brackets[0] . "<Esc>pa" . brackets[1]
-  endfor
 
 " airline
   let g:airline#extensions#tabline#enabled = 1
