@@ -9,11 +9,12 @@
 * neovim [text editor] & nvr [to open new file in exisiting nvim session]
 * ranger [file manager], ranger\_devicons [icons for ranger, depends on nerd-fonts]
 * nerd-fonts-source-code-pro, ttf-emojione-color, noto-fonts-emoji [for unicode emojis]
-* xclip [for manual clipboard management]
-* htop
+* xclip [manual clipboard management]
+* htop [peek at os]
 * mons [for multi monitor display control]
 * d\_menu [general selection from menu]
-* surf as a minimal brower
+* w3m [terminal images/HTML rendering]
+* surf [minimal browering]
 * feh [to set background picture]
 * sxiv [for images]
 * zathura [for pdfs]
@@ -29,11 +30,11 @@
 * cronie [for cron tabs]
 * flite and SoX [for text to speech utility]
 * xf86-input-synaptics [touchpad driver for X]
-* tmux
-* mbsync, msmtp, gnome-keyring, neomutt, notmuch for mail
-* bluez, bluez-utils, bluetoothctl for bluetooth
-* trash-cli for trash file management
-* ntpd to automatically set time from internet
+* tmux [multiple terminals]
+* mbsync, msmtp, gnome-keyring, neomutt, notmuch [mail]
+* bluez, bluez-utils, bluetoothctl [bluetooth]
+* trash-cli [trash management]
+* ntpd [automatically set time from internet]
 
 # Config
 * In file `/etc/systemd/logind.conf` set HandlePowerKey=ignore [for disabling immediate shutdown on power button press]

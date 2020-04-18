@@ -225,7 +225,7 @@ file_node_exact_matches = {
     'user-dirs.dirs'                   : '',
     'Makefile'                         : 'M',
     'makefile'                         : 'M',
-    'CMakeLists.txt'                   : 'C',
+    'CMakeLists.txt'                   : 'L',
 }
 
 def devicon(file):
