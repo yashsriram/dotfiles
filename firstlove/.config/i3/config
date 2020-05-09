@@ -34,8 +34,7 @@ for_window [title="^OpenGL$"] floating enable
 bindsym $windows_key+Return exec termite
 bindsym $windows_key+space exec dmenu_run -fn 'Fira Mono-14'
 bindsym $windows_key+z exec ~/.i3scripts/emojis_select
-bindsym $windows_key+x exec firefox
-bindsym $windows_key+c exec qutebrowser
+bindsym $windows_key+x exec qutebrowser
 
 bindsym $windows_key+m exec ~/.i3scripts/talk_to_me
 bindsym $windows_key+n exec termite -e neomutt
