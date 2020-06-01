@@ -45,7 +45,7 @@ bindsym $windows_key+s exec subl
 bindsym $windows_key+h exec nohup termite -e 'nvr -s --remote-tab-silent /home/pandu/journal/templatex/main.templatex' > /dev/null &
 bindsym $windows_key+j exec termite -d ~/journal
 bindsym $windows_key+k exec zathura ~/journal/tex/main.pdf
-bindsym $windows_key+l exec surf ~/journal/graph.html
+bindsym $windows_key+l exec qutebrowser ~/journal/graph.html
 
 bindsym $windows_key+y exec ~/.i3scripts/timer
 

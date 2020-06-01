@@ -14,7 +14,6 @@
 * mons [for multi monitor display control]
 * d\_menu [general selection from menu]
 * w3m [terminal images/HTML rendering]
-* surf [minimal browering]
 * feh [to set background picture]
 * sxiv [for images]
 * zathura [for pdfs]

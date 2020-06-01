@@ -21,6 +21,7 @@ call plug#begin()
   Plug 'lervag/vimtex' " tex plugin
   Plug 'lifepillar/vim-mucomplete' " completion engine
   Plug 'sirver/ultisnips' " Customizable snippets
+  Plug 'junegunn/vim-peekaboo' " To have a peek at vim registers
 call plug#end()
 
 " basic options
