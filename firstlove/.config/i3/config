@@ -28,13 +28,14 @@ for_window [class="Matplotlib"] floating enable
 for_window [class="FPS"] floating enable
 for_window [class="SimpleScreenRecorder"] floating enable
 for_window [title="^Processing$"] floating enable
-for_window [title="^OpenGL$"] floating enable
+for_window [title="Kiss3d"] floating enable
 
 ################ Application Keymaps ################
 bindsym $windows_key+Return exec termite
 bindsym $windows_key+space exec dmenu_run -fn 'Fira Mono-14'
 bindsym $windows_key+z exec ~/.i3scripts/emojis_select
 bindsym $windows_key+x exec qutebrowser
+bindsym $windows_key+c exec ~/.i3scripts/bluetooth_prompt
 
 bindsym $windows_key+m exec ~/.i3scripts/talk_to_me
 bindsym $windows_key+n exec termite -e neomutt
@@ -127,16 +128,16 @@ client.urgent           #000000 #d81b60 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
-for_window [class=".*"] title_format "⮀ <b>%class</b>"
-for_window [title="^pandu@firstlove*"] title_format "⮀ <b>Termite</b>"
-for_window [title="^neomutt$"] title_format "⮀ <b>Neomutt</b>"
-for_window [title="/bin/nvim"] title_format "⮀ <b>Neovim</b>"
-for_window [title="nvr -s --remote-tab-silent"] title_format "⮀ <b>Neovim</b>"
-for_window [title="^ranger$"] title_format "⮀ <b>Ranger</b>"
-for_window [class="^Zathura$"] title_format "⮀ <b>%title</b>"
-for_window [class="^ffplay$"] title_format "⮀ <b>FFPlay</b>"
-for_window [class="^qutebrowser$"] title_format "⮀ <b>Qutebrowser</b>"
-for_window [class="^firefox$"] title_format "⮀ <b>Firefox </b>"
+for_window [class=".*"]                                 title_format "⮀ <b>%class</b>"
+for_window [title="^pandu@firstlove"]                   title_format "⮀ <b>Termite</b>"
+for_window [title="^neomutt$"]                          title_format "⮀ <b>Neomutt</b>"
+for_window [title="/bin/nvim"]                          title_format "⮀ <b>Neovim</b>"
+for_window [title="nvr -s --remote-tab-silent"]         title_format "⮀ <b>Neovim</b>"
+for_window [title="^ranger$"]                           title_format "⮀ <b>Ranger</b>"
+for_window [class="^Zathura$"]                          title_format "⮀ <b>%title</b>"
+for_window [class="^ffplay$"]                           title_format "⮀ <b>FFPlay</b>"
+for_window [class="^qutebrowser$"]                      title_format "⮀ <b>Qutebrowser</b>"
+for_window [class="^mpv$"]                              title_format "⮀ <b>MPV</b>"
 
 # remove borders
 default_border normal 0

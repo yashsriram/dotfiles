@@ -1,0 +1,9 @@
+#! /bin/bash
+
+SELCTION=$(bluetoothctl devices | dmenu -fn 'Fira Mono-14' -i -l 5  -p 'Connect via bluetooth')
+[ $? != 0 ] && exit
+
+MAC_ADDRESS=$(echo ${SELCTION} | awk '{ print $2 }')
+bluetoothctl power on && bluetoothctl connect ${MAC_ADDRESS} \
+  && notify-send -a "scripts" "Connected to ${MAC_ADDRESS}" -i /usr/share/icons/Adwaita/24x24/devices/bluetooth-symbolic.symbolic.png -t 5000 \
+  || notify-send -a "scripts" "Unable to connect to ${MAC_ADDRESS}" -i /usr/share/icons/Adwaita/24x24/devices/bluetooth-symbolic.symbolic.png -t 5000 \
