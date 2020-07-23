@@ -12,11 +12,11 @@ call plug#begin()
   Plug 'tpope/vim-surround' " Surround text with anything
   Plug 'lifepillar/vim-mucomplete' " Completion engine
   Plug 'airblade/vim-gitgutter' " Gutter for git
-  Plug 'junegunn/vim-peekaboo' " To have a peek at vim registers
   Plug 'rbgrouleff/bclose.vim' " Required for ranger plugin
   Plug 'francoiscabrol/ranger.vim' " Ranger integration to open files
   Plug 'sirver/ultisnips' " Customizable snippets
-  Plug 'junegunn/fzf' " Searchable menu
+  Plug 'junegunn/fzf' " Search lists
+  Plug 'junegunn/fzf.vim' " Search lists
   Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
@@ -29,7 +29,8 @@ call plug#end()
 " basic options
   syntax on
   filetype plugin on
-  set number
+  set title
+  set number relativenumber
   set bg=dark
   set splitbelow splitright
   set encoding=utf-8
@@ -39,6 +40,7 @@ call plug#end()
   set noswapfile
   set autoread
   set hidden
+  set scrolloff=999
 
 " spelling
   nnoremap <C-l> 1z=
@@ -60,7 +62,6 @@ call plug#end()
   nnoremap <Up> gk
   nnoremap <Down> gj
   nnoremap <C-b> %
-  nnoremap gf :wincmd gf<Enter>
 
 " selection
   vnoremap > >gv
@@ -78,14 +79,12 @@ call plug#end()
   nnoremap <C-c> yy
   nnoremap <C-v> P
   vnoremap D "_d
+  nnoremap Y y$
 
 " save
   nnoremap <C-s> :w<Enter>
   inoremap <C-s> <Esc>:w<Enter>i
   vnoremap <C-s> <Esc>:w<Enter>
-
-" quit gracefully
-  nnoremap qq :q<Enter>
 
 " make sure vim returns to the same line when you reopen a file.
 augroup line_return
@@ -98,6 +97,8 @@ augroup END
 
 " copy to system clipboard
   vnoremap <C-y> "+y
+  nnoremap yall ggVG"+y
+
 
 " find
   set nowrapscan
@@ -126,16 +127,17 @@ augroup END
   cnoremap <C-e> <end>
 
 " buffers
-  nnoremap <A-w> :bd<Enter>
-  nnoremap <A-Up> :bp<Enter>
-  nnoremap <A-Down> :bn<Enter>
-  nnoremap <A-h> :sp<Enter>
-  nnoremap <A-v> :vsp<Enter>
+  nnoremap qq :bd<Enter>
+  nnoremap <A-Left> :bp<Enter>
+  nnoremap <A-Right> :bn<Enter>
 
 " tabs
-  nnoremap <C-t> :tabnew<Enter>
-  nnoremap <A-Right> :tabn<Enter>
-  nnoremap <A-Left> :tabp<Enter>
+  nnoremap qQ :q<Enter>
+  nnoremap <C-t> :enew<Enter>
+  nnoremap <A-Up> :tabp<Enter>
+  nnoremap <A-Down> :tabn<Enter>
+  nnoremap <A-h> :sp<Enter>
+  nnoremap <A-v> :vsp<Enter>
 
 " panes/windows
   nnoremap <A-S-Down> <C-w>j
@@ -145,8 +147,8 @@ augroup END
 
 " folding
   set foldlevel=99
-  nnoremap <Tab> za
   set foldmethod=syntax
+  nnoremap <Tab> za
 
 " tags
   nnoremap <leader><Right> <C-]>
@@ -157,7 +159,6 @@ augroup END
   nnoremap <leader><Down> <C-O>
 
 " ranger
-  nnoremap <A-1> :RangerCurrentFileNewTab<Enter>
   let g:ranger_replace_netrw = 1
 
 " mucomplete
@@ -177,10 +178,13 @@ augroup END
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rls'],
     \ }
-nnoremap <leader><leader> :call LanguageClient_contextMenu()<CR>
+nnoremap <leader>l :call LanguageClient_contextMenu()<Enter>
 " Or map each action separately
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+autocmd BufWritePost *.rs call LanguageClient#textDocument_formatting()
+nnoremap <leader>a :call LanguageClient#textDocument_rename()<Enter>
+nnoremap <leader>d :call LanguageClient#textDocument_definition()<Enter>
+nnoremap <leader>x :call LanguageClient#textDocument_hover()<Enter>
+nnoremap <leader>u :call LanguageClient#textDocument_references()<Enter>
 
 " airline
   let g:airline#extensions#tabline#enabled = 1
@@ -193,6 +197,9 @@ nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
       let g:airline_symbols = {}
   endif
 
+" fzf
+  nnoremap <leader><leader> :GFiles<Enter>
+
 " vimtex
   let g:tex_flavor='latex'
   " enable this if you need forward and backward search
@@ -201,6 +208,3 @@ nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 
 " smart spell check
   autocmd BufReadPost,BufNewFile *.tex setlocal spell | set spelllang=en_us | inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
-
-" rust
-autocmd BufWritePost *.rs call LanguageClient#textDocument_formatting()

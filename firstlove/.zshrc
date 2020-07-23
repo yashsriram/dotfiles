@@ -145,11 +145,11 @@ alias tig="tig --all"
 
 # pacman aliases
 alias pacc="pacman -Q | wc -l"
-alias pacl="pacman -Q | less"
+alias pacl="pacman -Q | fzf"
 alias paci="sudo pacman -S"
 alias pacr="sudo pacman -R"
 alias pacu="sudo pacman -Syu"
-alias pacac="cat /var/log/pacman.log | grep -aE '(installed|removed)' | sort -r | less"
+alias pacac="cat /var/log/pacman.log | grep -aE '(installed|removed)' | sort -r | fzf"
 alias pacclean="sudo pacman -Rns $(pacman -Qtdq)"
 alias paccachedrop="sudo pacman -Scc"
 
