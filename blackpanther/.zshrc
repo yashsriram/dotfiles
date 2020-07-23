@@ -69,27 +69,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-zsh_command_time() {
-    if [ -n "$ZSH_COMMAND_TIME" ]; then
-        hours=$(($ZSH_COMMAND_TIME/3600))
-        min=$(($ZSH_COMMAND_TIME/60))
-        sec=$(($ZSH_COMMAND_TIME%60))
-        if [ "$ZSH_COMMAND_TIME" -le 60 ]; then
-            timer_show="$fg[green]$ZSH_COMMAND_TIME s."
-        elif [ "$ZSH_COMMAND_TIME" -gt 60 ] && [ "$ZSH_COMMAND_TIME" -le 180 ]; then
-            timer_show="$fg[yellow]$min min. $sec s."
-        else
-            if [ "$hours" -gt 0 ]; then
-                min=$(($min%60))
-                timer_show="$fg[red]$hours h. $min min. $sec s."
-            else
-                timer_show="$fg[red]$min min. $sec s."
-            fi
-        fi
-        printf "${ZSH_COMMAND_TIME_MSG}\n" "$timer_show"
-    fi
-}
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -140,16 +119,15 @@ alias v="nvim"
 alias htop="htop --tree"
 alias mounts="mount | grep -E '(/dev/nvme|@|ifuse)'"
 alias tig="tig --all"
-alias p="/home/pandu/school/10/Animation\&Planning/processing/processing"
-alias pj="/home/pandu/school/10/Animation\&Planning/processing/processing-java"
+alias tl="trash-list"
 
 # pacman aliases
 alias pacc="pacman -Q | wc -l"
-alias pacl="pacman -Q | less"
+alias pacl="pacman -Q | fzf"
 alias paci="sudo pacman -S"
 alias pacr="sudo pacman -R"
 alias pacu="sudo pacman -Syu"
-alias pacac="cat /var/log/pacman.log | grep -aE '(installed|removed)' | sort -r | less"
+alias pacac="cat /var/log/pacman.log | grep -aE '(installed|removed)' | sort -r | fzf"
 alias pacclean="sudo pacman -Rns $(pacman -Qtdq)"
 alias paccachedrop="sudo pacman -Scc"
 
@@ -157,13 +135,13 @@ alias paccachedrop="sudo pacman -Scc"
 alias cfi3="${EDITOR} ~/.config/i3/config"
 alias cfi3b="${EDITOR} ~/.i3blocks.conf"
 alias cft="${EDITOR} ~/.config/termite/config"
+alias cfq="${EDITOR} ~/.config/qutebrowser/config.py"
 alias cfz="${EDITOR} ~/.zshrc"
-alias cfza="${EDITOR} ~/.config/zathura/zathurarc"
 alias cfr="${EDITOR} ~/.config/ranger/rc.conf"
-alias cfd="${EDITOR} ~/.config/dunst/dunstrc"
+alias cfrifle="${EDITOR} ~/.config/ranger/rifle.conf"
 alias cfv="${EDITOR} ~/.config/nvim/init.vim"
-alias cfm="${EDITOR} ~/.tmux.conf"
-alias cfmt="${EDITOR} ~/.mutt/muttrc"
+alias cfzathura="${EDITOR} ~/.config/zathura/zathurarc"
+alias cfdunst="${EDITOR} ~/.config/dunst/dunstrc"
 
 # git aliases
 alias gits="git status"
@@ -173,15 +151,6 @@ alias gitp="git push"
 alias gitd="git diff"
 alias gitl="git log"
 alias gitb="git branch"
-alias gito="git checkout"
-alias gitk="nohup gitk --all > /dev/null &"
-
-#jetbrains aliases
-alias idea="nohup ~/jetbrains/idea/bin/idea.sh > /dev/null &"
-alias pycharm="nohup ~/jetbrains/pycharm/bin/pycharm.sh > /dev/null &"
-alias clion="nohup ~/jetbrains/clion/bin/clion.sh > /dev/null &"
-alias android-studio="nohup ~/jetbrains/android-studio/bin/studio.sh > /dev/null &"
-alias adb="~/jetbrains/android/platform-tools/adb"
 
 # mount aliases
 alias mounthyperdrive="sudo mount /dev/nvme0n1p5 /home/pandu/mounts/hyperdrive"
@@ -212,4 +181,3 @@ alias usshfsrpi="fusermount -u /home/pandu/sshfs/raspberrypi"
 # umn
 alias sshfsumn="sshfs /home/pandu/sshfs/umn patku001@nebula.cs.umn.edu: ; ranger /home/pandu/sshfs/umn/.www/"
 alias usshfsumn="fusermount -u /home/pandu/sshfs/umn"
-

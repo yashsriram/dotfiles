@@ -15,41 +15,42 @@ bindsym $windows_key+Shift+c reload
 bindsym $windows_key+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $windows_key+Shift+e exec ~/.i3scripts/dmenu_prompt 'Do you really want to exit i3?' 'i3-msg exit'
-# shut down
-bindsym $windows_key+Shift+s exec ~/.i3scripts/dmenu_prompt 'Do you really want to shutdown?' 'shutdown now'
 # reboot
 bindsym $windows_key+Shift+d exec ~/.i3scripts/dmenu_prompt 'Do you really want to reboot?' 'reboot'
-# lock
-bindsym Control+$alt_key+l exec i3lock --fuzzy -l
+# kill application
+bindsym $windows_key+Shift+q kill
 
 ################ Application startup positions ################
 for_window [class="SpeedCrunch"] floating enable, resize set 840 500, move position center, border pixel 2
-for_window [class="Matplotlib"] floating enable
-for_window [class="FPS"] floating enable
-for_window [class="SimpleScreenRecorder"] floating enable
-for_window [class="OpenGL"] floating enable
-for_window [title="^Processing$"] floating enable
 
 ################ Application Keymaps ################
-bindsym $windows_key+Shift+q kill
-
 bindsym $windows_key+Return exec termite
 bindsym $windows_key+space exec dmenu_run -fn 'Fira Mono-22'
 bindsym $windows_key+z exec ~/.i3scripts/emojis_select
+bindsym $windows_key+x exec qutebrowser
+
 bindsym $windows_key+m exec ~/.i3scripts/talk_to_me
-bindsym $windows_key+t exec ~/.i3scripts/timer
+bindsym $windows_key+n exec termite -e neomutt
+
 bindsym $windows_key+a exec speedcrunch
 bindsym $windows_key+s exec subl
-bindsym $windows_key+c exec google-chrome-stable
+
 bindsym $windows_key+h exec nohup termite -e 'nvr -s --remote-tab-silent /home/pandu/journal/templatex/main.templatex' > /dev/null &
 bindsym $windows_key+j exec termite -d ~/journal
 bindsym $windows_key+k exec zathura ~/journal/tex/main.pdf
-bindsym $windows_key+l exec surf ~/journal/graph.html
+bindsym $windows_key+l exec qutebrowser ~/journal/graph.html
+
+bindsym $windows_key+y exec ~/.i3scripts/timer
 
 ################ Screenshot Keymaps ################
-bindsym --release Print exec --no-startup-id scrot /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot Captured"
-bindsym --release $windows_key+Print exec --no-startup-id scrot -s /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot of area Captured"
-bindsym --release $windows_key+Shift+Print exec --no-startup-id scrot -u /home/pandu/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot of app Captured"
+bindsym --release Print exec ~/.i3scripts/screenshot 'Screenshot name' '' 'Screenshot captured'
+bindsym --release $windows_key+Print exec exec ~/.i3scripts/screenshot 'Patchshot name' '-s' 'Patchshot captured'
+
+################ Screencast Keymaps ################
+bindsym --release $windows_key+r exec ~/.i3scripts/screencast 'Screencast name' 'Screencast captured'
+bindsym --release $windows_key+t exec killall -SIGINT ffmpeg
+# bindsym --release $windows_key+y exec screenkey
+# bindsym --release $windows_key+u exec pkill screenkey
 
 ################ Volume Control ################
 bindsym XF86AudioRaiseVolume exec pamixer -i 5 && pkill -RTMIN+2 i3blocks
@@ -67,9 +68,9 @@ workspace_layout tabbed
 bindsym $windows_key+w layout tabbed
 bindsym $windows_key+e layout toggle split
 # bindsym $windows_key+s layout stacking
-bindsym $windows_key+f fullscreen toggle
+bindsym $windows_key+v fullscreen toggle
 # split in horizontal orientation
-# bindsym $windows_key+h split h
+bindsym $windows_key+f split h
 # split in vertical orientation
 bindsym $windows_key+g split v
 # toggle tiling / floating
@@ -86,7 +87,7 @@ bindsym $windows_key+Up focus up
 
 ################ Gaps Control ################
 smart_gaps on
-gaps inner 10
+gaps inner 5
 bindsym $windows_key+o gaps outer current plus 5
 bindsym $windows_key+Shift+o gaps outer current minus 5
 bindsym $windows_key+i gaps inner current plus 5
@@ -114,21 +115,15 @@ font pango:fira mono 18
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #000000 #ffe57f #000000 #267fb5   #267fb5
-client.focused_inactive #000000 #5f676a #ffffff #484e50   #333333
+client.focused_inactive #000000 #404142 #ffffff #484e50   #333333
 client.unfocused        #000000 #000000 #ffffff #292d2e   #222222
 client.urgent           #000000 #d81b60 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
-for_window [class=".*"] title_format "⮀ <b>%class</b>"
-for_window [title="^pandu@blackpanther*"] title_format "⮀ <b>Termite</b>"
-for_window [title="^/bin/nvim"] title_format "⮀ <b>Vim</b>"
-for_window [title="^nvr -s --remote-tab-silent"] title_format "⮀ <b>Vim</b>"
-for_window [title="^ranger$"] title_format "⮀ <b>Ranger</b>"
-for_window [class="Google-chrome"] title_format "⮀ <b>Chrome</b>"
-
 # remove borders
 default_border normal 0
+for_window [class=".*"] title_format "<b>⮀ %title</b>"
 
 ################ Workspaces ################
 # Define names for default workspaces for which we configure key bindings later on.

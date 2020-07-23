@@ -1,5 +1,5 @@
 [options]
-font = Ubuntu Mono 21
+font = Fira Mono 20
 allow_bold = true
 clickable_url = true
 dynamic_title = true
@@ -36,7 +36,7 @@ color11 = #f4f99d
 
 # blue
 color4  = #0d47a1
-color12 = #82b1ff
+color12 = #448aff
 
 # magenta
 color5  = #ff79c6

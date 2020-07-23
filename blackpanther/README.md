@@ -19,7 +19,6 @@
 * zathura, xdotool [for pdfs, latex forward search]
 * pamixer [for volume control]
 * bc [for i3scripts]
-* xterm [for remote logins]
 * tig [git tui client]
 * networkmanager [instead of netctl]
 * dunst [for notifications]
@@ -29,7 +28,6 @@
 * cronie [for cron tabs]
 * flite and SoX [for text to speech utility]
 * tmux
-* blueberry [bluetooth]
 
 # Config
 * In file `/etc/systemd/logind.conf` set HandlePowerKey=ignore [for disabling immediate shutdown on power button press]

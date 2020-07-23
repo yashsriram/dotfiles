@@ -19,7 +19,7 @@ file_node_extensions = {
     'bmp'      : '',
     'bz2'      : '',
     'c'        : '',
-    'cu'       : '◌',
+    'cu'       : 'C',
     'h'        : '',
     'c++'      : '',
     'cab'      : '',
@@ -105,7 +105,6 @@ file_node_extensions = {
     'pyc'      : '',
     'pyd'      : '',
     'pyo'      : '',
-    'txt'      : 't',
     'rar'      : '',
     'rb'       : '',
     'rc'       : '',
@@ -225,7 +224,8 @@ file_node_exact_matches = {
     'react.jsx'                        : '',
     'user-dirs.dirs'                   : '',
     'Makefile'                         : 'M',
-    'CMakeLists.txt'                   : 'C',
+    'makefile'                         : 'M',
+    'CMakeLists.txt'                   : 'L',
 }
 
 def devicon(file):
