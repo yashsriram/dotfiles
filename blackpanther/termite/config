@@ -1,0 +1,51 @@
+[options]
+font = Fira Mono 20
+allow_bold = true
+clickable_url = true
+dynamic_title = true
+search_wrap = true
+scroll_on_keystroke = true
+scroll_on_output = false
+urgent_on_bell = true
+scrollback_lines = -1
+cursor_blink = false
+
+[colors]
+
+# special
+foreground      = #f8f8f2
+foreground_bold = #f8f8f2
+cursor          = #f8f8f2
+background      = #282a36
+
+# black
+color0  = #000000
+color8  = #4d4d4d
+
+# red
+color1  = #ff5555
+color9  = #ff6e67
+
+# green
+color2  = #43a047
+color10 = #00e676
+
+# yellow
+color3  = #f1fa8c
+color11 = #f4f99d
+
+# blue
+color4  = #5b95f0
+color12 = #448aff
+
+# magenta
+color5  = #ff79c6
+color13 = #ff92d0
+
+# cyan
+color6  = #8be9fd
+color14 = #9aedfe
+
+# white
+color7  = #bfbfbf
+color15 = #e6e6e6

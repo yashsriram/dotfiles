@@ -1,30 +1,31 @@
 # Tools
-* zsh & oh-my-zsh [default shell]
-* xorg [display server]
-* i3-gaps [window manager]
-  * i3
-  * i3blocks
-  * i3lock-blur
-  * i3-battery-popup
-* neovim [text editor] & nvr [to open new file in exisiting nvim session]
-* ranger [file manager]
-* ranger\_devicons [icons for ranger, depends on nerd-fonts]
-* nerd-fonts-source-code-pro, ttf-emojione-color, noto-fonts-emoji [for unicode emojis]
+
+| tool | use |
+| --- | --- |
+| zsh & oh-my-zsh | shell |
+| i3-gaps | wm |
+| i3blocks | status bar |
+| i3lock-blur | lock screen |
+| i3-battery-popup | low battery warning |
+| xcompmgr | composition manager - mostly used to remove black regions above titlebars |
+| neovim \& nvr | text editor and to open new file in exisiting nvim session |
+| ranger, ranger\_devicons  | file manager, icons for ranger |
+| nerd-fonts-source-code-pro, ttf-emojione-color, noto-fonts-emoji | fonts |
+| d\_menu | general selection from menu |
+| feh | to set background picture |
+| sxiv | for images |
+| gifsicle | for gifs |
+| zathura | for pdfs |
+| scrot | for screenshots |
+| speedcrunch | calculator |
+| networkmanager | instead of netctl |
+| dunst | for notifications |
+| tig | git tui |
+| pamixer | for volume control |
+| htop | process monitor |
 * xclip [for manual clipboard management]
-* htop
 * mons [for multi monitor display control]
-* d\_menu [general selection from menu]
-* feh [to set background picture]
-* sxiv [for images]
-* zathura, xdotool [for pdfs, latex forward search]
-* pamixer [for volume control]
 * bc [for i3scripts]
-* tig [git tui client]
-* networkmanager [instead of netctl]
-* dunst [for notifications]
-* scrot [for screenshots]
-* speedcrunch [calculator]
-* xcompmgr [composition manager - mostly used to remove black regions above titlebars]
 * cronie [for cron tabs]
 * flite and SoX [for text to speech utility]
 * tmux
