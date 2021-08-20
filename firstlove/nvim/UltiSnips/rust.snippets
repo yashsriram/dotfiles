@@ -1,0 +1,27 @@
+snippet pln "println" bA
+println!("{:?$1}", $2);$0
+endsnippet
+
+snippet ltb "test boiler plate code" bA
+    use super::*;
+    use legos_test_tools::proof::{BigO, ComplexityProof, CorrectnessProof};
+    use legos_test_tools::test_suite;
+
+    test_suite!(TODO);
+
+    fn cp() -> CorrectnessProof {
+        CorrectnessProof::TODO
+    }
+
+    fn tp() -> ComplexityProof {
+        ComplexityProof::TODO
+    }
+
+    fn sp() -> ComplexityProof {
+        ComplexityProof::TODO
+    }
+
+    fn tt() {
+        // TODO
+    }
+endsnippet
