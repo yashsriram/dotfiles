@@ -6,7 +6,7 @@ set $windows_key Mod4
 
 ################ Daemons ################
 exec --no-startup-id i3-battery-popup -L 20 -n -m "Battery low!"
-exec --no-startup-id dunst -conf ~/dotfiles/firstlove/dunst/dunstrc
+exec --no-startup-id dunst
 
 ################ High Level Commands ################
 # reload the configuration file
@@ -29,7 +29,7 @@ for_window [class="SpeedCrunch"] floating enable, resize set 500 500, move posit
 bindsym $windows_key+Return exec termite
 bindsym $windows_key+space exec dmenu_run -fn 'Fira Mono-14'
 bindsym $windows_key+z exec ~/dotfiles/firstlove/stupidscripts/emojis_select
-bindsym $windows_key+x exec qutebrowser -C ~/dotfiles/firstlove/qutebrowser/config.py
+bindsym $windows_key+x exec qutebrowser
 bindsym $windows_key+c exec ~/dotfiles/firstlove/stupidscripts/bluetooth_prompt
 
 bindsym $windows_key+m exec ~/dotfiles/firstlove/stupidscripts/talk_to_me
@@ -157,7 +157,7 @@ bindsym $windows_key+Shift+0 move container to workspace $ws10
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    status_command i3blocks -c ~/dotfiles/firstlove/i3blocks.conf
+    status_command i3blocks
     position bottom
         colors {
         background #000000
