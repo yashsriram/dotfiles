@@ -1,20 +1,20 @@
 # Modes of neomutt: Browser, Index, Pager, Attach
 ######## paths ########
 set folder = ~/.mail
-set header_cache = ~/dotfiles/firstlove/neomutt/cache/headers
-set message_cachedir = ~/dotfiles/firstlove/neomutt/cache/bodies
+set header_cache = $XDG_CONFIG_HOME/neomutt/cache/headers
+set message_cachedir = $XDG_CONFIG_HOME/neomutt/cache/bodies
 set certificate_file = /etc/ssl/certs/ca-certificates.crt
-set mailcap_path = ~/dotfiles/firstlove/neomutt/mailcap
-set tmpdir = ~/dotfiles/firstlove/neomutt/tmp
+set mailcap_path = $XDG_CONFIG_HOME/neomutt/mailcap
+set tmpdir = $XDG_CONFIG_HOME/neomutt/tmp
 
 ######## source files ########
-source ~/dotfiles/firstlove/neomutt/colors
+source $XDG_CONFIG_HOME/neomutt/colors
 
 ######## per-account options ########
-folder-hook 'yash.3997@gmail.com' 'source ~/dotfiles/firstlove/neomutt/accounts/yash.3997@gmail.com'
-folder-hook 'yspatkuri@gmail.com' 'source ~/dotfiles/firstlove/neomutt/accounts/yspatkuri@gmail.com'
-folder-hook 'patku001@umn.edu' 'source ~/dotfiles/firstlove/neomutt/accounts/patku001@umn.edu'
-source ~/dotfiles/firstlove/neomutt/accounts/patku001@umn.edu
+folder-hook 'yash.3997@gmail.com' 'source $XDG_CONFIG_HOME/neomutt/accounts/yash.3997@gmail.com'
+folder-hook 'yspatkuri@gmail.com' 'source $XDG_CONFIG_HOME/neomutt/accounts/yspatkuri@gmail.com'
+folder-hook 'patku001@umn.edu' 'source $XDG_CONFIG_HOME/neomutt/accounts/patku001@umn.edu'
+source $XDG_CONFIG_HOME/neomutt/accounts/patku001@umn.edu
 
 named-mailboxes "patku001@umn.edu/inbox" ="patku001@umn.edu/inbox"
 named-mailboxes "patku001@umn.edu/sent" ="patku001@umn.edu/sent"

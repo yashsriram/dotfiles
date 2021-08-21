@@ -14,11 +14,11 @@ bindsym $windows_key+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $windows_key+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $windows_key+Shift+e exec ~/dotfiles/firstlove/stupidscripts/dmenu_prompt 'Do you really want to exit i3?' 'i3-msg exit'
+bindsym $windows_key+Shift+e exec $XDG_CONFIG_HOME/stupidscripts/dmenu_prompt 'Do you really want to exit i3?' 'i3-msg exit'
 # shut down
-bindsym $windows_key+Shift+s exec ~/dotfiles/firstlove/stupidscripts/dmenu_prompt 'Do you really want to shutdown?' 'shutdown now'
+bindsym $windows_key+Shift+s exec $XDG_CONFIG_HOME/stupidscripts/dmenu_prompt 'Do you really want to shutdown?' 'shutdown now'
 # reboot
-bindsym $windows_key+Shift+d exec ~/dotfiles/firstlove/stupidscripts/dmenu_prompt 'Do you really want to reboot?' 'reboot'
+bindsym $windows_key+Shift+d exec $XDG_CONFIG_HOME/stupidscripts/dmenu_prompt 'Do you really want to reboot?' 'reboot'
 # kill application
 bindsym $windows_key+Shift+q kill
 
@@ -28,20 +28,20 @@ for_window [class="SpeedCrunch"] floating enable, resize set 500 500, move posit
 ################ Application Keymaps ################
 bindsym $windows_key+Return exec termite
 bindsym $windows_key+space exec dmenu_run -fn 'Fira Mono-14'
-bindsym $windows_key+z exec ~/dotfiles/firstlove/stupidscripts/emojis_select
+bindsym $windows_key+z exec $XDG_CONFIG_HOME/stupidscripts/emojis_select
 bindsym $windows_key+x exec qutebrowser
-bindsym $windows_key+c exec ~/dotfiles/firstlove/stupidscripts/bluetooth_prompt
+bindsym $windows_key+c exec $XDG_CONFIG_HOME/stupidscripts/bluetooth_prompt
 
-bindsym $windows_key+m exec ~/dotfiles/firstlove/stupidscripts/talk_to_me
+bindsym $windows_key+m exec $XDG_CONFIG_HOME/stupidscripts/talk_to_me
 bindsym $windows_key+n exec termite -e neomutt
 
 bindsym $windows_key+a exec speedcrunch
 bindsym $windows_key+s exec subl
-bindsym $windows_key+y exec ~/dotfiles/firstlove/stupidscripts/timer
+bindsym $windows_key+y exec $XDG_CONFIG_HOME/stupidscripts/timer
 
 ################ Screenshot Keymaps ################
-bindsym --release Print exec ~/dotfiles/firstlove/stupidscripts/screenshot 'Screenshot name' '' 'Screenshot captured'
-bindsym --release $windows_key+Print exec exec ~/dotfiles/firstlove/stupidscripts/screenshot 'Patchshot name' '-s' 'Patchshot captured'
+bindsym --release Print exec $XDG_CONFIG_HOME/stupidscripts/screenshot 'Screenshot name' '' 'Screenshot captured'
+bindsym --release $windows_key+Print exec exec $XDG_CONFIG_HOME/stupidscripts/screenshot 'Patchshot name' '-s' 'Patchshot captured'
 
 ################ Volume Control ################
 bindsym XF86AudioRaiseVolume exec pamixer -i 5 && pkill -RTMIN+2 i3blocks
