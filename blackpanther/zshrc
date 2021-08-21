@@ -46,6 +46,4 @@ alias gitb="git branch"
 alias mounthyperdrive="sudo mount /dev/nvme0n1p5 $HOME/mounts/hyperdrive"
 alias umounthyperdrive="sudo umount $HOME/mounts/hyperdrive"
 
-export XDG_CONFIG_HOME=~/dotfiles/blackpanther/
-export STARSHIP_CONFIG=~/dotfiles/blackpanther/starship.toml
 eval "$(starship init zsh)"

@@ -55,6 +55,4 @@ alias umounthyperdrive="sudo umount $HOME/mounts/hyperdrive"
 alias mountubuntu="sudo mount /dev/sda7 $HOME/mounts/ubuntu"
 alias umountubuntu="sudo umount $HOME/mounts/ubuntu"
 
-export XDG_CONFIG_HOME=~/dotfiles/firstlove/
-export STARSHIP_CONFIG=~/dotfiles/firstlove/starship.toml
 eval "$(starship init zsh)"
