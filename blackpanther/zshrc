@@ -17,7 +17,7 @@ export EDITOR=/bin/nvim
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # aliases
-alias r="ranger -r ~/dotfiles/blackpanther/ranger"
+alias r="ranger"
 alias htop="htop --tree"
 alias mounts="mount | grep -E '(/dev/nvme|@|ifuse)'"
 alias tig="tig --all"
