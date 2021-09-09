@@ -22,16 +22,15 @@ bindsym $windows_key+Shift+q kill
 
 ################ Application startup positions ################
 for_window [class="SpeedCrunch"] floating enable, resize set 840 500, move position center, border pixel 2
-for_window [title="^bevy$"] floating enable
 
 ################ Application Keymaps ################
-bindsym $windows_key+Return exec termite
+bindsym $windows_key+Return exec alacritty
 bindsym $windows_key+space exec dmenu_run -fn 'Fira Mono-22'
 bindsym $windows_key+z exec $XDG_CONFIG_HOME/stupidscripts/emojis_select
 bindsym $windows_key+x exec qutebrowser
 
 bindsym $windows_key+m exec $XDG_CONFIG_HOME/stupidscripts/talk_to_me
-bindsym $windows_key+n exec termite -e neomutt
+bindsym $windows_key+n exec alacritty -e neomutt
 
 bindsym $windows_key+a exec speedcrunch
 bindsym $windows_key+s exec subl
