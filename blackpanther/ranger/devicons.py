@@ -32,10 +32,10 @@ file_node_extensions = {
     'cp'       : '',
     'cpio'     : '',
     'cpp'      : '',
-    'hpp'      : '♞',
-    'glsl'     : '◩',
-    'frag'     : '◩',
-    'vert'     : '◩',
+    'hpp'      : 'h',
+    'glsl'     : 'g',
+    'frag'     : 'f',
+    'vert'     : 'v',
     'css'      : '',
     'cxx'      : '',
     'd'        : '',
@@ -137,6 +137,8 @@ file_node_extensions = {
     'xz'       : '',
     'yml'      : '',
     'zip'      : '',
+    'toml'     : '',
+    'lock'     : 'l',
 }
 
 dir_node_exact_matches = {
@@ -218,6 +220,8 @@ file_node_exact_matches = {
     'ini'                              : '',
     'ledger'                           : '',
     'license'                          : '',
+    'License'                          : '',
+    'LICENSE'                          : '',
     'mimeapps.list'                    : '',
     'node_modules'                     : '',
     'procfile'                         : '',
