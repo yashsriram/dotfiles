@@ -1,35 +1,3 @@
-# Tools
-
-| tool | use |
-| --- | --- |
-| zsh & oh-my-zsh | shell |
-| i3-gaps | wm |
-| i3blocks | status bar |
-| i3lock-blur | lock screen |
-| i3-battery-popup | low battery warning |
-| xcompmgr | composition manager - mostly used to remove black regions above titlebars |
-| neovim \& nvr | text editor and to open new file in exisiting nvim session |
-| ranger, ranger\_devicons  | file manager, icons for ranger |
-| nerd-fonts-source-code-pro, ttf-emojione-color, noto-fonts-emoji | fonts |
-| d\_menu | general selection from menu |
-| feh | to set background picture |
-| sxiv | for images |
-| gifsicle | for gifs |
-| zathura | for pdfs |
-| scrot | for screenshots |
-| speedcrunch | calculator |
-| networkmanager | instead of netctl |
-| dunst | for notifications |
-| tig | git tui |
-| pamixer | for volume control |
-| htop | process monitor |
-* xclip [for manual clipboard management]
-* mons [for multi monitor display control]
-* bc [for i3scripts]
-* cronie [for cron tabs]
-* flite and SoX [for text to speech utility]
-* tmux
-
 # Config
 * In file `/etc/systemd/logind.conf` set HandlePowerKey=ignore [for disabling immediate shutdown on power button press]
 * enable `NetworkManager.service`
