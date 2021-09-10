@@ -1,14 +1,9 @@
-[options]
-font = Fira Mono 20
-allow_bold = true
-clickable_url = true
 dynamic_title = true
 search_wrap = true
 scroll_on_keystroke = true
 scroll_on_output = false
 urgent_on_bell = true
 scrollback_lines = -1
-cursor_blink = false
 
 [colors]
 
@@ -25,10 +20,6 @@ color8  = #4d4d4d
 # red
 color1  = #ff5555
 color9  = #ff6e67
-
-# green
-color2  = #43a047
-color10 = #00e676
 
 # yellow
 color3  = #f1fa8c

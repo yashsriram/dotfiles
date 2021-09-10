@@ -9,7 +9,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # sources
-source /etc/profile.d/vte.sh
+# source /etc/profile.d/vte.sh
 
 # exports
 export EDITOR=/bin/nvim
