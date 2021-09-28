@@ -3,28 +3,30 @@
 let mapleader=" "
 
 call plug#begin()
-  Plug 'NLKNguyen/papercolor-theme' " Theme
-  Plug 'vim-airline/vim-airline' " Status line plugin
-  Plug 'Yashasvi-Sriram/vim-searchindex' " Gives number and count of matches
-  Plug 'ntpeters/vim-better-whitespace' " Highlights unwanted whitespaces
-  Plug 'tpope/vim-repeat' " Makes some tpope plugins repeatable
-  Plug 'tpope/vim-commentary' " Comment and uncomment quickly
-  Plug 'tpope/vim-surround' " Surround text with anything
-  Plug 'lifepillar/vim-mucomplete' " Completion engine
-  Plug 'airblade/vim-gitgutter' " Gutter for git
-  Plug 'rbgrouleff/bclose.vim' " Required for ranger plugin
-  Plug 'francoiscabrol/ranger.vim' " Ranger integration to open files
-  Plug 'sirver/ultisnips' " Customizable snippets
-  Plug 'junegunn/fzf' " Search lists
-  Plug 'junegunn/fzf.vim' " Search lists
+  Plug 'NLKNguyen/papercolor-theme'
+  Plug 'vim-airline/vim-airline'
+  Plug 'ntpeters/vim-better-whitespace'
+  Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-surround'
+  Plug 'lifepillar/vim-mucomplete'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'sirver/ultisnips'
+  Plug 'francoiscabrol/ranger.vim'
+  Plug 'rbgrouleff/bclose.vim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+
+  Plug 'lervag/vimtex'
+  Plug 'cespare/vim-toml', {
+    \ 'branch': 'main',
+    \ }
+  Plug 'tikhomirov/vim-glsl'
+
   Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
-    \ } " Language server protocol client
-  Plug 'lervag/vimtex' " Tex plugin
-  Plug 'cespare/vim-toml' " Toml syntax
-  Plug 'rhysd/vim-clang-format' " Clang autoformat
-  Plug 'psf/black' " Python formatter
+    \ }
 call plug#end()
 
 " basic options
@@ -36,7 +38,6 @@ call plug#end()
   set encoding=utf-8
   set tabstop=4 shiftwidth=4 expandtab
   set listchars=tab:→\ ,trail:•,nbsp:‡,extends:⟩,precedes:⟨ list
-  set updatetime=100
   set noswapfile
   set autoread
   set hidden
@@ -49,8 +50,9 @@ call plug#end()
   colorscheme PaperColor
   set background=dark
   highlight Visual ctermfg=NONE
-  highlight visual ctermbg=237
-  let g:airline_theme='dark'
+  highlight Visual ctermbg=237
+  highlight Normal ctermbg=black
+  " let g:airline_theme='dark'
   set cursorline
 
 " highlevel
@@ -99,7 +101,6 @@ augroup END
 " copy to system clipboard
   vnoremap <C-y> "+y
   nnoremap yall ggVG"+y
-
 
 " find
   set nowrapscan
@@ -177,15 +178,19 @@ augroup END
 
 " lsp client
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rls'],
+    \ 'rust'    : ['~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rust-analyzer'],
+    \ 'python'  : ['~/.local/bin/pyls'],
+    \ 'c'       : ['clangd'],
+    \ 'cpp'     : ['clangd'],
     \ }
 nnoremap <leader>l :call LanguageClient_contextMenu()<Enter>
-" Or map each action separately
-autocmd BufWritePost *.rs call LanguageClient#textDocument_formatting()
-nnoremap <leader>a :call LanguageClient#textDocument_rename()<Enter>
+autocmd BufWritePost *.rs,*.py,*.c,*.cpp call LanguageClient#textDocument_formatting()
+nnoremap <leader>n :call LanguageClient#textDocument_rename()<Enter>
 nnoremap <leader>d :call LanguageClient#textDocument_definition()<Enter>
-nnoremap <leader>x :call LanguageClient#textDocument_hover()<Enter>
-nnoremap <leader>u :call LanguageClient#textDocument_references()<Enter>
+nnoremap <leader>h :call LanguageClient#textDocument_hover()<Enter>
+nnoremap <leader>r :call LanguageClient#textDocument_references()<Enter>
+nnoremap <leader>i :call LanguageClient#textDocument_implementation()<Enter>
+nnoremap <leader>g :GFiles<Enter>
 
 " airline
   let g:airline#extensions#tabline#enabled = 1
@@ -193,18 +198,12 @@ nnoremap <leader>u :call LanguageClient#textDocument_references()<Enter>
   let g:airline#extensions#tabline#left_alt_sep = '|'
   let g:airline#extensions#tabline#formatter = 'unique_tail'
   let g:airline_powerline_fonts = 1
-
   if !exists('g:airline_symbols')
       let g:airline_symbols = {}
   endif
 
-" fzf
-  nnoremap <leader><leader> :GFiles<Enter>
-
 " vimtex
   let g:tex_flavor='latex'
-  " enable this if you need forward and backward search
-  " let g:vimtex_view_method='zathura'
   let g:vimtex_quickfix_mode=0
 
 " smart spell check
@@ -212,14 +211,3 @@ nnoremap <leader>u :call LanguageClient#textDocument_references()<Enter>
 
 " set html syntax for tera templates
   autocmd BufReadPost *.html.tera set syntax=html
-
-" clang format settings
-  let g:clang_format#style_options = {
-            \ "AccessModifierOffset" : -4,
-            \ "BasedOnStyle" : "Google",
-            \ "ColumnLimit" : "0",
-            \ "Standard" : "Latest"}
-  autocmd BufReadPost *.cpp :ClangFormatAutoEnable
-
-" python format settings
-  autocmd BufWritePre *.py :Black

@@ -179,7 +179,7 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = /usr/bin/dmenu -p 'Dunst' -fn 'Fira Mono-14':
+    dmenu = /usr/bin/dmenu -b -p 'Dunst' -fn 'Fira Mono-14':
 
     # Browser for opening urls in context menu.
     browser = /usr/bin/google-chrome-stable

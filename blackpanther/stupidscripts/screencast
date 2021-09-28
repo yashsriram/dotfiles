@@ -7,7 +7,7 @@ if [ $? -eq 0 ]; then
   exit -1
 fi
 
-FILE_NAME=$(echo "" | dmenu -fn 'Fira Mono-14' -i -p "${1}")
+FILE_NAME=$(echo "" | dmenu -b -fn 'Fira Mono-20' -i -p "${1}")
 [ $? -eq 0 ] || exit
 
 FILE_PATH="$HOME/screencasts/${FILE_NAME}.mkv"
