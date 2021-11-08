@@ -23,16 +23,6 @@ alias mounts="mount | grep -E '(/dev/nvme|@|ifuse)'"
 alias tig="tig --all"
 alias tl="trash-list"
 
-# pacman aliases
-alias pacc="pacman -Q | wc -l"
-alias pacl="pacman -Q | fzf"
-alias paci="sudo pacman -S"
-alias pacr="sudo pacman -R"
-alias pacu="sudo pacman -Syu"
-alias pacac="bat /var/log/pacman.log | fzf --reverse --tac --no-sort"
-alias pacclean="sudo pacman -Rns $(pacman -Qtdq)"
-alias paccachedrop="sudo pacman -Scc"
-
 # git aliases
 alias gits="git status"
 alias gita="git add"
