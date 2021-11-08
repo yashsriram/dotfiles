@@ -46,4 +46,5 @@ alias gitb="git branch"
 alias mounthyperdrive="sudo mount /dev/nvme0n1p5 $HOME/mounts/hyperdrive"
 alias umounthyperdrive="sudo umount $HOME/mounts/hyperdrive"
 
-PROMPT="%B%F{cyan}%d%f %F{green}[%j jobs]%f %F{magenta}[%? returned]%f%b "
+# PROMPT="%B%F{cyan}%d%f %F{green}[%j jobs]%f %F{magenta}[%? returned]%f%b "
+source <(/usr/bin/starship init zsh --print-full-init)
