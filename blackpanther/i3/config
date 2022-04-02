@@ -105,7 +105,7 @@ bindsym $windows_key+Shift+Right move right 30 px
 
 ################ Styling ################
 # Font for window titles. Will also be used by the bar unless a different font
-font pango:fira mono 18
+font pango:fira mono 14
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #000000 #ffe57f #000000 #267fb5   #267fb5

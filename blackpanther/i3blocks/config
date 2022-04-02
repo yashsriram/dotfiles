@@ -91,7 +91,7 @@ color=#f44336
 [wifi]
 label=
 color=#00bcd4
-command=echo "$(cat /sys/class/net/wlp61s0/operstate) $(ip addr | grep inet.\*wlp61s0 | awk '{print $2}')"
+command=echo "$(cat /sys/class/net/wlp61s0/operstate)"
 interval=10
 
 [separator]
@@ -101,7 +101,7 @@ color=#00bcd4
 [ethernet]
 label=
 color=#bcd400
-command=echo "$(cat /sys/class/net/enp60s0/operstate) $(ip addr | grep inet.\*enp60s0 | awk '{print $2}')"
+command=echo "$(cat /sys/class/net/enp60s0/operstate)"
 interval=10
 
 [separator]
