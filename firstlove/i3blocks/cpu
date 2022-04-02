@@ -1,6 +1,0 @@
-#!/bin/bash
-case $BLOCK_BUTTON in
-  3) notify-send -a "CPU usage" "$(ps h -Ao %mem,cmd --sort=-pmem  | awk '{ print $1"% "$2 }'  | head -n 10)" -t 5000
-esac
-
-echo $(sensors | grep id | awk '{print $4}')

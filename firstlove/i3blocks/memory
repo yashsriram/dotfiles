@@ -1,6 +1,0 @@
-#!/bin/bash
-case $BLOCK_BUTTON in
-  3) notify-send -a "Memory usage" "$(ps h -Ao %mem,cmd --sort=-pmem  | awk '{ print $1"% "$2 }'  | head -n 10)" -t 5000
-esac
-
-echo $(free -h | grep Mem | awk '{print $7}')
